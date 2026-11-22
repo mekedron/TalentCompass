@@ -1,0 +1,24 @@
+## Interface: 16001
+## Title: Talent Compass
+## Title-ruRU: Talent Compass — билды талантов
+## Notes: Popular talent builds for your class: highlights the next talent on the tree, plus rotation, stats and gear advice.
+## Notes-ruRU: Популярные билды для вашего класса: подсвечивает следующий талант на дереве, подсказывает ротацию, статы и экипировку.
+## Author: mekedron
+## Version: 0.1.0
+## IconTexture: Interface\Icons\INV_Misc_Book_11
+## SavedVariables: TalentCompassDB
+## SavedVariablesPerCharacter: TalentCompassCharDB
+
+Locales.lua
+Core.lua
+Data\WARRIOR.lua
+Data\PALADIN.lua
+Data\HUNTER.lua
+Data\ROGUE.lua
+Data\PRIEST.lua
+Data\SHAMAN.lua
+Data\MAGE.lua
+Data\WARLOCK.lua
+Data\DRUID.lua
+Highlight.lua
+UI.lua

@@ -1,0 +1,994 @@
+{
+ "class": "WARRIOR",
+ "patch": "WoW: Forever 1.60.1 (build 71037); talent data from the Wowhead Forever talent calculator, checked 2026-11-22, after the Nov 10, 11 and 16 hotfixes",
+ "sources": [
+  "https://www.wowhead.com/forever/talent-calc/warrior",
+  "https://nether.wowhead.com/forever/tooltip/spell/<id> (EN tooltips) and https://nether.wowhead.com/forever/ru/tooltip/spell/<id> (ruRU names)",
+  "https://www.wowhead.com/forever/guide/classes/warrior/arms/talent-builds-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/warrior/arms/dps-leveling-tips",
+  "https://www.wowhead.com/forever/guide/classes/warrior/arms/rotation-cooldowns-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/warrior/arms/stat-priority-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/warrior/fury/talent-builds-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/warrior/fury/rotation-cooldowns-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/warrior/fury/stat-priority-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/warrior/fury/dps-leveling-tips",
+  "https://www.wowhead.com/forever/guide/classes/warrior/protection/talent-builds-pve-tank",
+  "https://www.wowhead.com/forever/guide/classes/warrior/protection/rotation-cooldowns-pve-tank",
+  "https://www.wowhead.com/forever/guide/classes/warrior/protection/stat-priority-pve-tank",
+  "https://www.wowhead.com/forever/guide/classes/warrior/protection/tank-leveling-tips",
+  "https://conquestcapped.com/guides/wow-forever/wow-forever-warrior-overview/",
+  "https://conquestcapped.com/guides/wow-forever/wow-forever-fury-arms-warrior-bis/",
+  "https://www.warcrafttavern.com/forever/news/class-economy-changes-wow-forever-hotfixes-for-november-10/",
+  "https://us.forums.blizzard.com/en/wow/p/30774771",
+  "https://www.gameleap.com/articles/wow-forever-hotfixes-windfury-totem-and-priest-changes"
+ ],
+ "confidence_notes": "HIGH: talent names, tree, row/column, maxRank, spellId and prerequisites come straight from the live Wowhead Forever talent calculator DOM (53 talents: Arms 17, Fury 18, Protection 18). tier = calculator row + 1 and col = calculator column + 1 (both 1-based, 4 columns per tree). Some grid cells are empty, for example Arms tier 2 col 3 and tier 6 col 2. name_ru comes from Wowhead's ruRU Forever tooltips, which is game data and not a fan translation. HIGH: all three build orders are Wowhead's own point-by-point orders (Arms leveling 35/16/0, Fury raid 17/34/0, Protection standard 4/15/32), and the script checked each against tier gates, prerequisites and maxRank. MEDIUM: desc_en ranks marked 'at X/X' are taken from max-rank tooltips. Intermediate ranks are not always linear. MEDIUM: which talents are the 'gold' milestone talents is inferred, not read from any flag: the first talent unlocked at 10/15/20/30 points in each tree (Arms: Anger Management, Spearing Strike, Sweeping Strikes, Mortal Strike; Fury: Piercing Howl, Reckless Swings, Death Wish, Bloodthirst; Protection: Last Stand, Vanguard, Concussion Blow, Shield Slam). One fan site calls a Fury 16-point gold talent 'Raging Blows'. That name does not exist in the current calculator, so it is outdated. LOW/MEDIUM: endgame stat priorities. Wowhead's Arms and Protection pages use Hit 8% then Expertise to 6.5%. The Fury page still says 'Weapon Skill to 305, Hit 9%' and notes it is speculative (the beta was capped at level 30). Pre-raid gear lists are early and change often. Item names were checked in the Wowhead Forever item DB, but drop rates and some sources (for example Titanic Leggings plans) are unconfirmed. ruRU Slam: the rank 5 tooltip says 'Сокрушение' (matching the talent 'Улучшенное сокрушение'), while the new rank-1 Slam spell 1240193 says 'Мощный удар'. The text below uses 'Сокрушение'.",
+ "forever_changes_en": "Forever keeps the 3-tree Classic warrior but reworks many talents. Weaponmaster replaces the four weapon specialization talents (Axe/Polearm crit, Mace armor penetration, Sword extra attacks). New talents include Spearing Strike, Bloodthrill (Rend procs Overpower), Lingering Rage, Furious Precision, Reckless Swings, Gore Drinker, Improved Whirlwind, Master of Defense and Vanguard (Charge in Defensive Stance). Bastion gives +10% damage with a shield. Baseline changes: Tactical Mastery is baseline (keep 10 Rage on stance swap, 25 with the talent). Victory Rush (level 20, 30 sec CD) heals 10% HP after a kill. Battle Shout is raid-wide and includes the old Improved Battle Shout. Thunder Clap works in Defensive Stance, has a 6 sec CD and scales with Attack Power. Slam has a 15 sec CD that Improved Slam lowers. Bloodthirst no longer heals and gives +10% run speed. Shield Wall, Retaliation and Recklessness no longer share a cooldown, and Shield Wall and Retaliation are 15 min. Rage from hits is normalized to weapon speed, crits give 75% more Rage, and armor no longer lowers Rage gained from damage taken. Defensive Stance comes from a level 10 quest and Berserker Stance from a level 30 quest. Stats: Expertise (shown as 'chance to reduce dodge and parry') is a new stat, Haste exists on some gear, and the racial weapon-skill bonuses were removed. Human racials are now Ruthless (+1% crit), Will to Survive (stun break), Perception and The Human Spirit. The melee hit cap against a boss (+3 levels) is 8%. Hotfixes on Nov 10-16: Sweeping Strikes no longer wastes charges without a second target, Berserker Rage removes Sap, and Unbridled Wrath, Flurry and Reckless Swings interact correctly with Heroic Strike and Cleave.",
+ "trees": [
+  {
+   "name": "Arms",
+   "talents": [
+    {
+     "name": "Improved Heroic Strike",
+     "tier": 1,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 12282,
+     "name_ru": "Улучшенный удар героя",
+     "desc_en": "Reduces Heroic Strike Rage cost by 1/2/3."
+    },
+    {
+     "name": "Deflection",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 16462,
+     "name_ru": "Отражение",
+     "desc_en": "+1% Parry chance per rank (5% max)."
+    },
+    {
+     "name": "Improved Rend",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 12286,
+     "name_ru": "Улучшенное кровопускание",
+     "desc_en": "Rend bleed damage increased (+35% at 3/3)."
+    },
+    {
+     "name": "Improved Charge",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 12285,
+     "name_ru": "Улучшенный рывок",
+     "desc_en": "Charge generates +3/+6 extra Rage."
+    },
+    {
+     "name": "Improved Tactical Mastery",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 12295,
+     "name_ru": "Улучшенное тактическое превосходство",
+     "desc_en": "Retain up to 15 more Rage on stance change (25 total)."
+    },
+    {
+     "name": "Improved Overpower",
+     "tier": 2,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 12290,
+     "name_ru": "Улучшенное превосходство",
+     "desc_en": "Overpower crit chance +25/50%."
+    },
+    {
+     "name": "Anger Management",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 12296,
+     "name_ru": "Управление злостью",
+     "desc_en": "Generates 1 Rage every 3 sec in combat; 30% slower Rage decay out of combat."
+    },
+    {
+     "name": "Deep Wounds",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 12834,
+     "name_ru": "Глубокие раны",
+     "desc_en": "Crits make the target bleed for 20/40/60% of average weapon damage over 12 sec."
+    },
+    {
+     "name": "Spearing Strike",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 1,
+     "spellId": 1310222,
+     "name_ru": "Пробивающий удар",
+     "desc_en": "Battle Stance attack, 75% weapon damage (double vs Giants, Dragonkin, mounted; dismounts). 15 Rage, 20 sec CD."
+    },
+    {
+     "name": "Two-Handed Weapon Specialization",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 12163,
+     "name_ru": "Специализация на двуручном оружии",
+     "desc_en": "+2/4/6% damage with two-handed weapons."
+    },
+    {
+     "name": "Impale",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 16493,
+     "name_ru": "Прокалывание",
+     "desc_en": "+10/20% critical strike damage bonus for abilities."
+    },
+    {
+     "name": "Bloodthrill",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 1289682,
+     "name_ru": "Кровавый восторг",
+     "desc_en": "Main-hand hits on targets with your Rend have 15/20% chance to enable Overpower."
+    },
+    {
+     "name": "Sweeping Strikes",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 12292,
+     "name_ru": "Размашистые удары",
+     "desc_en": "Next 5 melee attacks hit an additional nearby enemy. 30 Rage, 30 sec CD, Battle Stance."
+    },
+    {
+     "name": "Weaponmaster",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 1290261,
+     "name_ru": "Мастер боя",
+     "desc_en": "Axe/Polearm: +1% crit/rank; Mace/Staff: ignore 3% armor/rank; Sword: 1%/rank extra-attack chance."
+    },
+    {
+     "name": "Improved Slam",
+     "tier": 6,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 12862,
+     "name_ru": "Улучшенное сокрушение",
+     "desc_en": "Slam CD -2.5/5 sec, cast and GCD -0.25/0.5 sec, no longer resets the swing timer."
+    },
+    {
+     "name": "Improved Hamstring",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 12289,
+     "name_ru": "Улучшенный порез сухожилия",
+     "desc_en": "Hamstring has 5/10/15% chance to root the target for 5 sec."
+    },
+    {
+     "name": "Mortal Strike",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 12294,
+     "name_ru": "Смертельный удар",
+     "desc_en": "Weapon damage strike that reduces healing on the target by 50% for 10 sec. 6 sec CD."
+    }
+   ]
+  },
+  {
+   "name": "Fury",
+   "talents": [
+    {
+     "name": "Booming Voice",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 12321,
+     "name_ru": "Луженая глотка",
+     "desc_en": "Shouts have a larger area and cost less Rage (+50% area, -25% cost per tooltip)."
+    },
+    {
+     "name": "Cruelty",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 12320,
+     "name_ru": "Безжалостность",
+     "desc_en": "+1% melee crit chance per rank (5% max)."
+    },
+    {
+     "name": "Lingering Rage",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 1323964,
+     "name_ru": "Длительная ярость",
+     "desc_en": "Rage starts decaying 2 sec later per rank after leaving combat (10 sec max)."
+    },
+    {
+     "name": "Unbridled Wrath",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 12322,
+     "name_ru": "Необузданный гнев",
+     "desc_en": "12% chance per rank to gain 1 extra Rage on weapon hits (60% max)."
+    },
+    {
+     "name": "Furious Precision",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 1323963,
+     "name_ru": "Неистовая точность",
+     "desc_en": "Off-hand hit chance increased (10% at 3/3)."
+    },
+    {
+     "name": "Piercing Howl",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 12323,
+     "name_ru": "Пронзительный вой",
+     "desc_en": "Dazes all enemies within 10 yds, -50% movement speed for 6 sec."
+    },
+    {
+     "name": "Blood Craze",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 16487,
+     "name_ru": "Мания крови",
+     "desc_en": "Regenerate Health over 6 sec after being crit or taking a big hit (3% at max rank)."
+    },
+    {
+     "name": "Enrage",
+     "tier": 3,
+     "col": 4,
+     "maxRank": 5,
+     "spellId": 12317,
+     "name_ru": "Исступление",
+     "desc_en": "30% chance after being hit to gain +2% Physical damage per rank for 12 sec (10% max)."
+    },
+    {
+     "name": "Dual Wield Specialization",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 5,
+     "spellId": 23584,
+     "name_ru": "Специализация на бое двумя оружиями",
+     "desc_en": "Off-hand damage +5% and off-hand Rage +10% per rank."
+    },
+    {
+     "name": "Reckless Swings",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 1329555,
+     "name_ru": "Безрассудные удары",
+     "desc_en": "Active: next 4 melee attacks generate 5 extra Rage; costs 25% base health, 15 sec CD."
+    },
+    {
+     "name": "Improved Execute",
+     "tier": 4,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 20502,
+     "name_ru": "Улучшенная казнь",
+     "desc_en": "Execute costs less Rage (5 at 2/2)."
+    },
+    {
+     "name": "Improved Berserker Rage",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 20500,
+     "name_ru": "Улучшенная ярость берсерка",
+     "desc_en": "Berserker Rage instantly generates Rage (10 at 2/2) and removes movement-impairing effects."
+    },
+    {
+     "name": "Death Wish",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 12328,
+     "name_ru": "Инстинкт смерти",
+     "desc_en": "Cooldown: +20% Physical damage and Fear immunity for 30 sec, +5% damage taken. 3 min CD."
+    },
+    {
+     "name": "Gore Drinker",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 1323967,
+     "name_ru": "Упоение кровью",
+     "desc_en": "Enrage, Berserker Rage, Bloodrage, Death Wish, Reckless Swings and Bloodthirst make your next 3 melee hits heal you (1% max HP each at 2/2)."
+    },
+    {
+     "name": "Improved Intercept",
+     "tier": 5,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 20504,
+     "name_ru": "Улучшенный перехват",
+     "desc_en": "Intercept cooldown reduced (10 sec at 2/2)."
+    },
+    {
+     "name": "Improved Whirlwind",
+     "tier": 6,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 1310315,
+     "name_ru": "Улучшенный вихрь",
+     "desc_en": "Whirlwind CD reduced (2 sec at 2/2) and +30% damage to the closest enemy at 2/2."
+    },
+    {
+     "name": "Flurry",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 12319,
+     "name_ru": "Шквал",
+     "desc_en": "After a melee crit, +10/20/30% attack speed for the next 3 swings."
+    },
+    {
+     "name": "Bloodthirst",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 23881,
+     "name_ru": "Кровожадность",
+     "desc_en": "Instant attack for 45% of Attack Power and +10% movement speed for 10 sec. 6 sec CD."
+    }
+   ]
+  },
+  {
+   "name": "Protection",
+   "talents": [
+    {
+     "name": "Improved Bloodrage",
+     "tier": 1,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 12301,
+     "name_ru": "Улучшенная кровавая ярость",
+     "desc_en": "Bloodrage generates more Rage (+50% at 2/2)."
+    },
+    {
+     "name": "Shield Specialization",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 12298,
+     "name_ru": "Специализация на щитах",
+     "desc_en": "+1% block chance per rank and a chance to gain 5 Rage when you block (100% at 5/5)."
+    },
+    {
+     "name": "Iron Will",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 12962,
+     "name_ru": "Железная воля",
+     "desc_en": "Reduces the duration of Stun and Fear effects on you."
+    },
+    {
+     "name": "Anticipation",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 5,
+     "spellId": 12297,
+     "name_ru": "Предчувствие",
+     "desc_en": "Increases Defense skill (+20 at 5/5)."
+    },
+    {
+     "name": "Improved Revenge",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 12797,
+     "name_ru": "Улучшенный реванш",
+     "desc_en": "Revenge deals more damage (60% at 3/3)."
+    },
+    {
+     "name": "Improved Thunder Clap",
+     "tier": 2,
+     "col": 4,
+     "maxRank": 3,
+     "spellId": 12287,
+     "name_ru": "Улучшенный удар грома",
+     "desc_en": "Thunder Clap costs less Rage (6 at 3/3)."
+    },
+    {
+     "name": "Last Stand",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 1,
+     "spellId": 12975,
+     "name_ru": "Ни шагу назад",
+     "desc_en": "Cooldown: gain 30% of max Health for 20 sec. 3 min CD."
+    },
+    {
+     "name": "Master of Defense",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 1310316,
+     "name_ru": "Мастер обороны",
+     "desc_en": "50/100% chance to gain 5 Rage when you Dodge or Parry with a shield equipped."
+    },
+    {
+     "name": "Improved Disarm",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 12313,
+     "name_ru": "Улучшенное разоружение",
+     "desc_en": "Disarm cooldown reduced (20 sec at 3/3)."
+    },
+    {
+     "name": "Defiance",
+     "tier": 3,
+     "col": 4,
+     "maxRank": 3,
+     "spellId": 12792,
+     "name_ru": "Неукротимость",
+     "desc_en": "More threat in Defensive Stance with a shield equipped (20% at 3/3)."
+    },
+    {
+     "name": "Improved Sunder Armor",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 12308,
+     "name_ru": "Улучшенный раскол брони",
+     "desc_en": "Sunder Armor costs less Rage (3 at 3/3)."
+    },
+    {
+     "name": "Vanguard",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 1310317,
+     "name_ru": "Авангард",
+     "desc_en": "Charge is usable in Defensive Stance."
+    },
+    {
+     "name": "Improved Shield Bash",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 12311,
+     "name_ru": "Улучшенный удар щитом",
+     "desc_en": "Shield Bash gains a chance to Silence for 3 sec (100% at 2/2)."
+    },
+    {
+     "name": "Improved Shield Wall",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 12312,
+     "name_ru": "Улучшенная глухая оборона",
+     "desc_en": "Shield Wall cooldown -5.5/11 min."
+    },
+    {
+     "name": "Concussion Blow",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 12809,
+     "name_ru": "Оглушающий удар",
+     "desc_en": "Stuns the target for 5 sec. 45 sec CD."
+    },
+    {
+     "name": "Focused Rage",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 29787,
+     "name_ru": "Сосредоточенная ярость",
+     "desc_en": "Offensive abilities cost less Rage (3 at 3/3)."
+    },
+    {
+     "name": "Bastion",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 16538,
+     "name_ru": "Бастион",
+     "desc_en": "+2% damage per rank while a shield is equipped (10% max)."
+    },
+    {
+     "name": "Shield Slam",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 23922,
+     "name_ru": "Сокрушение щитом",
+     "desc_en": "Shield strike scaling with Block Value, 50% chance to dispel 1 magic effect, very high threat. 6 sec CD."
+    }
+   ]
+  }
+ ],
+ "builds": [
+  {
+   "id": "arms_leveling",
+   "name_en": "Arms Leveling (2H, 35/16/0)",
+   "name_ru": "Оружие для прокачки (двуручное оружие, 35/16/0)",
+   "role": "LEVELING",
+   "summary_en": "Wowhead's Arms leveling build for a two-handed weapon. Early points add Rend, Overpower and Rage retention. The build reaches Sweeping Strikes, Weaponmaster, Improved Slam and Mortal Strike by level 40. After 40 it adds crit (Cruelty) and Fury utility for questing.",
+   "summary_ru": "Билд «Оружие» с Wowhead для прокачки с двуручным оружием. Первые очки усиливают «Кровопускание», «Превосходство» и сохранение ярости при смене стойки. К 40 уровню билд открывает «Размашистые удары», «Мастер боя», «Улучшенное сокрушение» и «Смертельный удар». После 40 очки идут в шанс крита («Безжалостность») и полезные таланты ветки «Неистовство» для заданий.",
+   "order": [
+    [
+     "Improved Rend",
+     3
+    ],
+    [
+     "Deflection",
+     2
+    ],
+    [
+     "Improved Overpower",
+     2
+    ],
+    [
+     "Improved Tactical Mastery",
+     3
+    ],
+    [
+     "Deep Wounds",
+     3
+    ],
+    [
+     "Anger Management",
+     1
+    ],
+    [
+     "Improved Charge",
+     1
+    ],
+    [
+     "Two-Handed Weapon Specialization",
+     3
+    ],
+    [
+     "Impale",
+     2
+    ],
+    [
+     "Bloodthrill",
+     2
+    ],
+    [
+     "Sweeping Strikes",
+     1
+    ],
+    [
+     "Weaponmaster",
+     2
+    ],
+    [
+     "Improved Slam",
+     1
+    ],
+    [
+     "Weaponmaster",
+     3
+    ],
+    [
+     "Improved Slam",
+     1
+    ],
+    [
+     "Mortal Strike",
+     1
+    ],
+    [
+     "Cruelty",
+     5
+    ],
+    [
+     "Lingering Rage",
+     5
+    ],
+    [
+     "Enrage",
+     3
+    ],
+    [
+     "Piercing Howl",
+     1
+    ],
+    [
+     "Enrage",
+     2
+    ],
+    [
+     "Improved Charge",
+     1
+    ],
+    [
+     "Deflection",
+     3
+    ]
+   ],
+   "rotation_en": [
+    "Open with Charge in Battle Stance to start with Rage.",
+    "Apply Rend and keep it up on targets that will live longer than a few seconds (it also triggers Bloodthrill).",
+    "Use Overpower every time it lights up after a dodge or a Bloodthrill proc.",
+    "Use Mortal Strike on cooldown (level 40+).",
+    "Use Slam on cooldown once you have Improved Slam. Before that, skip Slam because it delays your swing.",
+    "Use Spearing Strike if you have it, before Slam against Giants or Dragonkin.",
+    "Use Victory Rush after a kill whenever you are below about 90% health.",
+    "Use Heroic Strike only above about 40 Rage, because it replaces the Rage from that auto attack.",
+    "Against 2 or more mobs: Sweeping Strikes, then Mortal Strike, then Whirlwind (Berserker Stance) or Cleave. Use Thunder Clap and Demoralizing Shout if they hit hard.",
+    "Keep Battle Shout up at all times."
+   ],
+   "rotation_ru": [
+    "Начинайте бой «Рывком» в «Боевой стойке», чтобы сразу получить ярость.",
+    "Накладывайте «Кровопускание» на цели, которые проживут дольше нескольких секунд (оно же активирует «Кровавый восторг»).",
+    "Применяйте «Превосходство» каждый раз, когда оно становится доступно после уклонения цели или срабатывания «Кровавого восторга».",
+    "Используйте «Смертельный удар» сразу по готовности (с 40 уровня).",
+    "После «Улучшенного сокрушения» используйте «Сокрушение» по готовности. До этого таланта не используйте его, потому что оно задерживает автоатаку.",
+    "Если у вас есть «Пробивающий удар», против великанов и драконов используйте его перед «Сокрушением».",
+    "После убийства используйте «Победный раж», если здоровье ниже ~90%.",
+    "Используйте «Удар героя» только при ярости выше ~40, потому что он забирает ярость от этой автоатаки.",
+    "Против 2+ противников: «Размашистые удары», затем «Смертельный удар», затем «Вихрь» (в «Стойке берсерка») или «Рассекающий удар». Если враги бьют сильно, добавьте «Удар грома» и «Деморализующий крик».",
+    "Держите «Боевой крик» постоянно."
+   ],
+   "stats_en": "While leveling: the best two-handed weapon you can get beats everything else. Weapon damage drives Mortal Strike, Slam and Overpower. Then Strength (2 Attack Power each), then Agility (20 Agility = 1% crit, plus armor and dodge), then Stamina. A little Spirit helps you rest less. Any '+hit' or 'chance to reduce dodge and parry' (Expertise) is a big upgrade because misses cost you Rage. At 60 (Arms per Wowhead): Hit to 8%, Expertise to 6.5%, Crit, Strength, Agility, Haste. An item with about 1.5 times as much Agility as Strength is roughly equal.",
+   "stats_ru": "При прокачке: лучшее двуручное оружие, которое вы можете достать, важнее всего остального. От урона оружия зависят «Смертельный удар», «Сокрушение» и «Превосходство». Дальше сила (2 силы атаки за единицу), затем ловкость (20 ловкости = 1% крита, плюс броня и уклонение), затем выносливость. Немного духа сокращает отдых. Любая меткость и «мастерство» (шанс снизить уклонение и парирование цели) — большие улучшения, потому что промахи отнимают ярость. На 60 уровне («Оружие», по Wowhead): меткость до 8%, мастерство до 6,5%, крит, сила, ловкость, скорость. Вещь, где ловкости примерно в 1,5 раза больше силы, по ценности примерно равна вещи с силой.",
+   "gear_en": [
+    "Always upgrade the two-handed weapon first. Check quest rewards, the Auction House and Blacksmithing.",
+    "Weaponmaster gives the most to axes and polearms (+5% crit). Maces and swords are also fine.",
+    "Level 30: Whirlwind Axe, reward of the level 30 warrior class quest chain (it ends with a fight in Desolace). It is one of the best leveling weapons.",
+    "Level ~30-40: Ravager (Herod, Scarlet Monastery Armory) and Mograine's Might (Scarlet Commander Mograine, Scarlet Monastery Cathedral).",
+    "Wear plate from level 40 (train it at the warrior trainer). Before 40, mail with Strength/Stamina is best.",
+    "Level 60 targets: Arcanite Reaper (Blacksmithing) or Treant's Bane (Dire Maul tribute chest), Fury Visor (quest, Sunken Temple), Mark of Fordring (quest 'In Dreams', Western Plaguelands), Battleborn Armbraces (Warchief Rend Blackhand, UBRS), Blackhand's Breadth (quest 'General Drakkisath's Demise'), Hand of Justice (Emperor Dagran Thaurissan, BRD)."
+   ],
+   "gear_ru": [
+    "Первым делом всегда улучшайте двуручное оружие. Смотрите награды за задания, аукцион и кузнечное дело.",
+    "Больше всего «Мастер боя» даёт топорам и древковому оружию (+5% крита). Булавы и мечи тоже подойдут.",
+    "30 уровень: «Топор Смерча» — награда за цепочку классовых заданий воина 30 уровня (она заканчивается боем в Пустошах). Одно из лучших оружий для прокачки.",
+    "~30–40 уровни: «Опустошитель» (Герод, Оружейная Монастыря Алого ордена) и «Мощь Могрейна» (Командир Могрейн из Алого ордена, Собор Монастыря).",
+    "Латы надевайте с 40 уровня (выучите у учителя воинов). До 40 лучше кольчуга с силой и выносливостью.",
+    "Цели на 60 уровне: «Арканитовый жнец» (кузнечное дело) или «Погибель древня» (сундук дани в Забытом Городе), «Щиток Ярости» (задание, Затонувший храм), «Знак Фордринга» (задание «Во сне», Западные Чумные земли), «Битворожденные наручи» (Вождь Ренд Чернорук, Пик Черной горы), «Пластина Чернорука» (задание «Кончина генерала Драккисата»), «Рука правосудия» (Император Дагран Тауриссан, Глубины Черной горы)."
+   ],
+   "tips_en": [
+    "Stances: stay in Battle Stance for questing (Charge, Overpower, Rend, Sweeping Strikes). Do the level 10 quest for Defensive Stance and the level 30 quest for Berserker Stance (Whirlwind, Intercept, Berserker Rage, Pummel).",
+    "Tactical Mastery is baseline: you keep 10 Rage when you swap stances, 25 with Improved Tactical Mastery. Stance dancing is cheap.",
+    "Rage comes from hitting and being hit and drains out of combat. Lingering Rage lets you carry Rage into the next pull. Chain your pulls.",
+    "Victory Rush heals 10% HP after each kill. Put it on an easy key. It saves a lot of eating.",
+    "Train in this order when gold is short: Rend, Overpower, Battle Shout, Charge, Heroic Strike, Sunder Armor, Cleave, Victory Rush, Mortal Strike. Thunder Clap, Hamstring and Demoralizing Shout ranks can wait.",
+    "Macro: '#showtooltip\\n/cast [nostance:1] Battle Stance; Charge' charges from any stance.",
+    "Macro: '#showtooltip\\n/cast [nostance:3] Berserker Stance; Intercept' for chasing.",
+    "Professions: Mining + Blacksmithing (Forever adds leveling recipes, and you can make your own weapons). Leatherworking to 20 gives the Camp Tent (5% rested XP each hour). Train First Aid for bandages.",
+    "Spend Legacy Points in the Adventure tree: Thrill of Adventure first, then Well Rested."
+   ],
+   "tips_ru": [
+    "Стойки: для заданий оставайтесь в «Боевой стойке» («Рывок», «Превосходство», «Кровопускание», «Размашистые удары»). На 10 уровне выполните задание на «Оборонительную стойку», на 30 — на «Стойку берсерка» («Вихрь», «Перехват», «Ярость берсерка», «Зуботычина»).",
+    "«Тактическое превосходство» есть у всех: при смене стойки сохраняется 10 ярости, а с «Улучшенным тактическим превосходством» — 25. Менять стойки дёшево.",
+    "Ярость копится от ваших ударов и от полученного урона и уходит вне боя. «Длительная ярость» помогает перенести ярость на следующую группу. Нападайте на противников без пауз.",
+    "«Победный раж» после каждого убийства лечит 10% здоровья. Поставьте его на удобную клавишу — это сильно сокращает время на еду.",
+    "Если не хватает золота, обучайтесь в таком порядке: «Кровопускание», «Превосходство», «Боевой крик», «Рывок», «Удар героя», «Раскол брони», «Рассекающий удар», «Победный раж», «Смертельный удар». Ранги «Удара грома», «Подрезать сухожилия» и «Деморализующего крика» могут подождать.",
+    "Макрос для рывка из любой стойки: '#showtooltip\\n/cast [nostance:1] Боевая стойка; Рывок'.",
+    "Макрос для погони: '#showtooltip\\n/cast [nostance:3] Стойка берсерка; Перехват'.",
+    "Профессии: горное дело + кузнечное дело (в Forever есть рецепты для прокачки, оружие можно делать самому). Кожевничество до 20 даёт «Лагерную палатку» (5% бонусного опыта раз в час). Изучите первую помощь ради бинтов.",
+    "Очки наследия вкладывайте в ветку «Приключения»: сначала «Приключенческий азарт», затем «Хороший отдых»."
+   ]
+  },
+  {
+   "id": "fury_dps",
+   "name_en": "Fury DPS (Dual Wield, 17/34/0, raid/dungeon)",
+   "name_ru": "Неистовство, бой двумя оружиями (17/34/0, рейды и подземелья)",
+   "role": "DPS",
+   "summary_en": "Wowhead's Fury raid build for two one-handed weapons. It takes Improved Tactical Mastery, Improved Overpower, Deep Wounds and Impale in Arms, then all the core Fury talents: Cruelty, Unbridled Wrath, Furious Precision, Dual Wield Specialization, Death Wish, Flurry and Bloodthirst. It is the standard single-target melee DPS spec at level 60. For dungeons, you can move Improved Berserker Rage points into Enrage and Lingering Rage.",
+   "summary_ru": "Рейдовый билд «Неистовство» с Wowhead для двух одноручных оружий. В ветке «Оружие» он берёт «Улучшенное тактическое превосходство», «Улучшенное превосходство», «Глубокие раны» и «Прокалывание», затем все ключевые таланты «Неистовства»: «Безжалостность», «Необузданный гнев», «Неистовая точность», «Специализация на бое двумя оружиями», «Инстинкт смерти», «Шквал» и «Кровожадность». Это стандартный спек для урона по одной цели ближнего боя на 60 уровне. В подземельях очки из «Улучшенной ярости берсерка» можно перенести в «Исступление» и «Длительную ярость».",
+   "order": [
+    [
+     "Improved Rend",
+     3
+    ],
+    [
+     "Improved Heroic Strike",
+     2
+    ],
+    [
+     "Improved Tactical Mastery",
+     3
+    ],
+    [
+     "Improved Heroic Strike",
+     1
+    ],
+    [
+     "Improved Overpower",
+     1
+    ],
+    [
+     "Deep Wounds",
+     3
+    ],
+    [
+     "Anger Management",
+     1
+    ],
+    [
+     "Improved Overpower",
+     1
+    ],
+    [
+     "Impale",
+     2
+    ],
+    [
+     "Cruelty",
+     5
+    ],
+    [
+     "Unbridled Wrath",
+     5
+    ],
+    [
+     "Furious Precision",
+     3
+    ],
+    [
+     "Enrage",
+     2
+    ],
+    [
+     "Dual Wield Specialization",
+     5
+    ],
+    [
+     "Reckless Swings",
+     1
+    ],
+    [
+     "Improved Execute",
+     2
+    ],
+    [
+     "Death Wish",
+     1
+    ],
+    [
+     "Improved Berserker Rage",
+     2
+    ],
+    [
+     "Improved Whirlwind",
+     2
+    ],
+    [
+     "Flurry",
+     3
+    ],
+    [
+     "Bloodthirst",
+     1
+    ],
+    [
+     "Enrage",
+     2
+    ]
+   ],
+   "rotation_en": [
+    "Stay in Berserker Stance. Keep Battle Shout up, and keep 5 Sunder Armor stacks if no tank or other warrior does.",
+    "Execute when the target is below 20% health (it replaces almost everything else).",
+    "Bloodthirst on cooldown.",
+    "Whirlwind on cooldown.",
+    "Overpower when it is available and you have less than 30 Rage (Improved Tactical Mastery keeps 25 Rage through the swap).",
+    "Heroic Strike above about 65 Rage. Use Cleave instead with 2 or more targets (above about 60 Rage).",
+    "Use Reckless Swings on cooldown for Rage. It costs health, so keep healers in mind.",
+    "Cooldowns: Death Wish (3 min) during execute phase or burst windows. Recklessness (30 min) together with Death Wish at the end of a boss fight."
+   ],
+   "rotation_ru": [
+    "Оставайтесь в «Стойке берсерка». Держите «Боевой крик», а если «Раскол брони» не накладывает танк или другой воин, поддерживайте 5 его применений.",
+    "Когда у цели меньше 20% здоровья, используйте «Казнь» (она почти полностью заменяет остальные приёмы).",
+    "«Кровожадность» по готовности.",
+    "«Вихрь» по готовности.",
+    "«Превосходство», если оно доступно и ярости меньше 30 («Улучшенное тактическое превосходство» сохраняет 25 ярости при смене стойки).",
+    "«Удар героя» при ярости выше ~65. Против 2+ целей вместо него «Рассекающий удар» (при ярости выше ~60).",
+    "«Безрассудные удары» по готовности для ярости. Они стоят здоровья, учитывайте лекарей.",
+    "Кулдауны: «Инстинкт смерти» (3 мин) в фазе «Казни» или во время всплеска урона. «Безрассудство» (30 мин) вместе с «Инстинктом смерти» в конце боя с боссом."
+   ],
+   "stats_en": "At 60, get Hit to 8% first (the cap against bosses). Furious Precision adds 10% off-hand hit, and Hit above 8% is still a small gain for white hits. Then Expertise ('reduces dodge and parry'), then Crit (feeds Flurry, Deep Wounds, Impale and extra Rage; Human Ruthless gives +1%), then Strength (2 AP), then Agility (20 = 1% crit), then Stamina. Wowhead's Fury page still lists 'Weapon Skill to 305' first; if gear with weapon skill exists, it lowers the hit cap. Use a slow main hand and a fast or slow off hand. Rage is normalized to weapon speed in Forever, so speed matters less for Rage than in Classic.",
+   "stats_ru": "На 60 уровне сначала меткость до 8% (предел против боссов). «Неистовая точность» добавляет 10% меткости левой руке, а меткость сверх 8% всё ещё немного повышает урон автоатак. Затем мастерство («снижение уклонения и парирования цели»), затем крит (усиливает «Шквал», «Глубокие раны», «Прокалывание» и даёт больше ярости; человеческая «Безжалостность» даёт +1%), затем сила (2 силы атаки), затем ловкость (20 = 1% крита), затем выносливость. На странице Wowhead для «Неистовства» первым пунктом всё ещё указано «навык владения оружием до 305»; если найдёте вещи с навыком оружия, они снижают предел меткости. В правую руку берите медленное оружие, в левую — быстрое или медленное. В Forever ярость нормализована по скорости оружия, поэтому скорость влияет на ярость меньше, чем в Classic.",
+   "gear_en": [
+    "Weapons: Dal'Rend's Sacred Charge + Dal'Rend's Tribal Guardian (Warchief Rend Blackhand, UBRS) as a set. Ironfoe (Emperor Dagran Thaurissan, BRD) and Dragon's Call (Shade of Eranikus, Sunken Temple) are rare upgrades.",
+    "Head: Fury Visor (quest, Sunken Temple). Later Lionheart Helm (Blacksmithing, rare plans).",
+    "Neck: Mark of Fordring (quest 'In Dreams', Western Plaguelands).",
+    "Tier 0.5 'of Heroism' pieces for warriors (Arms/Fury version): Breastplate, Spaulders, Gauntlets, Belt, Legplates, Battleboots of Heroism.",
+    "Wrists: Battleborn Armbraces (Warchief Rend Blackhand, UBRS).",
+    "Rings: Blackstone Ring (Maraudon), Tarnished Elven Ring (Dire Maul North), Engraved Band (quest 'Blackmaw Reclamation', Blackmaw Hold), Cutthroat's Signet (Pix Xizzix, Tarnished Undermine Real).",
+    "Trinkets: Hand of Justice (Emperor Dagran Thaurissan, BRD), Blackhand's Breadth (quest 'General Drakkisath's Demise'), Counterattack Lodestone (Dire Maul North tribute), Behemoth Bones (Blackmaw Hold).",
+    "Alliance reputation gear: Theramore Gauntlets and Theramore Epaulets (Theramore Expeditionary Force, Exalted), Highlander's Plate Girdle (League of Arathor, Honored).",
+    "Ranged: Satyr's Bow (Zevrim Thornhoof, Dire Maul East)."
+   ],
+   "gear_ru": [
+    "Оружие: «Священный заряд Дал'Ренда» и «Племенной страж Дал'Ренда» (Вождь Ренд Чернорук, Пик Черной горы), лучше вместе как комплект. Редкие улучшения: «Железогубитель» (Император Дагран Тауриссан, Глубины Черной горы) и «Драконий зов» (Тень Эраникуса, Затонувший храм).",
+    "Голова: «Щиток Ярости» (задание, Затонувший храм). Позже «Шлем Львиного Сердца» (кузнечное дело, редкий чертёж).",
+    "Шея: «Знак Фордринга» (задание «Во сне», Западные Чумные земли).",
+    "Комплект 0.5 «героизма» для воинов (версия для «Оружия» и «Неистовства»): «Кираса Героизма», наплечники, рукавицы, пояс, поножи и «Боевые сапоги героизма».",
+    "Запястья: «Битворожденные наручи» (Вождь Ренд Чернорук, Пик Черной горы).",
+    "Кольца: «Кольцо Черного камня» (Мародон), «Потускневшее эльфийское кольцо» (Забытый Город, север), Engraved Band (задание «Blackmaw Reclamation», подземелье Blackmaw Hold; русское название не найдено), «Печатка бандита» (Пикс Ксиззикс, за Tarnished Undermine Real).",
+    "Аксессуары: «Рука правосудия» (Император Дагран Тауриссан), «Пластина Чернорука» (задание «Кончина генерала Драккисата»), «Магнит контратаки» (сундук дани, Забытый Город), Behemoth Bones (Blackmaw Hold; русское название не найдено).",
+    "Репутационные вещи Альянса: «Тераморские рукавицы» и «Тераморские эполеты» (Theramore Expeditionary Force, превознесение), «Латный ремень горца» (Лига Аратора, уважение).",
+    "Оружие дальнего боя: «Лук сатира» (Зеврим Терновое Копыто, Забытый Город, восток)."
+   ],
+   "tips_en": [
+    "This build has 17 points in Arms, so you can level with the Arms leveling build and respec to Fury at 60. Fury leveling needs two good weapons and plenty of Hit.",
+    "Fury relies on being hit and on crits for Rage. If Rage is short, use Bloodrage and Berserker Rage (both also trigger Gore Drinker if you take it).",
+    "Berserker Stance increases damage taken. Watch threat and do not out-threat the tank in the first seconds of a pull.",
+    "Macro: '#showtooltip\\n/cast [nostance:1] Battle Stance; Overpower' for quick Overpower. Swap back with '/cast Berserker Stance'.",
+    "Bind Pummel (Berserker Stance) for interrupts.",
+    "Consumables: Elixir of the Mongoose / Giants, Juju Power, Mighty Rage Potion, sharpening or weight stones on weapons.",
+    "Professions at 60: Blacksmithing (Lionheart Helm, Arcanite Reaper, Titanic Leggings when plans exist) or Engineering. Mining feeds both."
+   ],
+   "tips_ru": [
+    "В этом билде 17 очков в «Оружии», поэтому можно качаться билдом «Оружие» и перейти на «Неистовство» на 60. Для прокачки в «Неистовстве» нужны два хороших оружия и много меткости.",
+    "Ярость для «Неистовства» дают полученные удары и криты. Если ярости не хватает, используйте «Кровавую ярость» и «Ярость берсерка» (обе запускают «Упоение кровью», если оно взято).",
+    "«Стойка берсерка» увеличивает получаемый урон. Следите за угрозой и не перебивайте танка в первые секунды боя.",
+    "Макрос для быстрого «Превосходства»: '#showtooltip\\n/cast [nostance:1] Боевая стойка; Превосходство'. Обратно: '/cast Стойка берсерка'.",
+    "Назначьте удобную клавишу на «Зуботычину» («Стойка берсерка») для прерываний.",
+    "Расходники: «Эликсир мангуста» / «Эликсир великанов», «Сила джуджу», «Мощное зелье ярости», точильные камни или грузила на оружие.",
+    "Профессии на 60: кузнечное дело («Шлем Львиного Сердца», «Арканитовый жнец», «Поножи титанов», когда появятся чертежи) или инженерное дело. Горное дело обеспечивает материалами обе."
+   ]
+  },
+  {
+   "id": "prot_tank",
+   "name_en": "Protection Tank (Standard, 4/15/32)",
+   "name_ru": "Защита, танк (стандартный, 4/15/32)",
+   "role": "TANK",
+   "summary_en": "Wowhead's standard Protection build. It takes all the core shield talents: Shield Specialization, Defiance, Master of Defense, Last Stand, Improved Shield Wall, Bastion and Shield Slam. Vanguard lets you Charge in Defensive Stance. After that it adds Cruelty, Unbridled Wrath and Enrage in Fury for threat and Rage. It works for dungeons and raids. Protection is also a strong leveling spec in Forever.",
+   "summary_ru": "Стандартный билд «Защита» с Wowhead. Он берёт все ключевые таланты для щита: «Специализация на щитах», «Неукротимость», «Мастер обороны», «Ни шагу назад», «Улучшенная глухая оборона», «Бастион» и «Сокрушение щитом». «Авангард» позволяет делать «Рывок» в «Оборонительной стойке». После этого билд берёт «Безжалостность», «Необузданный гнев» и «Исступление» в «Неистовстве» ради угрозы и ярости. Подходит для подземелий и рейдов. «Защита» в Forever также сильна для прокачки.",
+   "order": [
+    [
+     "Shield Specialization",
+     5
+    ],
+    [
+     "Improved Revenge",
+     3
+    ],
+    [
+     "Anticipation",
+     2
+    ],
+    [
+     "Master of Defense",
+     2
+    ],
+    [
+     "Last Stand",
+     1
+    ],
+    [
+     "Defiance",
+     3
+    ],
+    [
+     "Vanguard",
+     1
+    ],
+    [
+     "Anticipation",
+     3
+    ],
+    [
+     "Improved Shield Wall",
+     2
+    ],
+    [
+     "Concussion Blow",
+     1
+    ],
+    [
+     "Focused Rage",
+     2
+    ],
+    [
+     "Bastion",
+     5
+    ],
+    [
+     "Shield Slam",
+     1
+    ],
+    [
+     "Cruelty",
+     5
+    ],
+    [
+     "Unbridled Wrath",
+     5
+    ],
+    [
+     "Enrage",
+     5
+    ],
+    [
+     "Deflection",
+     4
+    ],
+    [
+     "Focused Rage",
+     1
+    ]
+   ],
+   "rotation_en": [
+    "Defensive Stance with a shield. Pull with Charge (Vanguard) or a ranged weapon.",
+    "Shield Block whenever available (off the GCD) to block hits and trigger Revenge.",
+    "Revenge on cooldown.",
+    "Shield Slam on cooldown.",
+    "Sunder Armor up to 5 stacks on the main target; fill spare GCDs with it.",
+    "Keep Thunder Clap (attack-speed slow and AoE threat) and Demoralizing Shout up, and Battle Shout for the group.",
+    "Heroic Strike above about 30 Rage on one target. Use Cleave instead on packs.",
+    "AoE packs: Thunder Clap first, then Shield Block, Revenge, Shield Slam, Cleave, and tab-Sunder loose mobs.",
+    "Taunt anything that leaves you. Mocking Blow (Battle Stance) is the backup, and Challenging Shout is the emergency AoE taunt.",
+    "Defensives: Shield Wall before big hits (Defensive Stance, about 4 min CD with Improved Shield Wall), Last Stand when low. Retaliation (Battle Stance) also works as an AoE damage cooldown."
+   ],
+   "rotation_ru": [
+    "«Оборонительная стойка» и щит. Притягивайте врагов «Рывком» («Авангард») или выстрелом.",
+    "Используйте «Блок щитом» по готовности (вне общего кулдауна): он блокирует удары и открывает «Реванш».",
+    "«Реванш» по готовности.",
+    "«Сокрушение щитом» по готовности.",
+    "«Раскол брони» до 5 применений на основной цели; заполняйте им свободные глобальные кулдауны.",
+    "Поддерживайте «Удар грома» (замедление атаки, угроза по площади) и «Деморализующий крик», а для группы — «Боевой крик».",
+    "«Удар героя» при ярости выше ~30 против одной цели. На группах вместо него «Рассекающий удар».",
+    "Группы противников: сначала «Удар грома», затем «Блок щитом», «Реванш», «Сокрушение щитом», «Рассекающий удар», а «Раскол брони» по Tab на отбившихся мобов.",
+    "«Провокация» на всё, что ушло от вас. Запасной вариант — «Дразнящий удар» («Боевая стойка»), в экстренном случае — «Вызывающий крик» по площади.",
+    "Защитные: «Глухая оборона» заранее перед сильными ударами («Оборонительная стойка», ~4 мин восстановления с талантом), «Ни шагу назад» при низком здоровье. «Возмездие» («Боевая стойка») можно использовать как кулдаун урона по площади."
+   ],
+   "stats_en": "Balanced setup (Wowhead): Expertise to 6.5%, then Stamina, then Hit to 8%, then more Expertise (14% hard cap), Crit, Armor, Agility, Block Value, Strength/AP, Defense, and the avoidance stats. For progression raiding, use the defensive order: Stamina, Defense to 440, Armor, Agility, more Defense, Parry, Dodge, Block Value. Agility is a good tank stat (armor, dodge and crit). Strength adds threat and little defense (20 Str = 1 Block Value). Defense 440 is the target that keeps bosses from critting you.",
+   "stats_ru": "Сбалансированный вариант (Wowhead): мастерство до 6,5%, затем выносливость, затем меткость до 8%, затем ещё мастерство (жёсткий предел 14%), крит, броня, ловкость, показатель блокирования, сила/сила атаки, защита и характеристики уклонения. Для прогресса в рейдах используйте защитный порядок: выносливость, защита до 440, броня, ловкость, остальная защита, парирование, уклонение, показатель блокирования. Ловкость — хорошая характеристика для танка (броня, уклонение и крит). Сила даёт угрозу и мало защиты (20 силы = 1 показатель блокирования). Защита 440 — цель, при которой боссы не наносят вам критических ударов.",
+   "gear_en": [
+    "Shield: Draconian Deflector (General Drakkisath, UBRS). Skullflame Shield is a strong epic alternative.",
+    "Head: Lionheart Helm (Blacksmithing) is good for both threat and survival.",
+    "Trinkets: Hand of Justice (Emperor Dagran Thaurissan, BRD), Force of Will, Blackhand's Breadth (quest 'General Drakkisath's Demise').",
+    "Tier 0.5 'of Heroism' set (Protection version) from the Tier 0.5 questline.",
+    "Stockade Pauldrons (rare world drop) and other high Stamina/Defense plate. Theramore reputation gear is also worth checking.",
+    "While leveling, a one-handed weapon + shield with Stamina/Strength works fine. Swap to a two-hander for Retaliation or solo AoE if you like.",
+    "Keep a second set of high-damage DPS gear for easy dungeon content. Wowhead stresses gear with good stats for its slot over the 'tank stats' label."
+   ],
+   "gear_ru": [
+    "Щит: «Дракорианский отражающий щит» (генерал Драккисат, Пик Черной горы). Сильная эпическая альтернатива — «Щит пылающего черепа».",
+    "Голова: «Шлем Львиного Сердца» (кузнечное дело) хорош и для угрозы, и для выживаемости.",
+    "Аксессуары: «Рука правосудия» (Император Дагран Тауриссан), «Амулет Сильной Воли», «Пластина Чернорука» (задание «Кончина генерала Драккисата»).",
+    "Комплект 0.5 «героизма» (версия для «Защиты») из цепочки заданий T0.5.",
+    "«Тюремное наплечье» (редкая добыча в мире) и другие латы с высокой выносливостью и защитой. Стоит посмотреть и снаряжение за репутацию Терамора.",
+    "При прокачке достаточно одноручного оружия и щита с выносливостью и силой. Для «Возмездия» или для убийства групп в одиночку можно брать двуручное.",
+    "Для лёгких подземелий держите второй комплект с высоким уроном. Wowhead советует выбирать вещи с хорошими характеристиками для своего слота, а не по ярлыку «вещь для танка»."
+   ],
+   "tips_en": [
+    "Get Defensive Stance from the level 10 warrior quest before anything else. Protection becomes strong at 16 with Shield Block and Revenge.",
+    "Wowhead considers Protection one of the best warrior leveling specs for the first 35-40 levels in Forever. Bastion gives +10% damage with a shield and Victory Rush restores health.",
+    "Rage comes from taking hits, blocks (Shield Specialization) and dodges/parries (Master of Defense). Do not swap stances at high Rage, because you keep only 10 (25 with Improved Tactical Mastery).",
+    "Execute needs Battle or Berserker Stance. Only swap for it when incoming damage is low.",
+    "Macro: '#showtooltip\\n/cast [nostance:2] Defensive Stance; Shield Wall' and '#showtooltip\\n/cast [nostance:1] Battle Stance; Mocking Blow'.",
+    "Mark targets and pull with Charge (Vanguard) so you do not lose your stance.",
+    "Professions: Mining + Blacksmithing (Lionheart Helm, shields). Add First Aid. Consider Engineering for grenades, Free Action Potion and Limited Invulnerability Potion use in PvE."
+   ],
+   "tips_ru": [
+    "Первым делом выполните классовое задание на 10 уровне и получите «Оборонительную стойку». С 16 уровня («Блок щитом» и «Реванш») «Защита» становится сильной.",
+    "Wowhead считает «Защиту» одним из лучших вариантов для прокачки воина на первых 35–40 уровнях в Forever. «Бастион» даёт +10% урона со щитом, а «Победный раж» восстанавливает здоровье.",
+    "Ярость дают полученные удары, блоки («Специализация на щитах») и уклонения/парирования («Мастер обороны»). Не меняйте стойку при большом запасе ярости: сохраняется только 10 (25 с «Улучшенным тактическим превосходством»).",
+    "«Казнь» требует «Боевую стойку» или «Стойку берсерка». Переключайтесь ради неё, только когда входящий урон мал.",
+    "Макросы: '#showtooltip\\n/cast [nostance:2] Оборонительная стойка; Глухая оборона' и '#showtooltip\\n/cast [nostance:1] Боевая стойка; Дразнящий удар'.",
+    "Помечайте цели и начинайте бой «Рывком» («Авангард»), чтобы не терять стойку.",
+    "Профессии: горное дело + кузнечное дело («Шлем Львиного Сердца», щиты), плюс первая помощь. Инженерное дело полезно ради гранат. В PvE пригодятся «Зелье свободы действий» и «Слабое зелье неуязвимости»."
+   ]
+  }
+ ],
+ "forever_changes_ru": "Forever сохраняет три классические ветки воина, но многие таланты переработаны. «Мастер оружия» заменяет четыре таланта специализации по оружию (крит для топоров и древкового, пробивание брони для дробящего, дополнительные атаки для мечей). Новые таланты: «Пронзающий удар», «Кровавый азарт» («Кровопускание» вызывает «Превосходство»), «Затяжная ярость», «Яростная точность», «Безрассудные взмахи», «Кровопийца», «Улучшенный вихрь», «Мастер обороны» и «Авангард» («Рывок» в оборонительной стойке). «Бастион» даёт +10% к урону со щитом. Базовые изменения: «Тактическое мастерство» стало базовым (при смене стойки сохраняется 10 ярости, с талантом — 25). «Победный раж» (20 уровень, восстановление 30 сек.) исцеляет 10% здоровья после убийства. «Боевой крик» действует на весь рейд и включает старый «Улучшенный боевой крик». «Удар грома» работает в оборонительной стойке, восстанавливается 6 сек. и растёт от силы атаки. У «Сокрушения» восстановление 15 сек., которое снижает «Улучшенное сокрушение». «Кровожадность» больше не лечит и даёт +10% к скорости бега. «Глухая оборона», «Возмездие» и «Безрассудство» больше не делят восстановление, а «Глухая оборона» и «Возмездие» восстанавливаются 15 мин. Ярость от ударов нормализована по скорости оружия, криты дают на 75% больше ярости, а броня больше не снижает ярость от получаемого урона. Оборонительная стойка выдаётся за задание на 10 уровне, стойка берсерка — на 30. Характеристики: «Мастерство» (в окне персонажа — «снижение шанса уклонения и парирования») — новая характеристика, на части экипировки есть скорость, а расовые бонусы к навыку владения оружием убраны. Расовые способности человека теперь: «Беспощадность» (+1% к криту), «Воля к жизни» (снятие оглушения), «Восприятие» и «Человеческий дух». Предел меткости ближнего боя против босса (+3 уровня) — 8%. Хотфиксы 10–16 ноября: «Размашистые удары» больше не тратят заряды без второй цели, «Ярость берсерка» снимает «Ошеломление», а «Необузданный гнев», «Шквал» и «Безрассудные взмахи» корректно работают с «Ударом героя» и «Рассекающим ударом»."
+}

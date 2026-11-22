@@ -1,0 +1,833 @@
+{
+ "class": "WARLOCK",
+ "patch": "1.60.1 (build 71037); talent data from the Wowhead Forever database snapshot of 2026-11-20 (after the Nov 10-11 hotfixes)",
+ "sources": [
+  "https://www.wowhead.com/forever/talent-calc/warlock",
+  "https://www.wowhead.com/forever/guide/classes/warlock/affliction/dps-leveling-tips",
+  "https://www.wowhead.com/forever/guide/classes/warlock/affliction/talent-builds-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/warlock/affliction/rotation-cooldowns-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/warlock/affliction/bis-gear",
+  "https://www.wowhead.com/forever/guide/classes/warlock/destruction/talent-builds-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/warlock/destruction/rotation-cooldowns-pve-dps"
+ ],
+ "confidence_notes": "Talent names, maxRank, tier (row+1), col (col+1, 1-based) and spellId were read directly from Wowhead's Forever talent-calculator data (52 talents: Affliction 17, Demonology 19, Destruction 16). Wowhead's internal tree keys are 'WarlockCurses' and 'WarlockSummoning', but the calculator shows the trees as Affliction, Demonology and Destruction. spellId is the rank-1 id, and multi-rank talents share one id. name_ru comes from Wowhead's ruRU tooltips for the Forever data. The leveling order is Wowhead's own published order (the 'No Respec' 41/7/3 path). The two endgame builds (Affliction 'Wrack' 35/11/5 and Destruction 'Sayaad' 33/4/14 point distributions) come from Wowhead's simulation-based talent guides, but those guides publish no point order. The level-by-level order for them was written here: tier by tier, honoring prerequisites, main tree first. It is valid, but it is not Wowhead's. The hit cap is 17% vs bosses (4% vs same-level trash/PvP). Several BiS items have no Russian names in the Forever DB yet, so English names are kept in gear_ru.",
+ "forever_changes_en": "Forever reshapes the Warlock. The Affliction curses Agony and Doom are now 'Banes' (Bane of Agony, Bane of Doom; one Bane plus one Curse per target), and Bane of Havoc copies 15% of your damage to a second target. Wrack is the 31-point Affliction channel: while you channel it, Corruption, Siphon Life and Bane of Agony tick twice as fast, and Soul Siphon/Pandemic boost it. Destruction gains Incinerate, a Conflagrate that no longer consumes Immolate, and Shadow and Flame (Conflagrate buffs Shadow damage and Shadowburn buffs Fire damage, each by 20%). Demonology gains Demonic Knowledge and Demonic Pact. The Succubus/Incubus are now the Sayaad, and demons take 50% less damage from boss AoE. Affliction with drain-tanking is the smoothest leveling path.",
+ "trees": [
+  {
+   "name": "Affliction",
+   "talents": [
+    {
+     "name": "Improved Life Tap",
+     "tier": 1,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 18182,
+     "name_ru": "Улучшенный жизнеотвод"
+    },
+    {
+     "name": "Suppression",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 18174,
+     "name_ru": "Подавление"
+    },
+    {
+     "name": "Improved Corruption",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 17810,
+     "name_ru": "Улучшенная порча"
+    },
+    {
+     "name": "Grim Reach",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 18218,
+     "name_ru": "Предел мрака"
+    },
+    {
+     "name": "Soul Harvest",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 437032,
+     "name_ru": "Жатва душ"
+    },
+    {
+     "name": "Improved Drains",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 403511,
+     "name_ru": "Улучшенное похищение"
+    },
+    {
+     "name": "Improved Bane of Agony",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 18827,
+     "name_ru": "Улучшенный бич агонии"
+    },
+    {
+     "name": "Fel Concentration",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 17783,
+     "name_ru": "Сосредоточение Скверны"
+    },
+    {
+     "name": "Amplify Curse",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 18288,
+     "name_ru": "Усиление проклятия"
+    },
+    {
+     "name": "Pandemic",
+     "tier": 3,
+     "col": 4,
+     "maxRank": 3,
+     "spellId": 427712,
+     "name_ru": "Пандемия"
+    },
+    {
+     "name": "Malevolence",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 5,
+     "spellId": 1310949,
+     "name_ru": "Злоба"
+    },
+    {
+     "name": "Nightfall",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 18094,
+     "name_ru": "Сумерки"
+    },
+    {
+     "name": "Curse of Exhaustion",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 18223,
+     "name_ru": "Проклятие изнеможения"
+    },
+    {
+     "name": "Siphon Life",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 18265,
+     "name_ru": "Вытягивание жизни"
+    },
+    {
+     "name": "Soul Siphon",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 17804,
+     "name_ru": "Вытягивание души"
+    },
+    {
+     "name": "Shadow Mastery",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 18271,
+     "name_ru": "Власть над Тенями"
+    },
+    {
+     "name": "Wrack",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 1316697,
+     "name_ru": "Судороги"
+    }
+   ]
+  },
+  {
+   "name": "Demonology",
+   "talents": [
+    {
+     "name": "Improved Health Funnel",
+     "tier": 1,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 18703,
+     "name_ru": "Улучшенный канал здоровья"
+    },
+    {
+     "name": "Improved Imp",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 18694,
+     "name_ru": "Улучшенный бес"
+    },
+    {
+     "name": "Demonic Embrace",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 18697,
+     "name_ru": "Демоническое облачение"
+    },
+    {
+     "name": "Unholy Power",
+     "tier": 1,
+     "col": 4,
+     "maxRank": 5,
+     "spellId": 18769,
+     "name_ru": "Нечестивая сила"
+    },
+    {
+     "name": "Demonic Aegis",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 1235316,
+     "name_ru": "Демоническая эгида"
+    },
+    {
+     "name": "Improved Voidwalker",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 18705,
+     "name_ru": "Улучшенный демон Бездны"
+    },
+    {
+     "name": "Fel Vitality",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 18731,
+     "name_ru": "Энергия Скверны"
+    },
+    {
+     "name": "Demonic Energies",
+     "tier": 2,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 1225214,
+     "name_ru": "Демоническая энергия"
+    },
+    {
+     "name": "Improved Sayaad",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 18754,
+     "name_ru": "Улучшенный сайаад"
+    },
+    {
+     "name": "Demonic Sacrifice",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 18788,
+     "name_ru": "Демоническое жертвоприношение"
+    },
+    {
+     "name": "Master Summoner",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 18709,
+     "name_ru": "Мастер призыва"
+    },
+    {
+     "name": "Decimation",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 440870,
+     "name_ru": "Истребление"
+    },
+    {
+     "name": "Fel Domination",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 18708,
+     "name_ru": "Господство Скверны"
+    },
+    {
+     "name": "Demonic Brand",
+     "tier": 4,
+     "col": 4,
+     "maxRank": 3,
+     "spellId": 1293695,
+     "name_ru": "Демоническое клеймо"
+    },
+    {
+     "name": "Improved Felhunter",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 1225217,
+     "name_ru": "Улучшенный охотник Скверны"
+    },
+    {
+     "name": "Soul Link",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 19028,
+     "name_ru": "Связка души"
+    },
+    {
+     "name": "Demonic Knowledge",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 412732,
+     "name_ru": "Демоническое знание"
+    },
+    {
+     "name": "Master Demonologist",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 23785,
+     "name_ru": "Мастер-демонолог"
+    },
+    {
+     "name": "Demonic Pact",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 425464,
+     "name_ru": "Демонический союз"
+    }
+   ]
+  },
+  {
+   "name": "Destruction",
+   "talents": [
+    {
+     "name": "Destructive Reach",
+     "tier": 1,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 17917,
+     "name_ru": "Предел разрушения"
+    },
+    {
+     "name": "Improved Shadow Bolt",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 17793,
+     "name_ru": "Улучшенная стрела Тьмы"
+    },
+    {
+     "name": "Bane",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 17788,
+     "name_ru": "Погибель"
+    },
+    {
+     "name": "Molten Skin",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 5,
+     "spellId": 1225220,
+     "name_ru": "Раскаленная кожа"
+    },
+    {
+     "name": "Cataclysm",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 17778,
+     "name_ru": "Катаклизм"
+    },
+    {
+     "name": "Aftermath",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 18119,
+     "name_ru": "Последствия"
+    },
+    {
+     "name": "Ruin",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 17959,
+     "name_ru": "Разгром"
+    },
+    {
+     "name": "Shadowburn",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 17877,
+     "name_ru": "Ожог Тьмы"
+    },
+    {
+     "name": "Intensity",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 18135,
+     "name_ru": "Напряжение"
+    },
+    {
+     "name": "Agonizing Flames",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 17927,
+     "name_ru": "Пламенная боль"
+    },
+    {
+     "name": "Conflagrate",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 1293817,
+     "name_ru": "Поджигание"
+    },
+    {
+     "name": "Pyroclasm",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 18073,
+     "name_ru": "Пироклазм"
+    },
+    {
+     "name": "Bane of Havoc",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 1225228,
+     "name_ru": "Бич сокрушения"
+    },
+    {
+     "name": "Fire and Brimstone",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 412751,
+     "name_ru": "Огонь и сера"
+    },
+    {
+     "name": "Shadow and Flame",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 426316,
+     "name_ru": "Тьма и пламя"
+    },
+    {
+     "name": "Incinerate",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 412758,
+     "name_ru": "Испепеление"
+    }
+   ]
+  }
+ ],
+ "builds": [
+  {
+   "id": "affliction_leveling",
+   "name_en": "Affliction Leveling (No Respec)",
+   "name_ru": "Колдовство: прокачка без сброса талантов",
+   "role": "LEVELING",
+   "summary_en": "Wowhead's no-respec Affliction leveling path: instant Corruption, Suppression and Unholy Power for your demon, then Improved Drains for drain-tanking from level 30 and Wrack at 47. It ends at 41/7/3 with very little downtime thanks to Life Tap and Drain Life.",
+   "summary_ru": "Путь прокачки колдовства от Wowhead без сброса талантов: мгновенная «Порча», «Подавление» и «Нечестивая сила» для демона, затем «Улучшенное похищение» для танкования похищением с 30 уровня и «Судороги» на 47. Итог – 41/7/3 и почти никаких простоев благодаря «Жизнеотводу» и «Похищению жизни».",
+   "order": [
+    [
+     "Improved Corruption",
+     5
+    ],
+    [
+     "Suppression",
+     3
+    ],
+    [
+     "Unholy Power",
+     5
+    ],
+    [
+     "Demonic Energies",
+     2
+    ],
+    [
+     "Improved Drains",
+     3
+    ],
+    [
+     "Amplify Curse",
+     1
+    ],
+    [
+     "Improved Bane of Agony",
+     2
+    ],
+    [
+     "Suppression",
+     2
+    ],
+    [
+     "Pandemic",
+     3
+    ],
+    [
+     "Improved Life Tap",
+     1
+    ],
+    [
+     "Siphon Life",
+     1
+    ],
+    [
+     "Soul Siphon",
+     3
+    ],
+    [
+     "Improved Life Tap",
+     1
+    ],
+    [
+     "Shadow Mastery",
+     5
+    ],
+    [
+     "Wrack",
+     1
+    ],
+    [
+     "Malevolence",
+     5
+    ],
+    [
+     "Fel Concentration",
+     3
+    ],
+    [
+     "Nightfall",
+     2
+    ],
+    [
+     "Improved Shadow Bolt",
+     3
+    ]
+   ],
+   "rotation_en": [
+    "Send your demon in (Voidwalker from 10, Sayaad from 20)",
+    "Corruption (instant), then Bane of Agony and Siphon Life on tougher mobs",
+    "Pull a second mob: DoT it and Fear it while you kill the first",
+    "Drain Life to heal yourself and finish targets (drain-tank from level 30)",
+    "Wrack on fresh pulls once you have it (level 47)",
+    "Life Tap to refill mana, then Drain Life the health back"
+   ],
+   "rotation_ru": [
+    "Отправьте демона в бой (демон Бездны с 10 уровня, сайаад с 20)",
+    "«Порча» (мгновенная), затем «Бич агонии» и «Вытягивание жизни» на сильных противников",
+    "Притяните второго противника: повесьте на него эффекты периодического урона и «Страх», пока убиваете первого",
+    "«Похищение жизни» для самоисцеления и добивания (с 30 уровня – танкование похищением)",
+    "«Судороги» на новых противников, когда появятся (47 уровень)",
+    "«Жизнеотвод» для восполнения маны, затем восстановите здоровье «Похищением жизни»"
+   ],
+   "stats_en": "While leveling: Spell Damage/Shadow Damage > Stamina (fuels Life Tap and drain-tanking) > Intellect > Spirit. Kill speed depends heavily on spell power from gear.",
+   "stats_ru": "При прокачке: сила заклинаний/урон от темной магии > выносливость (питает «Жизнеотвод» и танкование похищением) > интеллект > дух. Скорость убийств сильно зависит от силы заклинаний на экипировке.",
+   "gear_en": [
+    "Greens 'of Shadow Wrath' or 'of the Eagle'",
+    "A good wand for finishing mobs early",
+    "Spell power staves and cloth from dungeons and quests",
+    "Felcloth pieces (Tailoring) at higher levels"
+   ],
+   "gear_ru": [
+    "Зеленые вещи «of Shadow Wrath» или «орла»",
+    "Хороший жезл для добивания противников в начале",
+    "Посохи и тканевые доспехи с силой заклинаний из подземелий и заданий",
+    "Вещи из ткани Скверны (портняжное дело) на высоких уровнях"
+   ],
+   "tips_en": [
+    "Feared mobs can run into other packs: Fear away from other enemies",
+    "Use the 'Respec at 40' variant if you want Wrack 7 levels earlier",
+    "Keep Soul Shards for Healthstones and Soulstone",
+    "Skip Siphon Life and the Bane on mobs that die in a few seconds",
+    "Swap Voidwalker/Sayaad depending on how risky the pull is"
+   ],
+   "tips_ru": [
+    "Противники под «Страхом» могут убежать к другим группам – направляйте их в сторону от врагов",
+    "Если хотите получить «Судороги» на 7 уровней раньше, выберите вариант со сбросом талантов на 40",
+    "Берегите осколки души для камней здоровья и камня души",
+    "Не тратьте «Вытягивание жизни» и бич на противников, которые умирают за несколько секунд",
+    "Меняйте демона Бездны и сайаада в зависимости от опасности боя"
+   ]
+  },
+  {
+   "id": "affliction_wrack_raid",
+   "name_en": "Affliction Wrack (Raid)",
+   "name_ru": "Колдовство: «Судороги» (рейды)",
+   "role": "DPS",
+   "summary_en": "Wowhead's strongest Affliction raid build (35/11/5): DoTs plus Wrack as the filler, with the Imp sacrificed through Demonic Sacrifice for 15% more Shadow damage. Shadow Mastery, Pandemic, Malevolence, Soul Siphon and Improved Shadow Bolt (via Nightfall procs) carry the damage.",
+   "summary_ru": "Сильнейшая рейдовая сборка колдовства по версии Wowhead (35/11/5): эффекты периодического урона и «Судороги» как основное заклинание, бес принесен в жертву через «Демоническое жертвоприношение» ради +15% урона от темной магии. Урон дают «Власть над Тенями», «Пандемия», «Злоба», «Вытягивание души» и «Улучшенная стрела Тьмы» (через срабатывания «Сумерек»).",
+   "order": [
+    [
+     "Improved Corruption",
+     5
+    ],
+    [
+     "Suppression",
+     5
+    ],
+    [
+     "Improved Bane of Agony",
+     2
+    ],
+    [
+     "Amplify Curse",
+     1
+    ],
+    [
+     "Pandemic",
+     3
+    ],
+    [
+     "Malevolence",
+     5
+    ],
+    [
+     "Siphon Life",
+     1
+    ],
+    [
+     "Soul Siphon",
+     3
+    ],
+    [
+     "Nightfall",
+     2
+    ],
+    [
+     "Improved Life Tap",
+     2
+    ],
+    [
+     "Shadow Mastery",
+     5
+    ],
+    [
+     "Wrack",
+     1
+    ],
+    [
+     "Demonic Embrace",
+     5
+    ],
+    [
+     "Demonic Aegis",
+     2
+    ],
+    [
+     "Fel Vitality",
+     3
+    ],
+    [
+     "Demonic Sacrifice",
+     1
+    ],
+    [
+     "Improved Shadow Bolt",
+     5
+    ]
+   ],
+   "rotation_en": [
+    "Pre-pull Shadow Bolt timed to land just after the tank's first hits",
+    "Bane of Agony (with Amplify Curse whenever it's ready), never Bane of Doom in this build",
+    "Your assigned Curse (Curse of the Elements or Curse of Recklessness)",
+    "Corruption, then Siphon Life",
+    "Shadow Bolt only on Shadow Trance procs (instant)",
+    "Life Tap right after a full Wrack when mana is below ~40%",
+    "Wrack as the filler; stop it when a DoT needs refreshing"
+   ],
+   "rotation_ru": [
+    "Перед боем – «Стрела Тьмы», которая попадет сразу после первых ударов танка",
+    "«Бич агонии» (с «Усилением проклятия», когда оно готово); «Бич судьбы» в этой сборке не используется",
+    "Назначенное проклятие («Проклятие стихий» или «Проклятие безрассудства»)",
+    "«Порча», затем «Вытягивание жизни»",
+    "«Стрела Тьмы» только при срабатывании «Теневого транса» (мгновенная)",
+    "«Жизнеотвод» сразу после полной «Судороги», если маны меньше ~40%",
+    "«Судороги» как основное заклинание; прерывайте их, когда нужно обновить эффект"
+   ],
+   "stats_en": "Spell Hit to 17% vs bosses (Suppression gives 5%) > Spell Damage (+Shadow) > Critical Strike (Pandemic boosts DoT and Wrack crits) > Intellect > Stamina/Spirit.",
+   "stats_ru": "Меткость заклинаний до 17% против боссов («Подавление» дает 5%) > сила заклинаний (урон от темной магии) > критический удар («Пандемия» усиливает криты эффектов и «Судорог») > интеллект > выносливость/дух.",
+   "gear_en": [
+    "Robe of Winter Night, Felcloth Shoulders and Felcloth Gloves (Tailoring)",
+    "'of Shadow Wrath' BoE pieces: Master's Belt/Boots, Tearfall Bracers",
+    "Spellweaver's Turban and Leggings of Torment",
+    "Rod of the Ogre Magi (or Blade of the New Moon + Obsidian Bauble), Skul's Ghastly Touch wand",
+    "Eye of Orgrimmar and Royal Seal of Eldre'Thalas trinkets"
+   ],
+   "gear_ru": [
+    "«Одеяние зимней ночи», «Наплечники из ткани Скверны» и «Перчатки из ткани Скверны» (портняжное дело)",
+    "Вещи «of Shadow Wrath», становящиеся персональными при надевании: пояс и ботинки Master's, наручи Tearfall",
+    "Spellweaver's Turban и Leggings of Torment",
+    "Rod of the Ogre Magi (или Blade of the New Moon + Obsidian Bauble), жезл Skul's Ghastly Touch",
+    "Аксессуары Eye of Orgrimmar и Royal Seal of Eldre'Thalas"
+   ],
+   "tips_en": [
+    "Sacrifice the Imp, not the Sayaad: the Imp gives Shadow damage",
+    "Have Corruption, Siphon Life and Bane of Agony all up before channeling Wrack (Soul Siphon counts them)",
+    "Recasting Wrack while it channels keeps its remaining ticks",
+    "Shadow Mastery needs 25 points above it; if you move Suppression points after hit cap, keep them above it",
+    "Don't recast Bane of Agony with less than 12 s of the fight left"
+   ],
+   "tips_ru": [
+    "Приносите в жертву беса, а не сайаада: бес дает бонус к урону от темной магии",
+    "Перед «Судорогами» на цели должны быть «Порча», «Вытягивание жизни» и «Бич агонии» («Вытягивание души» учитывает их)",
+    "Повторное применение «Судорог» во время канала сохраняет оставшиеся тики",
+    "«Власти над Тенями» нужно 25 очков выше нее: убирая очки из «Подавления» после предела меткости, оставляйте их в верхних рядах",
+    "Не обновляйте «Бич агонии», если до конца боя меньше 12 с"
+   ]
+  },
+  {
+   "id": "destruction_raid",
+   "name_en": "Destruction Sayaad (Raid)",
+   "name_ru": "Разрушение с сайаадом (рейды)",
+   "role": "DPS",
+   "summary_en": "Wowhead's top Destruction raid build (14/4/33): Incinerate filler, Conflagrate and Shadowburn on cooldown to keep Shadow and Flame up, Immolate plus Bane of Doom. The Sayaad stays out with Unholy Power, and the Affliction points add hit and Pandemic.",
+   "summary_ru": "Лучшая рейдовая сборка разрушения по версии Wowhead (14/4/33): «Испепеление» как основное заклинание, «Поджигание» и «Ожог Тьмы» по готовности ради «Тьмы и пламени», «Жертвенный огонь» и «Бич судьбы». Сайаад остается в бою с «Нечестивой силой», очки в колдовстве дают меткость и «Пандемию».",
+   "order": [
+    [
+     "Bane",
+     5
+    ],
+    [
+     "Aftermath",
+     5
+    ],
+    [
+     "Cataclysm",
+     3
+    ],
+    [
+     "Ruin",
+     5
+    ],
+    [
+     "Shadowburn",
+     1
+    ],
+    [
+     "Conflagrate",
+     1
+    ],
+    [
+     "Agonizing Flames",
+     3
+    ],
+    [
+     "Bane of Havoc",
+     1
+    ],
+    [
+     "Fire and Brimstone",
+     3
+    ],
+    [
+     "Shadow and Flame",
+     5
+    ],
+    [
+     "Incinerate",
+     1
+    ],
+    [
+     "Suppression",
+     5
+    ],
+    [
+     "Improved Life Tap",
+     2
+    ],
+    [
+     "Improved Corruption",
+     3
+    ],
+    [
+     "Amplify Curse",
+     1
+    ],
+    [
+     "Pandemic",
+     3
+    ],
+    [
+     "Unholy Power",
+     4
+    ]
+   ],
+   "rotation_en": [
+    "Pre-pull Soul Fire (or Immolate if you lack Soul Shards); send the Sayaad in",
+    "Bane of Doom with 1+ minute left, otherwise Amplify Curse + Bane of Agony",
+    "Your assigned Curse, then Immolate and Corruption",
+    "Conflagrate on cooldown (keeps Immolate at 5/5 Shadow and Flame)",
+    "Shadowburn on cooldown (Soul Shard refunded)",
+    "Life Tap in gaps before DoT refreshes or while moving",
+    "Incinerate as the filler"
+   ],
+   "rotation_ru": [
+    "Перед боем – «Ожог души» (или «Жертвенный огонь», если нет осколков души); отправьте сайаада в бой",
+    "«Бич судьбы», если до конца боя больше минуты, иначе «Усиление проклятия» + «Бич агонии»",
+    "Назначенное проклятие, затем «Жертвенный огонь» и «Порча»",
+    "«Поджигание» по готовности (при 5/5 «Тьмы и пламени» не снимает «Жертвенный огонь»)",
+    "«Ожог Тьмы» по готовности (осколок души возвращается)",
+    "«Жизнеотвод» в паузах перед обновлением эффектов или в движении",
+    "«Испепеление» как основное заклинание"
+   ],
+   "stats_en": "Spell Hit to 17% vs bosses (Suppression gives 5%) > Spell Damage (Fire and Shadow both matter) > Critical Strike (Ruin) > Intellect > Stamina.",
+   "stats_ru": "Меткость заклинаний до 17% против боссов («Подавление» дает 5%) > сила заклинаний (важны и огонь, и тьма) > критический удар («Разгром») > интеллект > выносливость.",
+   "gear_en": [
+    "Generic spell power over 'of Shadow Wrath' (you deal Fire and Shadow damage)",
+    "Robe of Winter Night and Felcloth pieces",
+    "Spellweaver's Turban; Rune Band of Wizardry",
+    "Rod of the Ogre Magi or Blade of the New Moon + Obsidian Bauble",
+    "Keep at least 2 Soul Shards before each pull"
+   ],
+   "gear_ru": [
+    "Обычная сила заклинаний ценнее вещей «of Shadow Wrath» (вы наносите урон и огнем, и тьмой)",
+    "«Одеяние зимней ночи» и вещи из ткани Скверны",
+    "Spellweaver's Turban; кольцо Rune Band of Wizardry",
+    "Rod of the Ogre Magi или Blade of the New Moon + Obsidian Bauble",
+    "Перед каждым боем имейте хотя бы 2 осколка души"
+   ],
+   "tips_en": [
+    "Incinerate needs 30 points above it and Shadow and Flame needs 25; keep moved points in the Destruction tree",
+    "Put Bane of Havoc on a second target for free cleave",
+    "The Imp variant is slightly behind but safer when melee range is dangerous",
+    "Use Hellfire or Rain of Fire on 3+ targets",
+    "In dungeons, move 2 Suppression points into Improved Corruption for an instant Corruption"
+   ],
+   "tips_ru": [
+    "«Испепелению» нужно 30 очков выше него, а «Тьме и пламени» – 25; переносимые очки оставляйте в ветке разрушения",
+    "Вешайте «Бич сокрушения» на вторую цель – это бесплатный урон по нескольким целям",
+    "Вариант с бесом немного слабее, но безопаснее, когда в ближнем бою опасно",
+    "Против 3 и более целей используйте «Адское Пламя» или «Огненный ливень»",
+    "В подземельях перенесите 2 очка из «Подавления» в «Улучшенную порчу» ради мгновенной «Порчи»"
+   ]
+  }
+ ],
+ "forever_changes_ru": "Forever меняет чернокнижника. Проклятия Колдовства «Агония» и «Рок» стали «Порчами» («Порча агонии», «Порча рока»; на цели может быть одна порча и одно проклятие), а «Порча опустошения» копирует 15% вашего урона на вторую цель. «Терзание» — канальное заклинание Колдовства за 31 очко: пока оно действует, «Порча», «Похищение жизни» и «Порча агонии» тикают вдвое быстрее, а «Вытягивание души» и «Пандемия» его усиливают. Разрушение получает «Испепеление», «Поджигание», которое больше не расходует «Жертвенный огонь», и «Тень и пламя» («Поджигание» усиливает урон от Тьмы, а «Ожог Тьмы» — урон от огня, каждый на 20%). Демонология получает «Демоническое знание» и «Демонический пакт». Суккуб/инкуб теперь называются шайади, а демоны получают на 50% меньше урона от АоЕ боссов. Колдовство с «вытягивающим» танкованием — самый плавный путь прокачки."
+}

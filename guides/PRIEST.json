@@ -1,0 +1,857 @@
+{
+ "class": "PRIEST",
+ "patch": "1.60.1 (build 71037); talent data from the Wowhead Forever database snapshot of 2026-11-20 (after the Nov 10-11 hotfixes)",
+ "sources": [
+  "https://www.wowhead.com/forever/talent-calc/priest",
+  "https://www.wowhead.com/forever/guide/classes/priest/leveling-guide",
+  "https://www.wowhead.com/forever/guide/classes/priest/shadow/dps-leveling-tips",
+  "https://www.wowhead.com/forever/guide/classes/priest/shadow/talent-builds-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/priest/shadow/rotation-cooldowns-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/priest/shadow/bis-gear",
+  "https://www.wowhead.com/forever/guide/classes/priest/discipline/talent-builds-pve-healer",
+  "https://www.wowhead.com/forever/guide/classes/priest/discipline/rotation-cooldowns-pve-healer",
+  "https://www.wowhead.com/forever/guide/classes/priest/holy/talent-builds-pve-healer"
+ ],
+ "confidence_notes": "Talent names, maxRank, tier (row+1), col (col+1, 1-based) and spellId were read directly from Wowhead's Forever talent-calculator data (52 talents: Discipline 18, Holy 17, Shadow 17). spellId is the rank-1 spell id Wowhead lists, and multi-rank talents share one id. name_ru comes from Wowhead's ruRU tooltips for the Forever data; the client string for Holy Specialization contained a Latin 'C', which was corrected to Cyrillic. Builds are Wowhead's published orders and pass tier/prerequisite validation: the Shadow leveling build (16/3/32), the Shadow raid build (15/3/33) and the Discipline raid healing build (31/20/0). Discipline was chosen as the healing build because Wowhead's Holy raid build is flagged as auto-migrated from older trees, with unspent points and no talent order. Stat priorities are partly speculative on Wowhead (written before level-60 testing), and gear lists are phase 1 / pre-raid. Several BiS items have no Russian names in the Forever database yet, so the gear_ru lists keep the English item names.",
+ "forever_changes_en": "Forever reworks all three Priest trees. Discipline gains Penance, Twin Disciplines, Soul Warding, Renewed Hope and Divine Aegis absorbs, and Power Infusion remains its 31-point talent. Holy gets Prayer of Mending as its 31-point talent, plus Litany of Light, Holy Binding and a Spirit-based Spiritual Guidance. Shadow is a full DPS spec: Devouring Plague and Shadow Word: Death are core spells, alongside Improved Mind Flay (ramping ticks), Devouring Contagion, Dark Inspiration (party Spirit buff), Early Demise and Shadowform at 31 points. Priests also get race-specific abilities from quests at levels 10 and 20. The early levels still lean on a wand, and Shadowform is the big power spike at level 40-42.",
+ "trees": [
+  {
+   "name": "Discipline",
+   "talents": [
+    {
+     "name": "Power in Light",
+     "tier": 1,
+     "col": 1,
+     "maxRank": 5,
+     "spellId": 1309969,
+     "name_ru": "Усиливающий Свет"
+    },
+    {
+     "name": "Wand Specialization",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 14524,
+     "name_ru": "Специализация на жезлах"
+    },
+    {
+     "name": "Twin Disciplines",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 1225132,
+     "name_ru": "Две дисциплины"
+    },
+    {
+     "name": "Silent Resolve",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 14523,
+     "name_ru": "Молчаливая решимость"
+    },
+    {
+     "name": "Holy Precision",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 1309957,
+     "name_ru": "Священная точность"
+    },
+    {
+     "name": "Mental Strength",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 18551,
+     "name_ru": "Сила мысли"
+    },
+    {
+     "name": "Martyrdom",
+     "tier": 2,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 14531,
+     "name_ru": "Мученичество"
+    },
+    {
+     "name": "Mental Agility",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 14520,
+     "name_ru": "Подвижность мысли"
+    },
+    {
+     "name": "Inner Focus",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 14751,
+     "name_ru": "Внутреннее сосредоточение"
+    },
+    {
+     "name": "Improved Power Word: Shield",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 14748,
+     "name_ru": "Улучшенное Слово силы: Щит"
+    },
+    {
+     "name": "Meditation",
+     "tier": 3,
+     "col": 4,
+     "maxRank": 3,
+     "spellId": 14521,
+     "name_ru": "Медитация"
+    },
+    {
+     "name": "Improved Inner Fire",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 14747,
+     "name_ru": "Улучшенный внутренний огонь"
+    },
+    {
+     "name": "Improved Mana Burn",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 14750,
+     "name_ru": "Улучшенное сожжение маны"
+    },
+    {
+     "name": "Soul Warding",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 402000,
+     "name_ru": "Оберег души"
+    },
+    {
+     "name": "Penance",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 402174,
+     "name_ru": "Исповедь"
+    },
+    {
+     "name": "Renewed Hope",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 425280,
+     "name_ru": "Новая надежда"
+    },
+    {
+     "name": "Divine Aegis",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 431622,
+     "name_ru": "Божественное покровительство"
+    },
+    {
+     "name": "Power Infusion",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 10060,
+     "name_ru": "Придание сил"
+    }
+   ]
+  },
+  {
+   "name": "Holy",
+   "talents": [
+    {
+     "name": "Twilight Focus",
+     "tier": 1,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 14913,
+     "name_ru": "Сумеречная концентрация"
+    },
+    {
+     "name": "Improved Renew",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 14908,
+     "name_ru": "Улучшенное обновление"
+    },
+    {
+     "name": "Holy Specialization",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 14889,
+     "name_ru": "Специализация на магии Света"
+    },
+    {
+     "name": "Spell Warding",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 27900,
+     "name_ru": "Защита от заклинаний"
+    },
+    {
+     "name": "Divine Fury",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 18530,
+     "name_ru": "Божественное неистовство"
+    },
+    {
+     "name": "Holy Nova",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 1,
+     "spellId": 15237,
+     "name_ru": "Кольцо Света"
+    },
+    {
+     "name": "Blessed Recovery",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 27811,
+     "name_ru": "Благословленное восстановление"
+    },
+    {
+     "name": "Inspiration",
+     "tier": 3,
+     "col": 4,
+     "maxRank": 3,
+     "spellId": 14892,
+     "name_ru": "Вдохновение"
+    },
+    {
+     "name": "Holy Reach",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 27789,
+     "name_ru": "Предел сил Света"
+    },
+    {
+     "name": "Improved Healing",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 14912,
+     "name_ru": "Улучшенное исцеление"
+    },
+    {
+     "name": "Searing Light",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 14909,
+     "name_ru": "Опаляющий свет"
+    },
+    {
+     "name": "Holy Binding",
+     "tier": 4,
+     "col": 4,
+     "maxRank": 1,
+     "spellId": 1328569,
+     "name_ru": "Священная связь"
+    },
+    {
+     "name": "Litany of Light",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 1317006,
+     "name_ru": "Литания Света"
+    },
+    {
+     "name": "Spirit of Redemption",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 20711,
+     "name_ru": "Дух воздаяния"
+    },
+    {
+     "name": "Spiritual Guidance",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 14901,
+     "name_ru": "Духовное направление"
+    },
+    {
+     "name": "Spiritual Healing",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 14898,
+     "name_ru": "Духовное исцеление"
+    },
+    {
+     "name": "Prayer of Mending",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 401859,
+     "name_ru": "Молитва восстановления"
+    }
+   ]
+  },
+  {
+   "name": "Shadow",
+   "talents": [
+    {
+     "name": "Shadow Focus",
+     "tier": 1,
+     "col": 1,
+     "maxRank": 5,
+     "spellId": 15260,
+     "name_ru": "Средоточие Тьмы"
+    },
+    {
+     "name": "Blackout",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 15326,
+     "name_ru": "Затмение"
+    },
+    {
+     "name": "Spirit Tap",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 15270,
+     "name_ru": "Захват духа"
+    },
+    {
+     "name": "Improved Mind Blast",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 5,
+     "spellId": 15273,
+     "name_ru": "Улучшенный взрыв разума"
+    },
+    {
+     "name": "Improved Shadow Word: Pain",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 15275,
+     "name_ru": "Улучшенное слово Тьмы: Боль"
+    },
+    {
+     "name": "Shadow Reach",
+     "tier": 2,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 17322,
+     "name_ru": "Предел Тьмы"
+    },
+    {
+     "name": "Improved Psychic Scream",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 15392,
+     "name_ru": "Улучшенный ментальный крик"
+    },
+    {
+     "name": "Mind Flay",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 15407,
+     "name_ru": "Пытка разума"
+    },
+    {
+     "name": "Improved Mind Flay",
+     "tier": 3,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 1225139,
+     "name_ru": "Улучшенная пытка разума"
+    },
+    {
+     "name": "Dark Inspiration",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 5,
+     "spellId": 1326159,
+     "name_ru": "Темное воодушевление"
+    },
+    {
+     "name": "Vampiric Embrace",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 15286,
+     "name_ru": "Объятия вампира"
+    },
+    {
+     "name": "Shadow Weaving",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 15257,
+     "name_ru": "Плетение Тьмы"
+    },
+    {
+     "name": "Silence",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 1,
+     "spellId": 15487,
+     "name_ru": "Молчание"
+    },
+    {
+     "name": "Devouring Contagion",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 1309950,
+     "name_ru": "Всепожирающее заражение"
+    },
+    {
+     "name": "Early Demise",
+     "tier": 6,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 1310076,
+     "name_ru": "Ранняя гибель"
+    },
+    {
+     "name": "Darkness",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 15259,
+     "name_ru": "Мрак"
+    },
+    {
+     "name": "Shadowform",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 15473,
+     "name_ru": "Облик Тьмы"
+    }
+   ]
+  }
+ ],
+ "builds": [
+  {
+   "id": "shadow_leveling",
+   "name_en": "Shadow Leveling (1-60)",
+   "name_ru": "Тьма: прокачка (1-60)",
+   "role": "LEVELING",
+   "summary_en": "Wowhead's no-respec Shadow leveling path: Wand Specialization and Spirit Tap first for mana efficiency, then Mind Flay, Shadow Weaving, Devouring Contagion and Shadowform at level 42. The last points go into Discipline/Holy for Meditation and quality of life.",
+   "summary_ru": "Путь прокачки Тьмы от Wowhead без сброса талантов: сначала «Специализация на жезлах» и «Захват духа» для экономии маны, затем «Пытка разума», «Плетение Тьмы», «Всепожирающее заражение» и «Облик Тьмы» на 42 уровне. Последние очки уходят в послушание и свет ради «Медитации» и удобства.",
+   "order": [
+    [
+     "Wand Specialization",
+     2
+    ],
+    [
+     "Spirit Tap",
+     5
+    ],
+    [
+     "Improved Shadow Word: Pain",
+     2
+    ],
+    [
+     "Shadow Reach",
+     2
+    ],
+    [
+     "Shadow Focus",
+     1
+    ],
+    [
+     "Mind Flay",
+     1
+    ],
+    [
+     "Improved Mind Flay",
+     2
+    ],
+    [
+     "Shadow Focus",
+     2
+    ],
+    [
+     "Shadow Weaving",
+     3
+    ],
+    [
+     "Vampiric Embrace",
+     1
+    ],
+    [
+     "Improved Mind Blast",
+     1
+    ],
+    [
+     "Devouring Contagion",
+     2
+    ],
+    [
+     "Improved Mind Blast",
+     3
+    ],
+    [
+     "Darkness",
+     5
+    ],
+    [
+     "Shadowform",
+     1
+    ],
+    [
+     "Twin Disciplines",
+     3
+    ],
+    [
+     "Silent Resolve",
+     3
+    ],
+    [
+     "Mental Strength",
+     2
+    ],
+    [
+     "Meditation",
+     3
+    ],
+    [
+     "Twilight Focus",
+     3
+    ],
+    [
+     "Silence",
+     1
+    ],
+    [
+     "Mental Strength",
+     3
+    ]
+   ],
+   "rotation_en": [
+    "Power Word: Shield yourself before or during the pull",
+    "Open with Mind Blast, then Shadow Word: Pain",
+    "Devouring Plague on tougher targets (it spreads on death with Devouring Contagion)",
+    "Mind Flay to finish and slow the target",
+    "Wand the last part of the enemy's health to save mana",
+    "Use Spirit Tap after kills to regenerate before the next pull"
+   ],
+   "rotation_ru": [
+    "Перед боем или в его начале – «Слово силы: Щит» на себя",
+    "Начинайте со «Взрыва разума», затем «Слово Тьмы: Боль»",
+    "«Всепожирающая чума» на более сильных противников (с «Всепожирающим заражением» перекидывается при смерти цели)",
+    "«Пытка разума», чтобы добить и замедлить цель",
+    "Остаток здоровья врага снимайте жезлом, чтобы экономить ману",
+    "После убийства используйте «Захват духа», чтобы восстановиться перед следующим боем"
+   ],
+   "stats_en": "While leveling: Spell Damage/Shadow Damage and Intellect, then Spirit (works well with Spirit Tap) and Stamina. A good wand matters most before level 20.",
+   "stats_ru": "При прокачке: сила заклинаний/урон от темной магии и интеллект, затем дух (хорошо сочетается с «Захватом духа») и выносливость. До 20 уровня важнее всего хороший жезл.",
+   "gear_en": [
+    "Best available wand (Enchanting can craft Greater Magic Wand early)",
+    "Glimmering Staff (Enchanting, level 25) or other spell power staves",
+    "Greens 'of Shadow Wrath', 'of the Owl' or 'of the Eagle'",
+    "Tailoring cloth and bags while leveling"
+   ],
+   "gear_ru": [
+    "Лучший доступный жезл (наложение чар позволяет рано создать Greater Magic Wand)",
+    "Glimmering Staff (наложение чар, 25 уровень) или другой посох с силой заклинаний",
+    "Зеленые вещи «of Shadow Wrath», «совы» или «орла»",
+    "Ткань и сумки от портняжного дела по ходу прокачки"
+   ],
+   "tips_en": [
+    "Priests have no mobility spells, so plan routes to avoid long runs",
+    "If you have gold, respec into Shadowform as soon as it becomes available",
+    "Some players level as Discipline (Meditation) and switch to Shadow at 40",
+    "Do your race-specific Priest quests at levels 10 and 20 for extra abilities",
+    "Multi-dot with Shadow Word: Pain instead of relying on AoE spells"
+   ],
+   "tips_ru": [
+    "У жрецов нет заклинаний перемещения – продумывайте маршрут, чтобы меньше бегать",
+    "Если есть золото, перераспределите таланты в пользу «Облика Тьмы», как только он станет доступен",
+    "Некоторые качаются в послушании («Медитация») и переходят во Тьму на 40 уровне",
+    "Выполните расовые задания жреца на 10 и 20 уровнях ради дополнительных способностей",
+    "Вместо АоЕ вешайте «Слово Тьмы: Боль» на несколько целей"
+   ]
+  },
+  {
+   "id": "shadow_raid",
+   "name_en": "Shadow PvE Raid",
+   "name_ru": "Тьма: рейды",
+   "role": "DPS",
+   "summary_en": "Wowhead's 15/3/33 Shadow raid build: Shadow Focus for hit, Improved Mind Blast at 4/5, Dark Inspiration for party Spirit, Devouring Contagion, Darkness and Shadowform. Twin Disciplines, Mental Strength and Meditation in Discipline and Twilight Focus in Holy cover the rest.",
+   "summary_ru": "Рейдовая сборка Wowhead 15/3/33: «Средоточие Тьмы» ради меткости, «Улучшенный взрыв разума» 4/5, «Темное воодушевление» для духа группы, «Всепожирающее заражение», «Мрак» и «Облик Тьмы». Остальное – «Две дисциплины», «Сила мысли» и «Медитация» в послушании и «Сумеречная концентрация» в свете.",
+   "order": [
+    [
+     "Shadow Focus",
+     5
+    ],
+    [
+     "Improved Shadow Word: Pain",
+     2
+    ],
+    [
+     "Shadow Reach",
+     2
+    ],
+    [
+     "Improved Mind Blast",
+     4
+    ],
+    [
+     "Mind Flay",
+     1
+    ],
+    [
+     "Improved Mind Flay",
+     2
+    ],
+    [
+     "Shadow Weaving",
+     3
+    ],
+    [
+     "Vampiric Embrace",
+     1
+    ],
+    [
+     "Dark Inspiration",
+     5
+    ],
+    [
+     "Devouring Contagion",
+     2
+    ],
+    [
+     "Darkness",
+     5
+    ],
+    [
+     "Shadowform",
+     1
+    ],
+    [
+     "Twin Disciplines",
+     5
+    ],
+    [
+     "Silent Resolve",
+     3
+    ],
+    [
+     "Mental Strength",
+     2
+    ],
+    [
+     "Meditation",
+     3
+    ],
+    [
+     "Twilight Focus",
+     3
+    ],
+    [
+     "Mental Strength",
+     2
+    ]
+   ],
+   "rotation_en": [
+    "Opener: pre-cast Mind Blast, then Shadow Word: Pain, Devouring Plague, Shadow Word: Death, Vampiric Embrace, Mind Blast",
+    "Keep Shadow Word: Pain up, refreshing right as it expires",
+    "Keep Devouring Plague up",
+    "Mind Blast on cooldown",
+    "Shadow Word: Death on cooldown",
+    "Keep Vampiric Embrace up when the raid needs healing",
+    "Fully channel Mind Flay as the filler (don't clip it, the ticks ramp up)"
+   ],
+   "rotation_ru": [
+    "Начало боя: заранее «Взрыв разума», затем «Слово Тьмы: Боль», «Всепожирающая чума», «Слово Тьмы: Смерть», «Объятия вампира», «Взрыв разума»",
+    "Поддерживайте «Слово Тьмы: Боль», обновляя его сразу после окончания",
+    "Поддерживайте «Всепожирающую чуму»",
+    "«Взрыв разума» по мере восстановления",
+    "«Слово Тьмы: Смерть» по мере восстановления",
+    "Поддерживайте «Объятия вампира», когда рейду нужно исцеление",
+    "«Пытка разума» как основное заклинание: поддерживайте полностью и не прерывайте (урон тиков нарастает)"
+   ],
+   "stats_en": "Spell Damage (+Shadow) > Spell Hit (17% is the ideal but out of reach early; Shadow Focus gives 5%) > Critical Strike > Intellect > Spirit/MP5.",
+   "stats_ru": "Сила заклинаний (урон от темной магии) > меткость заклинаний (идеал – 17%, на старте недостижим; «Средоточие Тьмы» дает 5%) > критический удар > интеллект > дух/восполнение маны.",
+   "gear_en": [
+    "BoE 'of Shadow Wrath' pieces (Master's Leggings/Boots, Tearfall Bracers)",
+    "Robe of Winter Night and Belt of the Archmage (Tailoring)",
+    "Spellweaver's Turban and Gloves of Spell Mastery",
+    "Blade of the New Moon with Obsidian Bauble off-hand; Skul's Ghastly Touch wand",
+    "Eye of the Beast trinket; Songstone of Ironforge and Rune Band of Wizardry rings"
+   ],
+   "gear_ru": [
+    "Вещи «of Shadow Wrath», становящиеся персональными при надевании («Поножи наставника», ботинки, наручи Tearfall)",
+    "«Одеяние зимней ночи» и «Пояс верховного мага» (портняжное дело)",
+    "Spellweaver's Turban и «Перчатки волшебства»",
+    "Blade of the New Moon с Obsidian Bauble в левой руке; жезл Skul's Ghastly Touch",
+    "Аксессуар Eye of the Beast; кольца Songstone of Ironforge и Rune Band of Wizardry"
+   ],
+   "tips_en": [
+    "Improved Mind Blast stays at 4/5: with a 6 s cooldown you fit exactly two Mind Flay channels between casts",
+    "Shadow has no throughput cooldown; use racials and potions on cooldown",
+    "Pre-pull Fade helps with early threat",
+    "Dark Inspiration also helps your healers' and casters' mana",
+    "Swap in Silence for a point if extra interrupts are useful"
+   ],
+   "tips_ru": [
+    "«Улучшенный взрыв разума» оставляют на 4/5: при 6 с восстановления между применениями ровно помещаются две «Пытки разума»",
+    "У Тьмы нет боевых кулдаунов – расовые способности и зелья используйте по готовности",
+    "«Уход в тень» перед боем помогает с угрозой в начале",
+    "«Темное воодушевление» помогает с маной лекарям и заклинателям группы",
+    "Если пригодятся дополнительные прерывания, вложите очко в «Молчание»"
+   ]
+  },
+  {
+   "id": "disc_heal",
+   "name_en": "Discipline Raid Healer",
+   "name_ru": "Послушание: рейдовый лекарь",
+   "role": "HEAL",
+   "summary_en": "Wowhead's 31/20/0 Discipline raid build: Power Word: Shield with Soul Warding, Penance, Renewed Hope, Divine Aegis and Power Infusion. The Holy points add Holy Specialization, Divine Fury, Inspiration and Improved Healing.",
+   "summary_ru": "Рейдовая сборка Wowhead 31/20/0 для послушания: «Слово силы: Щит» с «Оберегом души», «Исповедь», «Новая надежда», «Божественное покровительство» и «Придание сил». В свете взяты «Специализация на магии Света», «Божественное неистовство», «Вдохновение» и «Улучшенное исцеление».",
+   "order": [
+    [
+     "Twin Disciplines",
+     5
+    ],
+    [
+     "Mental Strength",
+     5
+    ],
+    [
+     "Meditation",
+     3
+    ],
+    [
+     "Improved Power Word: Shield",
+     3
+    ],
+    [
+     "Inner Focus",
+     1
+    ],
+    [
+     "Soul Warding",
+     1
+    ],
+    [
+     "Mental Agility",
+     2
+    ],
+    [
+     "Penance",
+     1
+    ],
+    [
+     "Renewed Hope",
+     5
+    ],
+    [
+     "Divine Aegis",
+     3
+    ],
+    [
+     "Mental Agility",
+     1
+    ],
+    [
+     "Power Infusion",
+     1
+    ],
+    [
+     "Holy Specialization",
+     5
+    ],
+    [
+     "Divine Fury",
+     5
+    ],
+    [
+     "Inspiration",
+     3
+    ],
+    [
+     "Improved Renew",
+     2
+    ],
+    [
+     "Improved Healing",
+     3
+    ],
+    [
+     "Improved Renew",
+     1
+    ],
+    [
+     "Blessed Recovery",
+     1
+    ]
+   ],
+   "rotation_en": [
+    "Power Word: Shield the active tank (Weakened Soul blocks a recast; crit heals shorten it with Renewed Hope)",
+    "Penance on an injured tank",
+    "Keep Renew rolling on the tank",
+    "Heal (downranked if needed) or Greater Heal when Penance is on cooldown; cancel casts that would overheal",
+    "Inner Focus with Greater Heal or Prayer of Healing for a free, high-crit cast",
+    "Power Infusion on a top DPS or yourself during burst phases; Fear Ward before fear effects"
+   ],
+   "rotation_ru": [
+    "«Слово силы: Щит» на основного танка («Ослабленная душа» не дает повесить щит повторно; с «Новой надеждой» критические исцеления сокращают ее)",
+    "«Исповедь» на раненого танка",
+    "Поддерживайте «Обновление» на танке",
+    "«Исцеление» (при необходимости низкого ранга) или «Великое исцеление», пока «Исповедь» восстанавливается; прерывайте заклинание, если оно уйдет в избыточное исцеление",
+    "«Внутреннее сосредоточение» вместе с «Великим исцелением» или «Молитвой исцеления» – бесплатное заклинание с повышенным шансом крита",
+    "«Придание сил» на лучшего бойца или на себя в фазах бурста; «Защита от страха» перед эффектами страха"
+   ],
+   "stats_en": "Healing power > Intellect > MP5/Spirit (Meditation keeps 50% of Spirit regen while casting) > Critical Strike (feeds Divine Aegis and Renewed Hope) > Stamina.",
+   "stats_ru": "Сила исцеления > интеллект > восполнение маны/дух («Медитация» сохраняет 50% восполнения от духа во время произнесения заклинаний) > критический удар (питает «Божественное покровительство» и «Новую надежду») > выносливость.",
+   "gear_en": [
+    "Vestments of the Virtuous (T0.5 priest set) pieces",
+    "Healing cloth from Scholomance, Stratholme and Blackrock Spire (e.g. Robe of Winter Night as a hybrid option)",
+    "Healing-power trinkets and rings; any MP5 jewelry",
+    "A healing mace or staff plus a healing off-hand",
+    "Enchants: healing to weapon and bracers, Arcanum on head/legs"
+   ],
+   "gear_ru": [
+    "Предметы комплекта жреца T0.5 (Vestments of the Virtuous)",
+    "Тканевые вещи для лекаря из Некроситета, Стратхольма и Пика Черной горы («Одеяние зимней ночи» как гибридный вариант)",
+    "Аксессуары и кольца с силой исцеления, любые украшения с восполнением маны",
+    "Булава или посох для лекаря и предмет для левой руки с исцелением",
+    "Чары: исцеление на оружие и наручи, магические камни на голову и ноги"
+   ],
+   "tips_en": [
+    "Removing damage with shields often beats healing it back afterwards",
+    "Use 2-3 lower spell ranks to save mana in long fights",
+    "Disc shines on tank healing: rotate Power Word: Shield, Penance and Heal",
+    "Don't hoard Inner Focus for emergencies, it is a big mana saving",
+    "Devouring Plague is too expensive to spam in raids; use it only when mana allows"
+   ],
+   "tips_ru": [
+    "Предотвратить урон щитами часто выгоднее, чем потом его лечить",
+    "В долгих боях используйте 2–3 более низких ранга заклинаний ради экономии маны",
+    "Послушание особенно сильно в лечении танка: чередуйте «Слово силы: Щит», «Исповедь» и «Исцеление»",
+    "Не берегите «Внутреннее сосредоточение» на крайний случай – это большая экономия маны",
+    "«Всепожирающая чума» слишком дорогая для рейдов; применяйте ее, только когда хватает маны"
+   ]
+  }
+ ],
+ "forever_changes_ru": "В Forever переработаны все три ветки жреца. Послушание получает «Исповедь», «Двойную дисциплину», «Защиту души», «Возрождённую надежду» и поглощения «Божественной эгиды», а «Придание сил» осталось талантом за 31 очко. Свет получает «Молитву восстановления» за 31 очко, а также «Литанию Света», «Священные узы» и «Духовное наставление» от духа. Тьма — полноценная специализация урона: «Всепожирающая чума» и «Слово Тьмы: Смерть» — основные заклинания, плюс «Улучшенная пытка разума» (нарастающие тики), «Всепожирающая зараза», «Тёмное вдохновение» (бафф духа для группы), «Ранняя кончина» и «Облик Тьмы» за 31 очко. Жрецы также получают расовые способности из заданий на 10 и 20 уровнях. На первых уровнях по-прежнему важен жезл, а «Облик Тьмы» на 40–42 уровне — главный скачок силы."
+}

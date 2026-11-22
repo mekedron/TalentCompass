@@ -1,0 +1,868 @@
+{
+ "class": "DRUID",
+ "patch": "1.60.1 (build 71037); talent data from the Wowhead Forever database snapshot of 2026-11-20 (after the Nov 10-11 hotfixes)",
+ "sources": [
+  "https://www.wowhead.com/forever/talent-calc/druid",
+  "https://www.wowhead.com/forever/guide/classes/druid/feral/tank-leveling-tips",
+  "https://www.wowhead.com/forever/guide/classes/druid/feral/talent-builds-pve-tank",
+  "https://www.wowhead.com/forever/guide/classes/druid/feral/rotation-cooldowns-pve-tank",
+  "https://www.wowhead.com/forever/guide/classes/druid/feral/stat-priority-pve-tank",
+  "https://www.wowhead.com/forever/guide/classes/druid/feral/bis-gear-tank",
+  "https://www.wowhead.com/forever/guide/classes/druid/restoration/talent-builds-pve-healer",
+  "https://www.wowhead.com/forever/guide/classes/druid/restoration/rotation-cooldowns-pve-healer"
+ ],
+ "confidence_notes": "Talent names, maxRank, tier (row+1), col (col+1, 1-based) and spellId were read directly from Wowhead's Forever talent-calculator data (52 talents: Balance 16, Feral Combat 20, Restoration 16). Feral Combat has two 31-point talents: Primal Bite (bear) and Shifting Power (cat). spellId is the rank-1 id, and multi-rank talents share one id. name_ru comes from Wowhead's ruRU tooltips for the Forever data. Note the clash: Improved Regrowth and Swiftmend are named «Улучшенное восстановление» and «Быстрое восстановление» because Regrowth is «Восстановление» in ruRU. The leveling (Feral Reflection 0/34/17) and Mono Bear tank (9/32/10) orders are Wowhead's own published orders. The NG/RG Restoration raid build (21/0/30) is Wowhead's recommended raid healing distribution, but the guide gives no point order, so the order here was written to follow the tiers and prerequisites. Wowhead calls the endgame raid/tank builds and stat priorities provisional. The tank stat weights come from the WoWSims Forever bear sim; Forever items can carry haste and expertise-like effects. Some items have no Russian names in the Forever DB yet, so English names are kept in gear_ru.",
+ "forever_changes_en": "Forever reworks the Druid trees. Feral Combat gains Lacerate (a 5-stack bleed and threat tool), Primal Bite (a 31-point bear attack) and Shifting Power (a 31-point mana-to-Energy conversion), plus Rend and Tear, Natural Instinct, Natural Reaction and Predatory Discipline. Feral Charge is a bear charge, and Barkskin can now be used while shapeshifted. Frenzied Regeneration was heavily buffed and can heal up to 100% of health. Restoration gains Wild Growth at 31 points (a 3-second cast), Bloom (a Spirit-based heal when Rejuvenation or Regrowth expires), Living Spirit, and a Naturalist that also shortens Healing Touch and Wild Growth casts. Tranquility is currently weak. Balance gains Genesis, Nature's Majesty, Nature's Splendor and Eclipse, and Moonkin Form sits at 31 points. Feral is the flexible leveling choice: cat for questing, bear for dungeon tanking, and self-heals between pulls.",
+ "trees": [
+  {
+   "name": "Balance",
+   "talents": [
+    {
+     "name": "Improved Wrath",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 16814,
+     "name_ru": "Улучшенный гнев"
+    },
+    {
+     "name": "Genesis",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 1223081,
+     "name_ru": "Сотворение"
+    },
+    {
+     "name": "Moonglow",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 16845,
+     "name_ru": "Лунное сияние"
+    },
+    {
+     "name": "Improved Moonfire",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 16821,
+     "name_ru": "Улучшенный лунный огонь"
+    },
+    {
+     "name": "Nature's Majesty",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 1223082,
+     "name_ru": "Величие природы"
+    },
+    {
+     "name": "Nature's Reach",
+     "tier": 2,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 16819,
+     "name_ru": "Предел сил Природы"
+    },
+    {
+     "name": "Improved Entangling Roots",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 16918,
+     "name_ru": "Улучшенный гнев деревьев"
+    },
+    {
+     "name": "Nature's Splendor",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 1223083,
+     "name_ru": "Великолепие природы"
+    },
+    {
+     "name": "Insect Swarm",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 1,
+     "spellId": 5570,
+     "name_ru": "Рой насекомых"
+    },
+    {
+     "name": "Vengeance",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 16909,
+     "name_ru": "Отмщение"
+    },
+    {
+     "name": "Improved Starfire",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 16850,
+     "name_ru": "Улучшенный звездный огонь"
+    },
+    {
+     "name": "Overgrowth",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 17245,
+     "name_ru": "Разрастание"
+    },
+    {
+     "name": "Nature's Grace",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 16880,
+     "name_ru": "Благоволение природы"
+    },
+    {
+     "name": "Eclipse",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 408248,
+     "name_ru": "Затмение"
+    },
+    {
+     "name": "Moonfury",
+     "tier": 6,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 16896,
+     "name_ru": "Лунное неистовство"
+    },
+    {
+     "name": "Moonkin Form",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 24858,
+     "name_ru": "Облик лунного совуха"
+    }
+   ]
+  },
+  {
+   "name": "Feral Combat",
+   "talents": [
+    {
+     "name": "Ferocity",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 16934,
+     "name_ru": "Свирепость"
+    },
+    {
+     "name": "Furor",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 17056,
+     "name_ru": "Гнев"
+    },
+    {
+     "name": "Feral Swiftness",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 17002,
+     "name_ru": "Звериная скорость"
+    },
+    {
+     "name": "Feral Instinct",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 16947,
+     "name_ru": "Животный инстинкт"
+    },
+    {
+     "name": "Brutal Impact",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 16940,
+     "name_ru": "Жестокий удар"
+    },
+    {
+     "name": "Thick Hide",
+     "tier": 2,
+     "col": 4,
+     "maxRank": 3,
+     "spellId": 16929,
+     "name_ru": "Плотная шкура"
+    },
+    {
+     "name": "Shredding Attacks",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 16966,
+     "name_ru": "Растерзать противника"
+    },
+    {
+     "name": "Savage Fury",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 16998,
+     "name_ru": "Бешеное неистовство"
+    },
+    {
+     "name": "Feral Charge",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 1238122,
+     "name_ru": "Звериный рывок"
+    },
+    {
+     "name": "Sharpened Claws",
+     "tier": 3,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 16942,
+     "name_ru": "Острые когти"
+    },
+    {
+     "name": "Predatory Strikes",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 16972,
+     "name_ru": "Удары хищника"
+    },
+    {
+     "name": "Lacerate",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 1328617,
+     "name_ru": "Растерзать"
+    },
+    {
+     "name": "Predatory Discipline",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 1328613,
+     "name_ru": "Дисциплина хищника"
+    },
+    {
+     "name": "Blood Frenzy",
+     "tier": 4,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 16958,
+     "name_ru": "Кровавое неистовство"
+    },
+    {
+     "name": "Leader of the Pack",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 17007,
+     "name_ru": "Вожак стаи"
+    },
+    {
+     "name": "Natural Instinct",
+     "tier": 5,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 1223242,
+     "name_ru": "Естественный инстинкт"
+    },
+    {
+     "name": "Rend and Tear",
+     "tier": 6,
+     "col": 1,
+     "maxRank": 5,
+     "spellId": 1223246,
+     "name_ru": "Рви и терзай"
+    },
+    {
+     "name": "Natural Reaction",
+     "tier": 6,
+     "col": 4,
+     "maxRank": 5,
+     "spellId": 417051,
+     "name_ru": "Безусловный рефлекс"
+    },
+    {
+     "name": "Primal Bite",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 407995,
+     "name_ru": "Неудержимый укус"
+    },
+    {
+     "name": "Shifting Power",
+     "tier": 7,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 1322605,
+     "name_ru": "Переходящая сила"
+    }
+   ]
+  },
+  {
+   "name": "Restoration",
+   "talents": [
+    {
+     "name": "Nature's Focus",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 17063,
+     "name_ru": "Средоточие Природы"
+    },
+    {
+     "name": "Heart of the Wild",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 17003,
+     "name_ru": "Сердце дикой природы"
+    },
+    {
+     "name": "Naturalist",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 5,
+     "spellId": 17069,
+     "name_ru": "Натуралист"
+    },
+    {
+     "name": "Reflection",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 17106,
+     "name_ru": "Отражение"
+    },
+    {
+     "name": "Natural Shapeshifter",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 16833,
+     "name_ru": "Прирожденный оборотень"
+    },
+    {
+     "name": "Subtlety",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 17118,
+     "name_ru": "Скрытность"
+    },
+    {
+     "name": "Gift of Nature",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 17104,
+     "name_ru": "Дар природы"
+    },
+    {
+     "name": "Bloom",
+     "tier": 3,
+     "col": 4,
+     "maxRank": 1,
+     "spellId": 1328621,
+     "name_ru": "Цветение"
+    },
+    {
+     "name": "Tranquil Spirit",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 24968,
+     "name_ru": "Мирный дух"
+    },
+    {
+     "name": "Improved Rejuvenation",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 17111,
+     "name_ru": "Улучшенное омоложение"
+    },
+    {
+     "name": "Swiftmend",
+     "tier": 4,
+     "col": 4,
+     "maxRank": 1,
+     "spellId": 18562,
+     "name_ru": "Быстрое восстановление"
+    },
+    {
+     "name": "Nature's Swiftness",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 1,
+     "spellId": 17116,
+     "name_ru": "Природная стремительность"
+    },
+    {
+     "name": "Living Spirit",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 1309631,
+     "name_ru": "Живой дух"
+    },
+    {
+     "name": "Improved Tranquility",
+     "tier": 5,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 17123,
+     "name_ru": "Улучшенное спокойствие"
+    },
+    {
+     "name": "Improved Regrowth",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 17074,
+     "name_ru": "Улучшенное восстановление"
+    },
+    {
+     "name": "Wild Growth",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 408120,
+     "name_ru": "Буйный рост"
+    }
+   ]
+  }
+ ],
+ "builds": [
+  {
+   "id": "feral_leveling",
+   "name_en": "Feral Leveling (Feral Reflection)",
+   "name_ru": "Сила зверя: прокачка (Feral Reflection)",
+   "role": "LEVELING",
+   "summary_en": "Wowhead's recommended level 1-60 Feral build (0/34/17): all key Feral talents first (Ferocity, Furor, Feral Swiftness, Lacerate, Leader of the Pack, Rend and Tear, Primal Bite, Shifting Power). Then it moves to Restoration for Heart of the Wild, Naturalist, Reflection and Natural Shapeshifter. It covers cat questing, bear dungeon tanking and cheap self-healing between pulls.",
+   "summary_ru": "Рекомендуемая Wowhead сборка для прокачки с 1 по 60 (0/34/17): сначала все ключевые таланты силы зверя («Свирепость», «Гнев», «Звериная скорость», «Растерзать», «Вожак стаи», «Рви и терзай», «Неудержимый укус», «Переходящая сила»). Затем таланты исцеления: «Сердце дикой природы», «Натуралист», «Отражение» и «Прирожденный оборотень». Подходит для заданий в облике кошки, танкования подземелий в облике медведя и дешевого самоисцеления между боями.",
+   "order": [
+    [
+     "Ferocity",
+     5
+    ],
+    [
+     "Furor",
+     3
+    ],
+    [
+     "Feral Swiftness",
+     2
+    ],
+    [
+     "Feral Charge",
+     1
+    ],
+    [
+     "Savage Fury",
+     2
+    ],
+    [
+     "Sharpened Claws",
+     2
+    ],
+    [
+     "Lacerate",
+     1
+    ],
+    [
+     "Predatory Discipline",
+     1
+    ],
+    [
+     "Predatory Strikes",
+     3
+    ],
+    [
+     "Leader of the Pack",
+     1
+    ],
+    [
+     "Natural Instinct",
+     2
+    ],
+    [
+     "Blood Frenzy",
+     1
+    ],
+    [
+     "Furor",
+     1
+    ],
+    [
+     "Rend and Tear",
+     4
+    ],
+    [
+     "Furor",
+     1
+    ],
+    [
+     "Primal Bite",
+     1
+    ],
+    [
+     "Shifting Power",
+     1
+    ],
+    [
+     "Heart of the Wild",
+     5
+    ],
+    [
+     "Naturalist",
+     5
+    ],
+    [
+     "Natural Shapeshifter",
+     3
+    ],
+    [
+     "Reflection",
+     3
+    ],
+    [
+     "Swiftmend",
+     1
+    ],
+    [
+     "Rend and Tear",
+     1
+    ],
+    [
+     "Blood Frenzy",
+     1
+    ]
+   ],
+   "rotation_en": [
+    "Cat Form + Prowl to approach, open with Rake",
+    "Claw (or Shred from behind) to build combo points",
+    "Ferocious Bite at 5 combo points",
+    "Shifting Power to refill Energy when you run dry",
+    "Switch to Bear Form for dangerous pulls: Lacerate, Primal Bite, Maul, Demoralizing Roar",
+    "Between pulls: Rejuvenation/Regrowth in caster form instead of eating"
+   ],
+   "rotation_ru": [
+    "Облик кошки и «Крадущийся зверь» для подхода, начинайте с «Глубокой раны»",
+    "«Цапнуть» (или «Полоснуть» со спины) для накопления приемов серии",
+    "«Свирепый укус» при 5 приемах серии",
+    "«Переходящая сила», когда закончилась энергия",
+    "На опасных противников – облик медведя: «Растерзать», «Неудержимый укус», «Трепка», «Устрашающий рев»",
+    "Между боями – «Омоложение» и «Восстановление» в обычном облике вместо еды"
+   ],
+   "stats_en": "While leveling: Agility and Strength (Attack Power in forms), then Stamina; a little Intellect/Spirit helps self-heals and shapeshifting costs. Weapon DPS barely matters in forms.",
+   "stats_ru": "При прокачке: ловкость и сила (сила атаки в обликах), затем выносливость; немного интеллекта и духа помогает с самоисцелением и стоимостью смены облика. Урон оружия в обликах почти не важен.",
+   "gear_en": [
+    "Leather with Agility/Strength ('of the Monkey', 'of the Bear', 'of the Tiger')",
+    "Staves or two-handed maces with stats (DPS doesn't matter in forms)",
+    "Feralheart (T0.5) pieces near 60",
+    "Keep a few healing/Intellect items only if you heal dungeons"
+   ],
+   "gear_ru": [
+    "Кожаные доспехи с ловкостью и силой («обезьяны», «медведя», «тигра»)",
+    "Посохи или двуручные булавы с характеристиками (урон оружия в обликах не важен)",
+    "Предметы комплекта «буйного сердца» (T0.5) ближе к 60",
+    "Вещи с исцелением и интеллектом держите, только если лечите в подземельях"
+   ],
+   "tips_en": [
+    "Take Feral Swiftness right after Cat Form: it also helps after Travel Form and mounts",
+    "Prowl lets you skip dangerous mobs on the way to objectives",
+    "Shapeshifting and healing eat mana: Natural Shapeshifter and Reflection fix that late",
+    "Be ready to tank dungeons; early dungeon quests give big upgrades",
+    "Frenzied Regeneration is much stronger in Forever and is great for solo sustain"
+   ],
+   "tips_ru": [
+    "Берите «Звериную скорость» сразу после облика кошки: она полезна даже с походным обликом и средством передвижения",
+    "«Крадущийся зверь» позволяет обходить опасных противников по пути к цели",
+    "Смена облика и исцеление расходуют много маны – позже это решают «Прирожденный оборотень» и «Отражение»",
+    "Будьте готовы танковать в подземельях: ранние задания там дают отличные награды",
+    "«Неистовое восстановление» в Forever намного сильнее и отлично подходит для одиночной игры"
+   ]
+  },
+  {
+   "id": "bear_tank",
+   "name_en": "Mono Bear Tank (Dungeon & Raid)",
+   "name_ru": "Чистый медведь: танк (подземелья и рейды)",
+   "role": "TANK",
+   "summary_en": "Wowhead's endgame Mono Bear build (9/32/10): Thick Hide, Feral Instinct, Lacerate, Natural Instinct, Rend and Tear, Primal Bite and Blood Frenzy for rage. Genesis, Nature's Majesty and Nature's Reach in Balance, plus Heart of the Wild and Naturalist in Restoration, round it out.",
+   "summary_ru": "Сборка Wowhead «чистый медведь» для 60 уровня (9/32/10): «Плотная шкура», «Животный инстинкт», «Растерзать», «Естественный инстинкт», «Рви и терзай», «Неудержимый укус» и «Кровавое неистовство» для ярости. Дополняют ее «Сотворение», «Величие природы» и «Предел сил Природы» в балансе, а также «Сердце дикой природы» и «Натуралист» в исцелении.",
+   "order": [
+    [
+     "Genesis",
+     5
+    ],
+    [
+     "Nature's Majesty",
+     2
+    ],
+    [
+     "Nature's Reach",
+     2
+    ],
+    [
+     "Ferocity",
+     5
+    ],
+    [
+     "Feral Swiftness",
+     2
+    ],
+    [
+     "Heart of the Wild",
+     5
+    ],
+    [
+     "Naturalist",
+     5
+    ],
+    [
+     "Feral Instinct",
+     3
+    ],
+    [
+     "Thick Hide",
+     3
+    ],
+    [
+     "Savage Fury",
+     2
+    ],
+    [
+     "Feral Charge",
+     1
+    ],
+    [
+     "Sharpened Claws",
+     2
+    ],
+    [
+     "Lacerate",
+     1
+    ],
+    [
+     "Predatory Strikes",
+     1
+    ],
+    [
+     "Leader of the Pack",
+     1
+    ],
+    [
+     "Natural Instinct",
+     2
+    ],
+    [
+     "Predatory Strikes",
+     2
+    ],
+    [
+     "Rend and Tear",
+     5
+    ],
+    [
+     "Primal Bite",
+     1
+    ],
+    [
+     "Blood Frenzy",
+     1
+    ]
+   ],
+   "rotation_en": [
+    "Before the pull: Mark of the Wild, Thorns, Bear Form and Enrage for starting Rage",
+    "Primal Bite whenever it is available",
+    "Keep 5 stacks of Lacerate on the target; never let it fall off",
+    "Fill with Lacerate for damage and threat",
+    "Maul to dump Rage above ~35, but never if it delays Primal Bite",
+    "Keep Demoralizing Roar and Faerie Fire up; Swipe on packs",
+    "Barkskin for predictable damage, Frenzied Regeneration for sustained damage, Challenging Roar in emergencies"
+   ],
+   "rotation_ru": [
+    "Перед боем: «Знак дикой природы», «Шипы», облик медведя и «Исступление» для стартовой ярости",
+    "«Неудержимый укус» при каждой возможности",
+    "Держите 5 эффектов «Растерзать» на цели и не давайте им спасть",
+    "В паузах применяйте «Растерзать» ради урона и угрозы",
+    "«Трепка» для сброса ярости выше ~35, но не в ущерб «Неудержимому укусу»",
+    "Поддерживайте «Устрашающий рев» и «Волшебный огонь»; против групп – «Размах»",
+    "«Дубовая кожа» под предсказуемый урон, «Неистовое восстановление» под затяжной урон, «Вызывающий рев» в экстренных случаях"
+   ],
+   "stats_en": "Defensive: Stamina > Defense to 440 (crit immunity) > Armor > Agility > Avoidance. Offensive: reduced chance to be dodged/parried > Hit > Crit > Haste > Strength/Agility.",
+   "stats_ru": "Защита: выносливость > защита до 440 (иммунитет к критическим ударам) > броня > ловкость > уклонение. Атака: снижение шанса уклонения/парирования цели > меткость > критический удар > скорость > сила/ловкость.",
+   "gear_en": [
+    "Feralheart Raiment (T0.5) pieces",
+    "Unyielding Maul (defensive) or Tuskblade Halberd (expertise-like effect, offensive)",
+    "Manual Crowd Pummeler for burst at the start of a fight (swap out after)",
+    "Ring of Protection, Talisman of Arathor, Stalwart Cloak",
+    "Idol of Brutality; Horn of Ve'han neck"
+   ],
+   "gear_ru": [
+    "Предметы комплекта «буйного сердца» (T0.5)",
+    "Unyielding Maul (защита) или Tuskblade Halberd (эффект, снижающий уклонение/парирование, для атаки)",
+    "«Ручной пробойник толпы» для рывка урона в начале боя (затем смените оружие)",
+    "«Охранное кольцо», «Талисман Аратора», «Плащ стойкости»",
+    "Идол Idol of Brutality; ожерелье «Рог Ве'хана»"
+   ],
+   "tips_en": [
+    "Watch your Rage: spamming Maul when off-tanking can leave you unable to Primal Bite",
+    "Barkskin works in Bear Form in Forever; save it for spikes",
+    "Innervate and Rebirth need caster form, so use them during tank swaps",
+    "For dungeons, Thick Hide points can go into Blood Frenzy for more Rage",
+    "Use a Pawn string from the WoWSims bear sim to compare items"
+   ],
+   "tips_ru": [
+    "Следите за яростью: постоянная «Трепка» при танковании второстепенной цели может оставить вас без «Неудержимого укуса»",
+    "В Forever «Дубовую кожу» можно применять в облике медведя – берегите ее под всплески урона",
+    "«Озарение» и «Возрождение» требуют обычного облика – используйте их при смене танков",
+    "В подземельях очки из «Плотной шкуры» можно перенести в «Кровавое неистовство» ради ярости",
+    "Для сравнения вещей используйте строку Pawn из симулятора медведя WoWSims"
+   ]
+  },
+  {
+   "id": "resto_ngrg",
+   "name_en": "Restoration NG/RG (Raid Healer)",
+   "name_ru": "Исцеление NG/RG (рейдовый лекарь)",
+   "role": "HEAL",
+   "summary_en": "Wowhead's recommended raid healing build (21/0/30): Nature's Grace in Balance plus Improved Regrowth in Restoration. This lets you chain hasted, high-crit Regrowths with Rejuvenation, Swiftmend and Nature's Swiftness, and Genesis boosts all your HoTs.",
+   "summary_ru": "Рекомендуемая Wowhead сборка для рейдового исцеления (21/0/30): «Благоволение природы» в балансе и «Улучшенное восстановление» в исцелении. Это позволяет непрерывно применять ускоренные «Восстановления» с высоким шансом крита вместе с «Омоложением», «Быстрым восстановлением» и «Природной стремительностью», а «Сотворение» усиливает все эффекты исцеления.",
+   "order": [
+    [
+     "Heart of the Wild",
+     5
+    ],
+    [
+     "Naturalist",
+     5
+    ],
+    [
+     "Reflection",
+     3
+    ],
+    [
+     "Gift of Nature",
+     5
+    ],
+    [
+     "Bloom",
+     1
+    ],
+    [
+     "Improved Rejuvenation",
+     3
+    ],
+    [
+     "Swiftmend",
+     1
+    ],
+    [
+     "Nature's Swiftness",
+     1
+    ],
+    [
+     "Living Spirit",
+     1
+    ],
+    [
+     "Improved Regrowth",
+     5
+    ],
+    [
+     "Genesis",
+     5
+    ],
+    [
+     "Improved Wrath",
+     5
+    ],
+    [
+     "Moonglow",
+     3
+    ],
+    [
+     "Nature's Majesty",
+     2
+    ],
+    [
+     "Improved Entangling Roots",
+     3
+    ],
+    [
+     "Nature's Splendor",
+     1
+    ],
+    [
+     "Insect Swarm",
+     1
+    ],
+    [
+     "Nature's Grace",
+     1
+    ]
+   ],
+   "rotation_en": [
+    "Pre-HoT targets about to take damage with Rejuvenation",
+    "Regrowth for spikes; chain Regrowth crits to keep Nature's Grace up (or Regrowth -> 3x Rejuvenation -> Regrowth)",
+    "Swiftmend when a HoT'd target drops low",
+    "Nature's Swiftness + Healing Touch for lethal damage",
+    "Wild Growth when 3+ players in one party are hurt (3 s cast, plan ahead)",
+    "Innervate yourself or another healer; weave Insect Swarm/Wrath when healing is light"
+   ],
+   "rotation_ru": [
+    "Заранее вешайте «Омоложение» на тех, кто вот-вот получит урон",
+    "«Восстановление» на всплески урона; криты «Восстановления» поддерживают «Благоволение природы» (или «Восстановление» → 3× «Омоложение» → «Восстановление»)",
+    "«Быстрое восстановление», когда здоровье цели с вашим эффектом сильно просело",
+    "«Природная стремительность» + «Целительное прикосновение» при смертельной опасности",
+    "«Буйный рост», если ранены 3 и более игрока одной группы (произносится 3 с – планируйте заранее)",
+    "«Озарение» на себя или другого лекаря; при малой нагрузке вплетайте «Рой насекомых» и «Гнев»"
+   ],
+   "stats_en": "Healing power > Intellect > Spirit (Bloom and Reflection use it) / MP5 > Critical Strike (Regrowth crits keep Nature's Grace up) > Stamina.",
+   "stats_ru": "Сила исцеления > интеллект > дух (на нем работают «Цветение» и «Отражение») / восполнение маны > критический удар (криты «Восстановления» поддерживают «Благоволение природы») > выносливость.",
+   "gear_en": [
+    "Healing-power leather and cloth from Scholomance, Stratholme and Blackrock Spire",
+    "Feralheart Raiment (T0.5) set bonus gives +23 spell power and mana procs",
+    "Healing mace/staff and a healing off-hand",
+    "MP5 and Spirit trinkets and rings",
+    "Enchants: Healing Power on weapon and bracers"
+   ],
+   "gear_ru": [
+    "Кожаные и тканевые вещи с силой исцеления из Некроситета, Стратхольма и Пика Черной горы",
+    "Комплект «буйного сердца» (T0.5): бонус дает +23 к силе заклинаний и восполнение маны",
+    "Булава или посох для лекаря и предмет для левой руки с исцелением",
+    "Аксессуары и кольца с восполнением маны и духом",
+    "Чары: сила исцеления на оружие и наручи"
+   ],
+   "tips_en": [
+    "Ignore Tranquility for now; it is weak in Forever",
+    "Deep Resto with Wild Growth is the alternative if your raid lacks AoE healing",
+    "The Living Spirit point can move to another Restoration talent, but must stay in the tree for Improved Regrowth",
+    "Use Barkskin to avoid pushback when you're being hit",
+    "Improved Entangling Roots makes Entangling Roots solid CC for stray adds"
+   ],
+   "tips_ru": [
+    "Пока не используйте «Спокойствие» – в Forever оно слабое",
+    "Если в рейде мало массового исцеления, альтернатива – глубокое исцеление с «Буйным ростом»",
+    "Очко в «Живом духе» можно перенести в другой талант исцеления, но оно должно остаться в ветке ради «Улучшенного восстановления»",
+    "Под ударами используйте «Дубовую кожу», чтобы заклинания не прерывались",
+    "С «Улучшенным гневом деревьев» «Гнев деревьев» – надежный контроль для отбившихся противников"
+   ]
+  }
+ ],
+ "forever_changes_ru": "В Forever деревья друида переработаны. «Сила зверя» получила «Растерзать» (кровотечение до 5 стаков и инструмент для удержания угрозы), «Первобытный укус» (атака медведя за 31 очко) и «Смену силы» (перевод маны в энергию за 31 очко), а также «Разорвать и растерзать», «Природный инстинкт», «Природную реакцию» и «Хищную дисциплину». «Звериная атака» — это рывок в облике медведя, а «Дубовую кожу» теперь можно использовать в формах. «Неистовое восстановление» сильно усилено и может восстановить до 100% здоровья. «Исцеление» получило «Буйный рост» за 31 очко (применение 3 сек.), «Цветение» (исцеление от духа, когда заканчиваются «Омоложение» или «Восстановление»), «Живой дух» и «Натуралиста», который также ускоряет «Целительное прикосновение» и «Буйный рост». «Спокойствие» пока слабое. «Баланс» получил «Зарождение», «Величие природы», «Великолепие природы» и «Затмение», облик лунного совуха — за 31 очко. Для прокачки удобнее всего «Сила зверя»: кошка для заданий, медведь для танкования подземелий и самоисцеление между боями."
+}

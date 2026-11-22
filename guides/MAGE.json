@@ -1,0 +1,892 @@
+{
+ "class": "MAGE",
+ "patch": "1.60.1 (build 71037); talent data from the Wowhead Forever database snapshot of 2026-11-20 (after the Nov 10-11 hotfixes)",
+ "sources": [
+  "https://www.wowhead.com/forever/talent-calc/mage",
+  "https://www.wowhead.com/forever/guide/classes/mage/frost/dps-leveling-tips",
+  "https://www.wowhead.com/forever/guide/classes/mage/frost/talent-builds-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/mage/frost/rotation-cooldowns-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/mage/frost/stat-priority-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/mage/frost/bis-gear",
+  "https://www.wowhead.com/forever/guide/classes/mage/fire/talent-builds-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/mage/fire/rotation-cooldowns-pve-dps",
+  "https://mobalytics.gg/wow-forever/classes/mage-leveling-guide",
+  "https://seemeta.com/en/wow-forever/talent-calculator/mage"
+ ],
+ "confidence_notes": "Talent names, maxRank, tier (row+1), col (col+1, 1-based, 4 columns) and spellId were read directly from Wowhead's Forever talent-calculator data (53 talents: Arcane 18, Fire 17, Frost 18). spellId is the rank-1 spell id Wowhead lists; for multi-rank Forever talents Wowhead reuses one id for all ranks, so ids of later ranks are not given. name_ru comes from Wowhead's ruRU spell tooltips for the Forever data environment (client strings); talents new to Forever may still carry machine-like or placeholder translations. The three build orders are Wowhead's own published talent orders (decoded from the calculator links in the guides) and pass tier-gating/prerequisite validation. Wowhead's endgame stat and BiS pages are partly speculative (written before level-60 testing) and the BiS list is phase 1 / pre-raid. Gold milestone talents are not flagged in the data; they correspond to the tier 3/4/5/7 talents unlocked at 11/16/21/31 points.",
+ "forever_changes_en": "Forever gives Mages several new spells and talent-granted abilities: Arcane Blast (stacking spell power from 12% of Intellect), Arcane Wrath, Frostfire Bolt, and Ice Lance (a Frost talent that shares an 8-second cooldown with Fire Blast). Proc-based talents drive the rotations: Missile Barrage, Heating Up (cheaper and faster Pyroblasts), and Fingers of Frost combined with Shatter. Winter's Chill now empowers Cone of Cold. Ice Barrier also grants a Frost damage buff while the shield holds. Frost remains the safest leveling spec. At 60, deep Fire with an Arcane sub-tree, Frostfire hybrids and deep Frost (Cone of Cold + Fingers of Frost) are all viable. Hit cap is about 17% with talents, and mana management (Evocation, mana gems) is a central concern.",
+ "trees": [
+  {
+   "name": "Arcane",
+   "talents": [
+    {
+     "name": "Wand Specialization",
+     "tier": 1,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 6057,
+     "name_ru": "Специализация на жезлах"
+    },
+    {
+     "name": "Improved Channeling",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 11237,
+     "name_ru": "Улучшенное поддержание"
+    },
+    {
+     "name": "Arcane Resilience",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 28574,
+     "name_ru": "Чародейская стойкость"
+    },
+    {
+     "name": "Arcane Subtlety",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 11210,
+     "name_ru": "Искусные чары"
+    },
+    {
+     "name": "Magic Absorption",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 29441,
+     "name_ru": "Магическое поглощение"
+    },
+    {
+     "name": "Arcane Concentration",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 11213,
+     "name_ru": "Чародейская сосредоточенность"
+    },
+    {
+     "name": "Missile Barrage",
+     "tier": 2,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 400588,
+     "name_ru": "Заградительные стрелы"
+    },
+    {
+     "name": "Arcane Geometry",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 11247,
+     "name_ru": "Чародейская геометрия"
+    },
+    {
+     "name": "Arcane Impact",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 11242,
+     "name_ru": "Магическое действие"
+    },
+    {
+     "name": "Arcane Blast",
+     "tier": 3,
+     "col": 4,
+     "maxRank": 1,
+     "spellId": 400574,
+     "name_ru": "Чародейская вспышка"
+    },
+    {
+     "name": "Arcane Shielding",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 11252,
+     "name_ru": "Чародейская защита"
+    },
+    {
+     "name": "Improved Counterspell",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 11255,
+     "name_ru": "Улучшенная Антимагия"
+    },
+    {
+     "name": "Arcane Meditation",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 18462,
+     "name_ru": "Чародейская медитация"
+    },
+    {
+     "name": "Arcane Wrath",
+     "tier": 4,
+     "col": 4,
+     "maxRank": 1,
+     "spellId": 1326079,
+     "name_ru": "Чародейский гнев"
+    },
+    {
+     "name": "Presence of Mind",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 12043,
+     "name_ru": "Присутствие разума"
+    },
+    {
+     "name": "Arcane Mind",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 11232,
+     "name_ru": "Чародейский ум"
+    },
+    {
+     "name": "Arcane Instability",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 15058,
+     "name_ru": "Магическая нестабильность"
+    },
+    {
+     "name": "Arcane Power",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 12042,
+     "name_ru": "Мощь тайной магии"
+    }
+   ]
+  },
+  {
+   "name": "Fire",
+   "talents": [
+    {
+     "name": "Incineration",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 18459,
+     "name_ru": "Испепеление"
+    },
+    {
+     "name": "Accelerant",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 11069,
+     "name_ru": "Катализатор"
+    },
+    {
+     "name": "Ignite",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 5,
+     "spellId": 11119,
+     "name_ru": "Воспламенение"
+    },
+    {
+     "name": "Flame Throwing",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 11100,
+     "name_ru": "Метание пламени"
+    },
+    {
+     "name": "Impact",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 11103,
+     "name_ru": "Сотрясение"
+    },
+    {
+     "name": "Burning Soul",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 11083,
+     "name_ru": "Пылающая душа"
+    },
+    {
+     "name": "Improved Flamestrike",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 11108,
+     "name_ru": "Улучшенный огненный столб"
+    },
+    {
+     "name": "Pyroblast",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 11366,
+     "name_ru": "Огненная глыба"
+    },
+    {
+     "name": "Improved Fire Blast",
+     "tier": 3,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 11078,
+     "name_ru": "Улучшенный огненный взрыв"
+    },
+    {
+     "name": "Improved Scorch",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 11095,
+     "name_ru": "Улучшенный ожог"
+    },
+    {
+     "name": "Improved Fire Ward",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 11094,
+     "name_ru": "Улучшенная защита от огня"
+    },
+    {
+     "name": "Heating Up",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 400624,
+     "name_ru": "Разогрев"
+    },
+    {
+     "name": "Master of Elements",
+     "tier": 4,
+     "col": 4,
+     "maxRank": 3,
+     "spellId": 29074,
+     "name_ru": "Повелитель Стихий"
+    },
+    {
+     "name": "Critical Mass",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 11115,
+     "name_ru": "Критическая масса"
+    },
+    {
+     "name": "Blast Wave",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 11113,
+     "name_ru": "Взрывная волна"
+    },
+    {
+     "name": "Fire Power",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 11124,
+     "name_ru": "Сила огня"
+    },
+    {
+     "name": "Combustion",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 11129,
+     "name_ru": "Возгорание"
+    }
+   ]
+  },
+  {
+   "name": "Frost",
+   "talents": [
+    {
+     "name": "Frost Warding",
+     "tier": 1,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 11189,
+     "name_ru": "Защита от льда"
+    },
+    {
+     "name": "Improved Frostbolt",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 11070,
+     "name_ru": "Улучшенная ледяная стрела"
+    },
+    {
+     "name": "Precision",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 29438,
+     "name_ru": "Точность"
+    },
+    {
+     "name": "Ice Shards",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 5,
+     "spellId": 11207,
+     "name_ru": "Ледяные осколки"
+    },
+    {
+     "name": "Frostbite",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 11071,
+     "name_ru": "Обморожение"
+    },
+    {
+     "name": "Improved Frost Nova",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 11165,
+     "name_ru": "Улучшенное кольцо льда"
+    },
+    {
+     "name": "Permafrost",
+     "tier": 2,
+     "col": 4,
+     "maxRank": 3,
+     "spellId": 11175,
+     "name_ru": "Вечная мерзлота"
+    },
+    {
+     "name": "Frost Channeling",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 11160,
+     "name_ru": "Направленная сила льда"
+    },
+    {
+     "name": "Improved Blizzard",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 11185,
+     "name_ru": "Улучшенная снежная буря"
+    },
+    {
+     "name": "Ice Lance",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 1312002,
+     "name_ru": "Ледяное копье"
+    },
+    {
+     "name": "Arctic Reach",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 16757,
+     "name_ru": "Предел льда"
+    },
+    {
+     "name": "Ice Block",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 11958,
+     "name_ru": "Ледяная глыба"
+    },
+    {
+     "name": "Shatter",
+     "tier": 4,
+     "col": 4,
+     "maxRank": 3,
+     "spellId": 11170,
+     "name_ru": "Обледенение"
+    },
+    {
+     "name": "Improved Cone of Cold",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 11190,
+     "name_ru": "Улучшенный конус холода"
+    },
+    {
+     "name": "Cold Snap",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 12472,
+     "name_ru": "Холодная хватка"
+    },
+    {
+     "name": "Fingers of Frost",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 400647,
+     "name_ru": "Ледяные пальцы"
+    },
+    {
+     "name": "Winter's Chill",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 11180,
+     "name_ru": "Зимняя стужа"
+    },
+    {
+     "name": "Ice Barrier",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 11426,
+     "name_ru": "Ледяная преграда"
+    }
+   ]
+  }
+ ],
+ "builds": [
+  {
+   "id": "frost_leveling",
+   "name_en": "Frost Leveling (1-60)",
+   "name_ru": "Лед: прокачка (1-60)",
+   "role": "LEVELING",
+   "summary_en": "Wowhead's all-purpose Frost leveling build: Wand Specialization first for mana-free damage, then Frostbolt cast time, Frostbite, Ice Lance and Shatter for kiting and freeze-shatter combos. It ends at 7/0/44 with Ice Barrier, Ice Block and Winter's Chill-empowered Cone of Cold.",
+   "summary_ru": "Универсальная сборка Wowhead для прокачки льдом: сначала «Специализация на жезлах» для урона без затрат маны, затем ускорение «Ледяной стрелы», «Обморожение», «Ледяное копье» и «Обледенение» для кайта и комбинаций с заморозкой. К 60 уровню получается 7/0/44 с «Ледяной преградой», «Ледяной глыбой» и усиленным «Зимней стужей» «Конусом холода».",
+   "order": [
+    [
+     "Wand Specialization",
+     2
+    ],
+    [
+     "Improved Frostbolt",
+     5
+    ],
+    [
+     "Frostbite",
+     3
+    ],
+    [
+     "Precision",
+     2
+    ],
+    [
+     "Ice Lance",
+     1
+    ],
+    [
+     "Improved Blizzard",
+     1
+    ],
+    [
+     "Ice Shards",
+     3
+    ],
+    [
+     "Shatter",
+     3
+    ],
+    [
+     "Ice Shards",
+     2
+    ],
+    [
+     "Fingers of Frost",
+     2
+    ],
+    [
+     "Cold Snap",
+     1
+    ],
+    [
+     "Improved Cone of Cold",
+     2
+    ],
+    [
+     "Winter's Chill",
+     5
+    ],
+    [
+     "Ice Barrier",
+     1
+    ],
+    [
+     "Ice Block",
+     1
+    ],
+    [
+     "Improved Cone of Cold",
+     1
+    ],
+    [
+     "Precision",
+     1
+    ],
+    [
+     "Improved Blizzard",
+     2
+    ],
+    [
+     "Frost Channeling",
+     3
+    ],
+    [
+     "Permafrost",
+     3
+    ],
+    [
+     "Arctic Reach",
+     2
+    ],
+    [
+     "Arcane Resilience",
+     3
+    ],
+    [
+     "Arcane Subtlety",
+     2
+    ]
+   ],
+   "rotation_en": [
+    "Pre-cast Frostbolt and cast another while the enemy runs at you",
+    "Frost Nova when it gets close, then step away during the global cooldown",
+    "Ice Lance a frozen target (Frost Nova, Frostbite or Fingers of Frost) for shatter damage",
+    "Fire Blast to finish or when the enemy is about to reach you",
+    "Frostbolt as the filler",
+    "Wand to finish low-health enemies and save mana",
+    "For packs: Frost Nova, then Blizzard/Cone of Cold (with Improved Blizzard slows)"
+   ],
+   "rotation_ru": [
+    "Начинайте с «Ледяной стрелы» и успейте выпустить еще одну, пока противник бежит к вам",
+    "«Кольцо льда», когда враг подошел вплотную, затем отойдите во время общего восстановления",
+    "«Ледяное копье» по замороженной цели («Кольцо льда», «Обморожение» или «Ледяные пальцы»)",
+    "«Огненный взрыв», чтобы добить цель или когда она вот-вот дойдет до вас",
+    "«Ледяная стрела» как основное заклинание",
+    "Жезл, чтобы добивать врагов с малым запасом здоровья и экономить ману",
+    "Против групп: «Кольцо льда», затем «Снежная буря» или «Конус холода» (замедление от «Улучшенной снежной бури»)"
+   ],
+   "stats_en": "While leveling: Intellect and Spirit (fewer drinking breaks) plus any Spell Damage/Frost Damage; Stamina for safety. Look for 'of Frozen Wrath' or 'of the Owl/Eagle' greens.",
+   "stats_ru": "При прокачке: интеллект и дух (реже пить), плюс любой урон от заклинаний/урон от магии льда; выносливость для выживаемости. Ищите зеленые вещи «of Frozen Wrath», «совы» и «орла».",
+   "gear_en": [
+    "Best wand you can get (Wand Specialization makes it a real damage source early)",
+    "BoE greens 'of Frozen Wrath' (Frost spell damage)",
+    "Cloth with Intellect/Spirit from quests",
+    "Tailoring crafts while leveling; Robe of the Archmage / Belt of the Archmage at 60"
+   ],
+   "gear_ru": [
+    "Лучший доступный жезл («Специализация на жезлах» делает его серьезным источником урона в начале)",
+    "Зеленые вещи «of Frozen Wrath» (урон от магии льда)",
+    "Тканевые доспехи с интеллектом и духом из заданий",
+    "Изделия портняжного дела по ходу прокачки; на 60 – «Одеяние верховного мага» и «Пояс верховного мага»"
+   ],
+   "tips_en": [
+    "Ice Lance shares an 8-second cooldown with Fire Blast, so spend it on frozen targets",
+    "Frost-immune mobs (water elementals) are rough until you get some Arcane talents; skip them or wand them",
+    "Respec at higher levels: Wowhead suggests dropping Wand Specialization and Frostbite later for more Ice Barrier/Cone of Cold power",
+    "Keep Ice Barrier up: it absorbs damage and boosts Frost damage",
+    "Use Conjure Water/Food and your profession camp buffs to cut downtime"
+   ],
+   "tips_ru": [
+    "«Ледяное копье» делит 8-секундное восстановление с «Огненным взрывом», поэтому тратьте его на замороженные цели",
+    "Существа с иммунитетом к магии льда (элементали воды) неудобны, пока нет талантов тайной магии: обходите их или бейте жезлом",
+    "На высоких уровнях стоит перераспределить таланты: Wowhead советует убрать «Специализацию на жезлах» и «Обморожение» ради «Ледяной преграды» и «Конуса холода»",
+    "Держите «Ледяную преграду»: она поглощает урон и усиливает урон от магии льда",
+    "Сотворяйте воду и еду и пользуйтесь бонусами лагеря профессий, чтобы меньше простаивать"
+   ]
+  },
+  {
+   "id": "frost_raid",
+   "name_en": "Deep Frost PvE (Raid & Dungeon)",
+   "name_ru": "Глубокий лед: PvE (рейды и подземелья)",
+   "role": "DPS",
+   "summary_en": "Wowhead's 18/0/33 deep Frost build for raids and dungeons, built around Fingers of Frost, Shatter, Winter's Chill-empowered Cone of Cold and Ice Barrier uptime. The Arcane points add mana sustain (Arcane Concentration, Arcane Meditation) and resist penetration.",
+   "summary_ru": "Сборка Wowhead 18/0/33 для рейдов и подземелий: «Ледяные пальцы», «Обледенение», «Конус холода» с «Зимней стужей» и постоянная «Ледяная преграда». Очки в тайной магии дают запас маны («Чародейская сосредоточенность», «Чародейская медитация») и снижение сопротивлений цели.",
+   "order": [
+    [
+     "Improved Frostbolt",
+     5
+    ],
+    [
+     "Precision",
+     3
+    ],
+    [
+     "Ice Shards",
+     5
+    ],
+    [
+     "Ice Lance",
+     1
+    ],
+    [
+     "Improved Blizzard",
+     1
+    ],
+    [
+     "Frost Channeling",
+     3
+    ],
+    [
+     "Shatter",
+     3
+    ],
+    [
+     "Fingers of Frost",
+     1
+    ],
+    [
+     "Improved Cone of Cold",
+     3
+    ],
+    [
+     "Cold Snap",
+     1
+    ],
+    [
+     "Winter's Chill",
+     4
+    ],
+    [
+     "Ice Barrier",
+     1
+    ],
+    [
+     "Winter's Chill",
+     1
+    ],
+    [
+     "Wand Specialization",
+     2
+    ],
+    [
+     "Arcane Resilience",
+     3
+    ],
+    [
+     "Arcane Subtlety",
+     2
+    ],
+    [
+     "Arcane Concentration",
+     5
+    ],
+    [
+     "Arcane Impact",
+     3
+    ],
+    [
+     "Arcane Meditation",
+     3
+    ],
+    [
+     "Fingers of Frost",
+     1
+    ]
+   ],
+   "rotation_en": [
+    "Pre-pull: Ice Barrier ~4 s before, Frostbolt ~2.5 s before the pull",
+    "Cold Snap if Cone of Cold has more than ~7 s left on cooldown",
+    "Cone of Cold at 5 stacks of Winter's Chill",
+    "With 1 Fingers of Frost stack left: Frostbolt and queue Ice Lance so both consume it",
+    "Recast Ice Barrier to keep its Frost damage buff (Frigid Power) up",
+    "Frostbolt as filler; Mana Ruby / Evocation only when you run low"
+   ],
+   "rotation_ru": [
+    "Перед боем: «Ледяная преграда» примерно за 4 с и «Ледяная стрела» примерно за 2,5 с до начала боя",
+    "«Холодная хватка», если до восстановления «Конуса холода» осталось больше ~7 с",
+    "«Конус холода» при 5 эффектах «Зимней стужи»",
+    "Если остался 1 заряд «Ледяных пальцев» – «Ледяная стрела» и сразу в очередь «Ледяное копье», чтобы оба заклинания использовали заряд",
+    "Обновляйте «Ледяную преграду», чтобы не терять ее усиление урона от магии льда",
+    "«Ледяная стрела» как основное заклинание; «Рубин маны» и «Прилив сил» – только при нехватке маны"
+   ],
+   "stats_en": "Spell hit up to the cap (about 11-12% from gear; ~6% comes from Precision) > Spell Damage (+Frost) > Critical Strike > Intellect > Spirit > Stamina. Wowhead marks this as provisional.",
+   "stats_ru": "Меткость заклинаний до предела (около 11–12% с экипировки, еще ~6% дает «Точность») > сила заклинаний (урон от магии льда) > критический удар > интеллект > дух > выносливость. Wowhead считает этот приоритет предварительным.",
+   "gear_en": [
+    "Sorcerer's Regalia (T0.5) pieces: Crown, Mantle, Bindings, Gauntlets, Leggings, Sandals",
+    "Robe of the Archmage and Belt of the Archmage (Tailoring)",
+    "Elemental Mage Staff (BoE) with Enchant Weapon - Revelation",
+    "Eye of the Beast and Draconic Infused Emblem (Blackrock Spire) trinkets",
+    "Arcanoweave Cloak and Channeler's Ring (Pix Xizzix, Stranglethorn Vale)"
+   ],
+   "gear_ru": [
+    "Предметы комплекта «Регалии волшебника» (T0.5): «Корона волшебника», «Мантия волшебника», «Наручники волшебника», а также перчатки, поножи и сандалии из комплекта",
+    "«Одеяние верховного мага» и «Пояс верховного мага» (портняжное дело)",
+    "Elemental Mage Staff (БоЕ, мировой трофей) с чарами «Чары для оружия: откровение»",
+    "Аксессуары Eye of the Beast и Draconic Infused Emblem (Пик Черной горы; русских названий в базе пока нет)",
+    "«Плащ из тайной ткани» и «Кольцо направителя» (Пикс Ксиззикс, Тернистая долина)"
+   ],
+   "tips_en": [
+    "Never let the 1-minute Ice Barrier buff drop; delay recasting the shield until after damage lands when you can",
+    "Get close for Cone of Cold before the pull",
+    "Improved Blizzard (1 point) can be swapped for Incineration on pure single-target fights",
+    "If mana is fine, drop Arcane Meditation for quality-of-life talents",
+    "Conjure Mana Ruby before the pull; gems are off the global cooldown"
+   ],
+   "tips_ru": [
+    "Не давайте спасть минутному эффекту «Ледяной преграды»; по возможности обновляйте щит после получения урона",
+    "Встаньте ближе к цели перед боем, чтобы достать «Конусом холода»",
+    "В боях с одной целью очко в «Улучшенной снежной буре» можно перенести в «Испепеление»",
+    "Если маны хватает, уберите «Чародейскую медитацию» в пользу удобных талантов",
+    "Примените «Сотворение рубина маны» до боя; камни маны не вызывают общего восстановления"
+   ]
+  },
+  {
+   "id": "fire_raid",
+   "name_en": "Deep Fire / Arcane PvE",
+   "name_ru": "Глубокий огонь с тайной магией: PvE",
+   "role": "DPS",
+   "summary_en": "Wowhead's 16/32/3 deep Fire raid build: Fireball filler, Heating Up-powered Pyroblasts, Improved Scorch, Combustion and Fire Power. The Arcane tree adds Missile Barrage, Arcane Blast (spell power from Intellect) and mana sustain.",
+   "summary_ru": "Рейдовая сборка Wowhead 16/32/3 для огня: «Огненный шар» как основа, «Огненная глыба» с «Разогревом», «Улучшенный ожог», «Возгорание» и «Сила огня». В ветке тайной магии – «Заградительные стрелы», «Чародейская вспышка» (сила заклинаний от интеллекта) и запас маны.",
+   "order": [
+    [
+     "Accelerant",
+     3
+    ],
+    [
+     "Precision",
+     3
+    ],
+    [
+     "Accelerant",
+     2
+    ],
+    [
+     "Ignite",
+     5
+    ],
+    [
+     "Pyroblast",
+     1
+    ],
+    [
+     "Incineration",
+     4
+    ],
+    [
+     "Heating Up",
+     1
+    ],
+    [
+     "Improved Scorch",
+     3
+    ],
+    [
+     "Improved Fire Blast",
+     2
+    ],
+    [
+     "Critical Mass",
+     3
+    ],
+    [
+     "Master of Elements",
+     1
+    ],
+    [
+     "Fire Power",
+     3
+    ],
+    [
+     "Master of Elements",
+     2
+    ],
+    [
+     "Combustion",
+     1
+    ],
+    [
+     "Incineration",
+     1
+    ],
+    [
+     "Improved Channeling",
+     5
+    ],
+    [
+     "Missile Barrage",
+     2
+    ],
+    [
+     "Arcane Subtlety",
+     2
+    ],
+    [
+     "Arcane Concentration",
+     1
+    ],
+    [
+     "Arcane Blast",
+     1
+    ],
+    [
+     "Arcane Concentration",
+     4
+    ],
+    [
+     "Arcane Meditation",
+     1
+    ]
+   ],
+   "rotation_en": [
+    "Pre-cast Pyroblast",
+    "Scorch to build and keep the Improved Scorch debuff (5 stacks)",
+    "Keep 1 stack of Arcane Blast for its spell power bonus",
+    "Pyroblast at 3 stacks of Heating Up",
+    "Fire Blast on cooldown",
+    "Arcane Missiles when Missile Barrage procs",
+    "Fireball as filler; Combustion on cooldown with Scorch stacked and Heating Up ready"
+   ],
+   "rotation_ru": [
+    "Начинайте бой с «Огненной глыбы»",
+    "«Ожог» до 5 эффектов «Улучшенного ожога» и поддерживайте их",
+    "Держите 1 эффект «Чародейской вспышки» ради прибавки к силе заклинаний",
+    "«Огненная глыба» при 3 эффектах «Разогрева»",
+    "«Огненный взрыв» по мере восстановления",
+    "«Чародейские стрелы», когда срабатывают «Заградительные стрелы»",
+    "«Огненный шар» как основное заклинание; «Возгорание» по готовности, когда «Ожог» набран и «Разогрев» готов"
+   ],
+   "stats_en": "Spell hit to cap > Spell Damage (+Fire) > Critical Strike (feeds Ignite and Heating Up) > Intellect (also boosts Arcane Blast) > Spirit. Spell Penetration is a useful bonus.",
+   "stats_ru": "Меткость заклинаний до предела > сила заклинаний (урон от магии огня) > критический удар (питает «Воспламенение» и «Разогрев») > интеллект (также усиливает «Чародейскую вспышку») > дух. Проникающая способность заклинаний – полезный бонус.",
+   "gear_en": [
+    "Sorcerer's Regalia (T0.5) set pieces",
+    "Robe of the Archmage / Belt of the Archmage (Tailoring)",
+    "Spell power + hit items; 'of Fiery Wrath' greens early",
+    "Eye of the Beast and Draconic Infused Emblem trinkets",
+    "Enchants: Arcanum of Focus on head/legs, Greater Spellpower on bracers, Revelation on the weapon"
+   ],
+   "gear_ru": [
+    "Предметы комплекта «Регалии волшебника» (T0.5)",
+    "«Одеяние верховного мага» и «Пояс верховного мага» (портняжное дело)",
+    "Вещи с силой заклинаний и меткостью; на старте – зеленые «of Fiery Wrath»",
+    "Аксессуары Eye of the Beast и Draconic Infused Emblem",
+    "Чары: «Магический камень сосредоточения» на голову и ноги, «Чары для наручей - сила заклинаний II», «Чары для оружия: откровение»"
+   ],
+   "tips_en": [
+    "You can swap 1 Master of Elements point for Blast Wave (AoE) or Flame Throwing (range)",
+    "Use Scorch instead of Fireball when Fire Blast has more than 3 s of cooldown left",
+    "Line up Combustion with trinkets and Power Infusion",
+    "Evocation can be cancelled early when you only need part of it",
+    "The Frostfire alternative (Fire + Frost, Fingers of Frost) plays more proc-based and has fewer flex points"
+   ],
+   "tips_ru": [
+    "Одно очко «Повелителя Стихий» можно перенести во «Взрывную волну» (АоЕ) или «Метание пламени» (дальность)",
+    "Если до восстановления «Огненного взрыва» больше 3 с, применяйте «Ожог» вместо «Огненного шара»",
+    "Совмещайте «Возгорание» с аксессуарами и «Приданием сил»",
+    "«Прилив сил» можно прервать раньше, если нужна лишь часть маны",
+    "Альтернатива – сборка «Стрелы ледяного огня» (огонь + лед, «Ледяные пальцы»): больше зависит от срабатываний и почти не оставляет свободных очков"
+   ]
+  }
+ ],
+ "forever_changes_ru": "В Forever маг получил новые заклинания и способности из талантов: «Чародейская вспышка» (накапливаемая сила заклинаний от 12% интеллекта), «Чародейский гнев», «Стрела ледяного огня» и «Ледяное копье» (талант Льда, общее 8-секундное восстановление с «Огненным взрывом»). Ротации строятся на срабатываниях талантов: «Шквал чародейских стрел», «Разогрев» (более дешёвые и быстрые «Огненные глыбы») и «Ледяные пальцы» вместе с «Обледенением». «Зимняя стужа» теперь усиливает «Конус холода». «Ледяная преграда» пока держится щит, ещё и увеличивает урон от магии льда. Лёд остаётся самой безопасной специализацией для прокачки. На 60 уровне хороши глубокий Огонь с ветками Тайной магии, гибриды ледяного огня и глубокий Лёд («Конус холода» + «Ледяные пальцы»). Предел меткости с талантами — около 17%, а управление маной («Прилив сил», самоцветы маны) — ключевая задача."
+}

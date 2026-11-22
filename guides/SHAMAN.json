@@ -1,0 +1,839 @@
+{
+ "class": "SHAMAN",
+ "patch": "WoW: Forever 1.60.1 (build 71037); talent data from Wowhead Forever talent calculator data file dated 2026-11-20 (post Nov 10-11 hotfixes)",
+ "sources": [
+  "https://www.wowhead.com/forever/talent-calc/shaman",
+  "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1795213635",
+  "https://nether.wowhead.com/forever/ru/data/talents-classic?dv=34&db=1795213635",
+  "https://www.wowhead.com/forever/guide/classes/shaman/enhancement/dps-leveling-tips",
+  "https://www.wowhead.com/forever/guide/classes/shaman/enhancement/talent-builds-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/shaman/enhancement/rotation-cooldowns-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/shaman/enhancement/stat-priority-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/shaman/elemental/talent-builds-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/shaman/elemental/rotation-cooldowns-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/shaman/elemental/stat-priority-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/shaman/restoration/talent-builds-pve-healer",
+  "https://www.wowhead.com/forever/guide/classes/shaman/restoration/rotation-cooldowns-pve-healer",
+  "https://www.wowhead.com/forever/guide/classes/shaman/restoration/stat-priority-pve-healer"
+ ],
+ "confidence_notes": "Talent names, maxRank, row/col and Russian names come straight from Wowhead's Forever talent data (enUS and ruRU, data build 2026-11-20), so they are high confidence. tier = Wowhead row+1, col = Wowhead col+1. spellId is the rank-1 spell ID. All three point orders are copied from Wowhead's embedded talent calculators: Enhancement leveling (guide updated 2026-11-18), Elemental 'Shamanistic Focus' raid/dungeon (2026-11-16) and Restoration 'Ghost Wolf' raid (2026-11-19). Wowhead's Enhancement raid build (17/34/0) equals the leveling build with the 8 Restoration points moved to Flurry 5/5, Maelstrom Weapon 5/5 and Rage of the Farseer. The Elemental guide gives two equal raid options; the other one (31/4/16) takes Mana Tide Totem, Totemic Focus and Water Shield instead. Wowhead still calls the Enhancement stat list speculative. Some ruRU strings are Blizzard's (e.g. 'Опустошение Духов стихии') and are kept verbatim.",
+ "forever_changes_en": "Shaman was reworked as a hybrid. Enhancement scales with Intellect through Mental Dexterity (AP = 100% of Intellect) and Mental Quickness (spell power = 30% of Intellect). It has Maelstrom Weapon stacks for instant, cheaper Lightning Bolts, Improved Stormstrike for mana regeneration, and Rage of the Farseer (30% attack speed) as its 31-point cooldown. Fire Nova is a spell rather than a totem. Elemental's 31-point talent, Lightning Mastery, is a 15-sec burst cooldown (faster Lightning Bolt, no Chain Lightning cooldown), and Earthbound makes Earthbind Totem root. Restoration gains Riptide (HoT that boosts Chain Heal on that target by 25%) and Water Shield (mana on crits and hits). Improved Ghost Wolf makes Ghost Wolf instant and usable indoors. Expertise exists as a stat, and crit chance is unified between melee and spells.",
+ "trees": [
+  {
+   "name": "Elemental",
+   "talents": [
+    {
+     "name": "Convection",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 16039,
+     "name_ru": "Конвекция"
+    },
+    {
+     "name": "Concussion",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 16035,
+     "name_ru": "Сотрясение мозга"
+    },
+    {
+     "name": "Elemental Devastation",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 30160,
+     "name_ru": "Опустошение Духов стихии"
+    },
+    {
+     "name": "Reverberation",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 16040,
+     "name_ru": "Отзвук"
+    },
+    {
+     "name": "Elemental Alacrity",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 16578,
+     "name_ru": "Стихийная стремительность"
+    },
+    {
+     "name": "Call of Flame",
+     "tier": 2,
+     "col": 4,
+     "maxRank": 3,
+     "spellId": 16038,
+     "name_ru": "Зов пламени"
+    },
+    {
+     "name": "Elemental Focus",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 1,
+     "spellId": 16164,
+     "name_ru": "Концентрация стихий"
+    },
+    {
+     "name": "Elemental Warding",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 28996,
+     "name_ru": "Защита от стихий"
+    },
+    {
+     "name": "Trial by Fire",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 16086,
+     "name_ru": "Испытание огнем"
+    },
+    {
+     "name": "Eye of the Storm",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 29062,
+     "name_ru": "Око шторма"
+    },
+    {
+     "name": "Earthbound",
+     "tier": 4,
+     "col": 4,
+     "maxRank": 1,
+     "spellId": 1222988,
+     "name_ru": "Узы земли"
+    },
+    {
+     "name": "Elemental Reach",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 28999,
+     "name_ru": "Предел стихии"
+    },
+    {
+     "name": "Call of Thunder",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 16120,
+     "name_ru": "Зов грома"
+    },
+    {
+     "name": "Lightning Overload",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 408438,
+     "name_ru": "Электрическая перегрузка"
+    },
+    {
+     "name": "Elemental Fury",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 16089,
+     "name_ru": "Неистовство стихий"
+    },
+    {
+     "name": "Lightning Mastery",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 16166,
+     "name_ru": "Власть над молнией"
+    }
+   ]
+  },
+  {
+   "name": "Enhancement",
+   "talents": [
+    {
+     "name": "Earth's Grasp",
+     "tier": 1,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 16043,
+     "name_ru": "Земной захват"
+    },
+    {
+     "name": "Thundering Strikes",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 16255,
+     "name_ru": "Грохочущие удары"
+    },
+    {
+     "name": "Ancestral Knowledge",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 17485,
+     "name_ru": "Знания предков"
+    },
+    {
+     "name": "Guardian Totems",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 16258,
+     "name_ru": "Сторожевые тотемы"
+    },
+    {
+     "name": "Mental Dexterity",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 415140,
+     "name_ru": "Гибкость разума"
+    },
+    {
+     "name": "Improved Lightning Shield",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 16261,
+     "name_ru": "Улучшенный щит молний"
+    },
+    {
+     "name": "Elemental Weapons",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 16266,
+     "name_ru": "Оружие стихий"
+    },
+    {
+     "name": "Shamanistic Focus",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 1223030,
+     "name_ru": "Концентрация шамана"
+    },
+    {
+     "name": "Anticipation",
+     "tier": 3,
+     "col": 4,
+     "maxRank": 3,
+     "spellId": 16254,
+     "name_ru": "Предчувствие"
+    },
+    {
+     "name": "Toughness",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 5,
+     "spellId": 16252,
+     "name_ru": "Крепость"
+    },
+    {
+     "name": "Flurry",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 16256,
+     "name_ru": "Шквал"
+    },
+    {
+     "name": "Stormstrike",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 17364,
+     "name_ru": "Удар бури"
+    },
+    {
+     "name": "Improved Ghost Wolf",
+     "tier": 4,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 16262,
+     "name_ru": "Улучшенный призрачный волк"
+    },
+    {
+     "name": "Spirit Weapons",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 1,
+     "spellId": 16268,
+     "name_ru": "Духовное оружие"
+    },
+    {
+     "name": "Mental Quickness",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 30812,
+     "name_ru": "Ментальная скорость"
+    },
+    {
+     "name": "Improved Stormstrike",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 1223031,
+     "name_ru": "Улучшенный удар бури"
+    },
+    {
+     "name": "Maelstrom Weapon",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 408498,
+     "name_ru": "Оружие Водоворота"
+    },
+    {
+     "name": "Rage of the Farseer",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 425336,
+     "name_ru": "Ярость предсказателя"
+    }
+   ]
+  },
+  {
+   "name": "Restoration",
+   "talents": [
+    {
+     "name": "Improved Healing Wave",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 16182,
+     "name_ru": "Улучшенная волна исцеления"
+    },
+    {
+     "name": "Tidal Focus",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 16179,
+     "name_ru": "Приливная концентрация"
+    },
+    {
+     "name": "Mindfulness",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 1223033,
+     "name_ru": "Вдумчивость"
+    },
+    {
+     "name": "Natural Grace",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 29187,
+     "name_ru": "Природная ловкость"
+    },
+    {
+     "name": "Totemic Focus",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 16173,
+     "name_ru": "Тотемное средоточие"
+    },
+    {
+     "name": "Improved Reincarnation",
+     "tier": 2,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 16184,
+     "name_ru": "Улучшенное восстание из мертвых"
+    },
+    {
+     "name": "Ancestral Healing",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 16176,
+     "name_ru": "Исцеление предков"
+    },
+    {
+     "name": "Healing Focus",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 16181,
+     "name_ru": "Средоточие исцеления"
+    },
+    {
+     "name": "Water Shield",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 408510,
+     "name_ru": "Водный щит"
+    },
+    {
+     "name": "Tidal Mastery",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 5,
+     "spellId": 16194,
+     "name_ru": "Мастерство владения приливами"
+    },
+    {
+     "name": "Restorative Totems",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 16187,
+     "name_ru": "Восстанавливающий тотем"
+    },
+    {
+     "name": "Mana Tide Totem",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 16190,
+     "name_ru": "Тотем прилива маны"
+    },
+    {
+     "name": "Healing Way",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 29206,
+     "name_ru": "Путь исцеления"
+    },
+    {
+     "name": "Nature's Swiftness",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 16188,
+     "name_ru": "Природная стремительность"
+    },
+    {
+     "name": "Purification",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 16178,
+     "name_ru": "Чистота"
+    },
+    {
+     "name": "Riptide",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 408521,
+     "name_ru": "Быстрина"
+    }
+   ]
+  }
+ ],
+ "builds": [
+  {
+   "id": "enh_leveling",
+   "name_en": "Enhancement Leveling (17/26/8)",
+   "name_ru": "Совершенствование для прокачки (17/26/8)",
+   "role": "LEVELING",
+   "summary_en": "Wowhead's leveling build, which is also its Enhancement dungeon build. It rushes Stormstrike and instant indoor Ghost Wolf, adds mana talents (Shamanistic Focus, Improved Stormstrike, Mindfulness) and Restoration hit, then Elemental Fire Nova talents for AoE. For raids at 60, move the 8 Restoration points into Flurry, Maelstrom Weapon and Rage of the Farseer (Wowhead raid build 17/34/0).",
+   "summary_ru": "Сборка Wowhead для прокачки, она же сборка «Совершенствования» для подземелий. Быстро берутся Удар бури и мгновенный Призрачный волк, работающий в помещениях, затем таланты на ману (Концентрация шамана, Улучшенный удар бури, Вдумчивость) и меткость из «Исцеления», а потом таланты «Стихий» на Кольцо огня для урона по площади. Для рейдов на 60-м уровне перенесите 8 очков из «Исцеления» в Шквал, Оружие Водоворота и Ярость предсказателя (рейдовая сборка Wowhead 17/34/0).",
+   "order": [
+    [
+     "Thundering Strikes",
+     5
+    ],
+    [
+     "Mental Dexterity",
+     3
+    ],
+    [
+     "Ancestral Knowledge",
+     2
+    ],
+    [
+     "Shamanistic Focus",
+     1
+    ],
+    [
+     "Elemental Weapons",
+     3
+    ],
+    [
+     "Ancestral Knowledge",
+     1
+    ],
+    [
+     "Stormstrike",
+     1
+    ],
+    [
+     "Improved Ghost Wolf",
+     2
+    ],
+    [
+     "Flurry",
+     2
+    ],
+    [
+     "Improved Stormstrike",
+     2
+    ],
+    [
+     "Mental Quickness",
+     2
+    ],
+    [
+     "Spirit Weapons",
+     1
+    ],
+    [
+     "Maelstrom Weapon",
+     1
+    ],
+    [
+     "Tidal Focus",
+     5
+    ],
+    [
+     "Mindfulness",
+     3
+    ],
+    [
+     "Concussion",
+     5
+    ],
+    [
+     "Call of Flame",
+     3
+    ],
+    [
+     "Elemental Devastation",
+     3
+    ],
+    [
+     "Elemental Focus",
+     1
+    ],
+    [
+     "Reverberation",
+     3
+    ],
+    [
+     "Trial by Fire",
+     2
+    ]
+   ],
+   "rotation_en": [
+    "Keep your weapon imbue and Lightning Shield up, and drop Strength of Earth/Windfury Totem in groups.",
+    "Drop Magma Totem (or Searing Totem when solo) where it hits the most enemies.",
+    "Keep Flame Shock on targets.",
+    "Use Stormstrike on cooldown.",
+    "Cast Lightning Bolt at 5 Maelstrom Weapon stacks; otherwise use Earth Shock.",
+    "Fill with Fire Nova on packs if mana allows."
+   ],
+   "rotation_ru": [
+    "Поддерживайте зачарование оружия и Щит молний, в группе ставьте Тотем силы земли и Тотем неистовства ветра.",
+    "Ставьте Тотем магмы (в одиночку — Опаляющий тотем) так, чтобы он задевал как можно больше врагов.",
+    "Держите на целях Огненный шок.",
+    "Применяйте Удар бури по готовности.",
+    "При 5 зарядах Оружия Водоворота применяйте Молнию, иначе — Земной шок.",
+    "На группах заполняйте паузы Кольцом огня, если хватает маны."
+   ],
+   "stats_en": "Hit to 8% > Expertise to 6.5% > Crit > Strength > Intellect (Mental Dexterity and Mental Quickness turn it into AP and spell power) > Spell Penetration > Haste > Agility > Spell Damage.",
+   "stats_ru": "Меткость до 8% > мастерство до 6,5% > критический удар > сила > интеллект (Гибкость разума и Ментальная скорость превращают его в силу атаки и силу заклинаний) > проникающая способность заклинаний > скорость > ловкость > сила заклинаний.",
+   "gear_en": [
+    "A slow two-hander or a slow main-hand weapon: Maelstrom Weapon procs scale with weapon speed.",
+    "Mail/leather with Strength and Intellect together is ideal for Enhancement.",
+    "A bit of hit above 8% helps your spells (Earth Shock, Lightning Bolt).",
+    "Intellect and mp5 reduce downtime while leveling."
+   ],
+   "gear_ru": [
+    "Медленное двуручное оружие или медленное оружие в правой руке: срабатывание Оружия Водоворота зависит от скорости оружия.",
+    "Для «Совершенствования» идеальны кольчужные и кожаные вещи с силой и интеллектом одновременно.",
+    "Немного меткости сверх 8% помогает заклинаниям (Земной шок, Молния).",
+    "Интеллект и восполнение маны сокращают простои во время прокачки."
+   ],
+   "tips_en": [
+    "Improved Ghost Wolf makes Ghost Wolf instant and usable indoors, a big mobility boost.",
+    "Improved Stormstrike gives 15 sec of 50% casting regeneration; keep Stormstrike rolling to sustain mana.",
+    "Don't sit at 5 Maelstrom Weapon stacks; spend them quickly.",
+    "Earthbind Totem (Earthbound roots) is your escape and kiting tool.",
+    "In groups, Windfury Totem and Strength of Earth Totem are big melee buffs."
+   ],
+   "tips_ru": [
+    "Улучшенный призрачный волк делает Призрачного волка мгновенным и доступным в помещениях — это сильно повышает мобильность.",
+    "Улучшенный удар бури дает 15 секунд восполнения маны на 50% во время произнесения; применяйте Удар бури постоянно, чтобы не терять ману.",
+    "Не держите 5 зарядов Оружия Водоворота — сразу тратьте их.",
+    "Тотем оков земли (с Узами земли — обездвиживание) помогает сбежать и удерживать врагов на расстоянии.",
+    "В группе Тотем неистовства ветра и Тотем силы земли сильно усиливают бойцов ближнего боя."
+   ]
+  },
+  {
+   "id": "ele_raid",
+   "name_en": "Elemental Raid (Shamanistic Focus, 32/11/8)",
+   "name_ru": "Стихии для рейда (Концентрация шамана, 32/11/8)",
+   "role": "DPS",
+   "summary_en": "Wowhead's Elemental raid build that relies on Shamanistic Focus and Ancestral Knowledge for mana instead of Water Shield. It goes deep Elemental to Lightning Mastery and takes Tidal Focus and Mindfulness for hit and regeneration; Wowhead names it the best dungeon build too.",
+   "summary_ru": "Рейдовая сборка «Стихий» по Wowhead, где мана обеспечивается Концентрацией шамана и Знаниями предков вместо Водного щита. Глубоко в «Стихии» до Власти над молнией, плюс Приливная концентрация и Вдумчивость ради меткости и восполнения маны; по Wowhead это также лучшая сборка для подземелий.",
+   "order": [
+    [
+     "Concussion",
+     5
+    ],
+    [
+     "Elemental Alacrity",
+     3
+    ],
+    [
+     "Call of Flame",
+     3
+    ],
+    [
+     "Elemental Focus",
+     1
+    ],
+    [
+     "Convection",
+     3
+    ],
+    [
+     "Eye of the Storm",
+     3
+    ],
+    [
+     "Convection",
+     2
+    ],
+    [
+     "Call of Thunder",
+     1
+    ],
+    [
+     "Lightning Overload",
+     3
+    ],
+    [
+     "Trial by Fire",
+     1
+    ],
+    [
+     "Elemental Fury",
+     5
+    ],
+    [
+     "Lightning Mastery",
+     1
+    ],
+    [
+     "Tidal Focus",
+     5
+    ],
+    [
+     "Mindfulness",
+     3
+    ],
+    [
+     "Thundering Strikes",
+     4
+    ],
+    [
+     "Trial by Fire",
+     1
+    ],
+    [
+     "Thundering Strikes",
+     1
+    ],
+    [
+     "Ancestral Knowledge",
+     5
+    ],
+    [
+     "Shamanistic Focus",
+     1
+    ]
+   ],
+   "rotation_en": [
+    "Keep group buff totems up (Strength of Earth Totem, Windfury Totem).",
+    "Keep Searing Totem down for cheap passive damage.",
+    "Keep Flame Shock on the target, refreshing it right after it expires.",
+    "Use Lightning Mastery on cooldown along with trinkets, potions and racials.",
+    "Cast Chain Lightning when Lightning Mastery is not active and you have a Clearcasting proc or mana to spare.",
+    "Cast Lightning Bolt as filler; downrank if mana gets tight."
+   ],
+   "rotation_ru": [
+    "Поддерживайте групповые тотемы (Тотем силы земли, Тотем неистовства ветра).",
+    "Держите Опаляющий тотем ради дешевого пассивного урона.",
+    "Держите на цели Огненный шок, обновляя его сразу после окончания.",
+    "Применяйте Власть над молнией по готовности вместе с аксессуарами, зельями и расовыми способностями.",
+    "Применяйте Цепную молнию вне Власти над молнией, если сработала Ясность мысли или маны достаточно.",
+    "Молния — основное заклинание-заполнитель; при нехватке маны используйте более низкие ранги."
+   ],
+   "stats_en": "Spell Penetration > Haste > Hit to 17% > Spell Damage > Crit > Nature/Fire Damage > Intellect > Spirit; balance Intellect and Spirit so you don't run out of mana.",
+   "stats_ru": "Проникающая способность заклинаний > скорость > меткость до 17% > сила заклинаний > критический удар > урон от сил природы и огня > интеллект > дух; поддерживайте баланс интеллекта и духа, чтобы не остаться без маны.",
+   "gear_en": [
+    "Spell damage cloth/mail/leather caster pieces with hit.",
+    "Haste and spell penetration items are top rated by Wowhead.",
+    "Bring Major Mana Potions and Demonic Runes; Elemental is very mana-hungry.",
+    "Intellect and mp5 pieces keep you casting through long fights."
+   ],
+   "gear_ru": [
+    "Вещи заклинателя с силой заклинаний и меткостью.",
+    "По оценке Wowhead, скорость и проникающая способность заклинаний ценнее всего.",
+    "Берите с собой Огромные зелья маны и Демонические руны: «Стихии» расходуют очень много маны.",
+    "Интеллект и восполнение маны позволяют колдовать весь долгий бой."
+   ],
+   "tips_en": [
+    "Elemental is a burst spec: line up Lightning Mastery with every other cooldown.",
+    "Elemental Focus Clearcasting procs make your next damage spell free; spend them on Chain Lightning.",
+    "Downranking Flame Shock, Lightning Bolt and Chain Lightning is a valid mana tool.",
+    "Your totems are a big part of your raid value; keep them up.",
+    "For packs: Earthbind Totem, Stoneclaw Totem, Magma Totem and Fire Nova."
+   ],
+   "tips_ru": [
+    "«Стихии» — специализация мгновенного урона: совмещайте Власть над молнией со всеми остальными усилениями.",
+    "Концентрация стихий дает Ясность мысли — следующее атакующее заклинание бесплатно; тратьте его на Цепную молнию.",
+    "Использование низких рангов Огненного шока, Молнии и Цепной молнии — нормальный способ экономить ману.",
+    "Тотемы — большая часть вашей ценности для рейда; не забывайте о них.",
+    "Против групп: Тотем оков земли, Тотем каменного когтя, Тотем магмы и Кольцо огня."
+   ]
+  },
+  {
+   "id": "resto_raid",
+   "name_en": "Restoration Raid Healer (Ghost Wolf, 0/17/34)",
+   "name_ru": "Рейдовый лекарь «Исцеление» (Призрачный волк, 0/17/34)",
+   "role": "HEAL",
+   "summary_en": "Wowhead's raid Restoration build with all core talents: Riptide, Nature's Swiftness, Mana Tide Totem, Purification and Healing Way. The Enhancement points go to Ancestral Knowledge, Guardian Totems, Shamanistic Focus and Improved Ghost Wolf for mobility; on static fights Wowhead swaps Improved Ghost Wolf and the utility points for Restorative Totems.",
+   "summary_ru": "Рейдовая сборка «Исцеления» по Wowhead со всеми ключевыми талантами: Быстрина, Природная стремительность, Тотем прилива маны, Чистота и Путь исцеления. Очки в «Совершенствовании» идут в Знания предков, Сторожевые тотемы, Концентрацию шамана и Улучшенного призрачного волка ради мобильности; на статичных боях Wowhead заменяет волка и вспомогательные таланты Восстанавливающим тотемом.",
+   "order": [
+    [
+     "Improved Healing Wave",
+     5
+    ],
+    [
+     "Mindfulness",
+     3
+    ],
+    [
+     "Tidal Focus",
+     2
+    ],
+    [
+     "Healing Focus",
+     3
+    ],
+    [
+     "Water Shield",
+     1
+    ],
+    [
+     "Ancestral Healing",
+     3
+    ],
+    [
+     "Tidal Mastery",
+     5
+    ],
+    [
+     "Mana Tide Totem",
+     1
+    ],
+    [
+     "Nature's Swiftness",
+     1
+    ],
+    [
+     "Healing Way",
+     3
+    ],
+    [
+     "Purification",
+     5
+    ],
+    [
+     "Riptide",
+     1
+    ],
+    [
+     "Thundering Strikes",
+     5
+    ],
+    [
+     "Ancestral Knowledge",
+     5
+    ],
+    [
+     "Tidal Focus",
+     1
+    ],
+    [
+     "Guardian Totems",
+     2
+    ],
+    [
+     "Shamanistic Focus",
+     1
+    ],
+    [
+     "Earth's Grasp",
+     2
+    ],
+    [
+     "Improved Ghost Wolf",
+     2
+    ]
+   ],
+   "rotation_en": [
+    "Keep group buff totems up (Strength of Earth Totem, Windfury Totem or caster totems as needed).",
+    "Keep Water Shield up, refreshing it during downtime or while moving.",
+    "Keep Riptide on the most damaged ally (the tank).",
+    "Use Chain Heal for group damage, starting on a target with Riptide for +25%.",
+    "Use Healing Wave for efficient single-target healing, max rank on deeply injured targets.",
+    "Use Mana Tide Totem at about 80% mana, and Nature's Swiftness + Healing Wave for emergencies."
+   ],
+   "rotation_ru": [
+    "Поддерживайте групповые тотемы (Тотем силы земли, Тотем неистовства ветра или тотемы для заклинателей по ситуации).",
+    "Поддерживайте Водный щит, обновляя его в паузах или на ходу.",
+    "Держите Быстрину на самом раненом союзнике (обычно на танке).",
+    "При уроне по группе применяйте Цепное исцеление, начиная с цели под Быстриной (+25%).",
+    "Волна исцеления — экономное лечение одной цели; максимальный ранг используйте на сильно раненых.",
+    "Тотем прилива маны ставьте примерно при 80% маны, а Природную стремительность + Волну исцеления берегите для экстренных случаев."
+   ],
+   "stats_en": "Healing Power > Crit (feeds Water Shield and Ancestral Healing) > Haste > Intellect > Spirit > Mp5.",
+   "stats_ru": "Сила исцеления > критический удар (усиливает Водный щит и Исцеление предков) > скорость > интеллект > дух > восполнение маны.",
+   "gear_en": [
+    "+Healing mail/leather/cloth pieces first.",
+    "Spell crit returns mana through Water Shield and gives armor through Ancestral Healing.",
+    "Intellect, Spirit and mp5 for sustain on long fights.",
+    "A shield or off-hand with healing stats."
+   ],
+   "gear_ru": [
+    "В первую очередь вещи с бонусом к исцелению.",
+    "Критический эффект заклинаний возвращает ману через Водный щит и усиливает броню через Исцеление предков.",
+    "Интеллект, дух и восполнение маны для долгих боев.",
+    "Щит или предмет для левой руки с характеристиками лекаря."
+   ],
+   "tips_en": [
+    "Wait until targets are deeply injured to cast full-rank Healing Wave; it saves mana and keeps you outside the 5-second rule.",
+    "Don't drop Mana Tide Totem when it would overcap mana for your group.",
+    "Water Shield loses globes on crits; refresh it whenever you're idle.",
+    "Ancestral Healing's +25% armor after crit heals is a strong tank buff.",
+    "Improved Ghost Wolf is for movement-heavy fights; take Restorative Totems for static ones."
+   ],
+   "tips_ru": [
+    "Ждите, пока цель получит серьезный урон, прежде чем применять Волну исцеления максимального ранга: это экономит ману и чаще выводит вас из-под правила 5 секунд.",
+    "Не ставьте Тотем прилива маны, если у группы мана почти полная.",
+    "Водный щит теряет сферы при критических эффектах — обновляйте его при каждой паузе.",
+    "Исцеление предков после критического лечения повышает броню на 25% — сильное усиление для танка.",
+    "Улучшенный призрачный волк нужен на подвижных боях, на статичных берите Восстанавливающий тотем."
+   ]
+  }
+ ],
+ "forever_changes_ru": "Шаман переработан как гибрид. Совершенствование растёт от интеллекта через «Ментальную ловкость» (сила атаки = 100% интеллекта) и «Ментальную быстроту» (сила заклинаний = 30% интеллекта). У него есть стаки «Оружия Водоворота» для мгновенных и более дешёвых «Молний», «Улучшенный удар бури» для восстановления маны и «Ярость Провидца» (+30% к скорости атаки) — кулдаун за 31 очко. «Кольцо огня» стало заклинанием, а не тотемом. Талант Стихий за 31 очко — «Мастерство молний», 15-секундный кулдаун для рывка урона (быстрая «Молния», «Цепная молния» без восстановления), а «Связь с землёй» заставляет «Тотем оков земли» обездвиживать. Исцеление получает «Быстрину» (HoT, усиливающий «Цепное исцеление» по этой цели на 25%) и «Водный щит» (мана при критах и попаданиях). «Улучшенный призрачный волк» делает «Призрачного волка» мгновенным и доступным в помещениях. Появилось «Мастерство», а шанс крита общий для ближнего боя и заклинаний."
+}

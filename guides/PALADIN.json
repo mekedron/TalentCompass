@@ -1,0 +1,864 @@
+{
+ "class": "PALADIN",
+ "patch": "WoW: Forever 1.60.1 (build 71037); talent data from Wowhead Forever talent calculator data file dated 2026-11-20 (post Nov 10-11 hotfixes)",
+ "sources": [
+  "https://www.wowhead.com/forever/talent-calc/paladin",
+  "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1795213635",
+  "https://nether.wowhead.com/forever/ru/data/talents-classic?dv=34&db=1795213635",
+  "https://www.wowhead.com/forever/guide/classes/paladin/retribution/dps-leveling-tips",
+  "https://www.wowhead.com/forever/guide/classes/paladin/retribution/talent-builds-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/paladin/retribution/rotation-cooldowns-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/paladin/retribution/stat-priority-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/paladin/retribution/bis-gear",
+  "https://www.wowhead.com/forever/guide/classes/paladin/holy/talent-builds-pve-healer",
+  "https://www.wowhead.com/forever/guide/classes/paladin/holy/rotation-cooldowns-pve-healer",
+  "https://www.wowhead.com/forever/guide/classes/paladin/holy/stat-priority-pve-healer",
+  "https://www.wowhead.com/forever/guide/classes/paladin/protection/talent-builds-pve-tank",
+  "https://www.wowhead.com/forever/guide/classes/paladin/protection/rotation-cooldowns-pve-tank",
+  "https://www.wowhead.com/forever/guide/classes/paladin/protection/stat-priority-pve-tank"
+ ],
+ "confidence_notes": "Talent names, maxRank, row/col and Russian names come straight from Wowhead's Forever talent data (enUS and ruRU files, data build stamped 2026-11-20), so they are high confidence. tier = Wowhead row+1, col = Wowhead col+1 (1-4). spellId is the rank-1 spell ID from that data; for multi-rank Classic talents later ranks have different IDs. Some ruRU strings are Blizzard's own and contain typos (e.g. 'Улучшенное провосудие', 'Духовное концентрация'); they are kept verbatim because the client shows them that way. Point orders are copied from the Wowhead talent-calc links in the guides (Ret leveling/raid guide updated 2026-11-18; Holy and Prot talent pages last updated 2026-11-04, but their builds validate against the current tree). Stat priorities are Wowhead's and are partly speculative until raids open on Dec 9. Gear advice is generic because Phase 1 raid loot (Barrow Deeps, Hyjal Summit) is not out yet.",
+ "forever_changes_en": "Paladin was heavily reworked. Holy Strike is a new baseline 10-sec-cooldown melee strike, Judgement no longer consumes the active Seal, and Seal of Fury is the tank seal. Blessing of Kings and Voice of Truth are baseline, and blessings last 1 hour. Retribution's 31-point talent is Unsealed Wrath, which stores Seal 'echoes' to spend by switching seals. Champion of the Light turns 60% of Intellect into spell damage, so Ret now wants Intellect and spell damage. Holy gets Holy Shock at 21 points (10-sec cooldown) and Light's Vigil, a group heal that Holy Shock triggers. Protection gets Templar's Bulwark (absorb), Swift Judgement, Iron Creed and Shieldsworn. Expertise exists as a stat (6.5% soft cap). The 1-point 'gold' talents unlock at 11/16/21/31 points in a tree.",
+ "trees": [
+  {
+   "name": "Holy",
+   "talents": [
+    {
+     "name": "Spiritual Focus",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 20205,
+     "name_ru": "Духовное концентрация"
+    },
+    {
+     "name": "Divine Strength",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 20262,
+     "name_ru": "Божественная сила"
+    },
+    {
+     "name": "Healing Light",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 20237,
+     "name_ru": "Исцеляющий Свет"
+    },
+    {
+     "name": "Reverence",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 1310899,
+     "name_ru": "Благоговение"
+    },
+    {
+     "name": "Improved Seals",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 20224,
+     "name_ru": "Улучшенные печати"
+    },
+    {
+     "name": "Purifying Power",
+     "tier": 2,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 429144,
+     "name_ru": "Очищающая сила"
+    },
+    {
+     "name": "Divine Favor",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 1,
+     "spellId": 20216,
+     "name_ru": "Божественное одобрение"
+    },
+    {
+     "name": "Illumination",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 20210,
+     "name_ru": "Свечение"
+    },
+    {
+     "name": "Holy Conduit",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 1237268,
+     "name_ru": "Священный проводник"
+    },
+    {
+     "name": "Divine Precision",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 1310904,
+     "name_ru": "Божественная точность"
+    },
+    {
+     "name": "Infusion of Light",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 426065,
+     "name_ru": "Прилив Света"
+    },
+    {
+     "name": "Oath of Light",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 1328548,
+     "name_ru": "Клятва Света"
+    },
+    {
+     "name": "Consecrated Ground",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 1310905,
+     "name_ru": "Освященная земля"
+    },
+    {
+     "name": "Holy Shock",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 1311606,
+     "name_ru": "Шок небес"
+    },
+    {
+     "name": "Boundless Light",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 1328550,
+     "name_ru": "Безграничный Свет"
+    },
+    {
+     "name": "Holy Power",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 5923,
+     "name_ru": "Священная сила"
+    },
+    {
+     "name": "Light's Vigil",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 1310911,
+     "name_ru": "Дозор Света"
+    }
+   ]
+  },
+  {
+   "name": "Protection",
+   "talents": [
+    {
+     "name": "Divine Intellect",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 20257,
+     "name_ru": "Божественный интеллект"
+    },
+    {
+     "name": "Redoubt",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 20127,
+     "name_ru": "Оплот"
+    },
+    {
+     "name": "Precision",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 20189,
+     "name_ru": "Точность"
+    },
+    {
+     "name": "Guardian's Favor",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 20174,
+     "name_ru": "Помощь стража"
+    },
+    {
+     "name": "Sacred Duty",
+     "tier": 2,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 1224697,
+     "name_ru": "Священный долг"
+    },
+    {
+     "name": "Templar's Bulwark",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 1,
+     "spellId": 1311015,
+     "name_ru": "Щит храмовника"
+    },
+    {
+     "name": "Improved Hammer of Justice",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 20487,
+     "name_ru": "Улучшенный молот правосудия"
+    },
+    {
+     "name": "Shield Specialization",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 20150,
+     "name_ru": "Специализация на щитах"
+    },
+    {
+     "name": "Toughness",
+     "tier": 3,
+     "col": 4,
+     "maxRank": 5,
+     "spellId": 20143,
+     "name_ru": "Крепость"
+    },
+    {
+     "name": "Swift Judgement",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 1,
+     "spellId": 1310994,
+     "name_ru": "Стремительное правосудие"
+    },
+    {
+     "name": "Improved Righteous Fury",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 20468,
+     "name_ru": "Улучшенное праведное неистовство"
+    },
+    {
+     "name": "Anticipation",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 20096,
+     "name_ru": "Предчувствие"
+    },
+    {
+     "name": "Stoicism",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 1328546,
+     "name_ru": "Стоицизм"
+    },
+    {
+     "name": "Holy Shield",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 20925,
+     "name_ru": "Щит небес"
+    },
+    {
+     "name": "Reckoning",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 20177,
+     "name_ru": "Расплата"
+    },
+    {
+     "name": "Iron Creed",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 1311034,
+     "name_ru": "Железная вера"
+    },
+    {
+     "name": "Shieldsworn",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 1328544,
+     "name_ru": "Клятва щита"
+    }
+   ]
+  },
+  {
+   "name": "Retribution",
+   "talents": [
+    {
+     "name": "Deflection",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 20060,
+     "name_ru": "Отражение"
+    },
+    {
+     "name": "Benediction",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 20101,
+     "name_ru": "Благодарение"
+    },
+    {
+     "name": "Improved Judgement",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 25956,
+     "name_ru": "Улучшенное провосудие"
+    },
+    {
+     "name": "Conviction",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 20117,
+     "name_ru": "Приговор"
+    },
+    {
+     "name": "Sanctified Judgement",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 1311074,
+     "name_ru": "Священное правосудие"
+    },
+    {
+     "name": "Vindication",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 9452,
+     "name_ru": "Подтверждение"
+    },
+    {
+     "name": "Unyielding Faith",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 9453,
+     "name_ru": "Непоколебимая вера"
+    },
+    {
+     "name": "Seal of Command",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 20375,
+     "name_ru": "Печать повиновения"
+    },
+    {
+     "name": "Pursuit of Justice",
+     "tier": 3,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 26022,
+     "name_ru": "Погоня за справедливостью"
+    },
+    {
+     "name": "Eye for an Eye",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 9799,
+     "name_ru": "Око за око"
+    },
+    {
+     "name": "Sacred Arbiter",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 1311087,
+     "name_ru": "Священный вершитель"
+    },
+    {
+     "name": "Two-Handed Weapon Specialization",
+     "tier": 4,
+     "col": 4,
+     "maxRank": 3,
+     "spellId": 20111,
+     "name_ru": "Специализация на двуручном оружии"
+    },
+    {
+     "name": "Turn Evil",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 1328370,
+     "name_ru": "Изгнание зла"
+    },
+    {
+     "name": "Repentance",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 20066,
+     "name_ru": "Покаяние"
+    },
+    {
+     "name": "Vengeance",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 20049,
+     "name_ru": "Отмщение"
+    },
+    {
+     "name": "Champion of the Light",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 1311084,
+     "name_ru": "Воитель Света"
+    },
+    {
+     "name": "Unsealed Wrath",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 1310735,
+     "name_ru": "Освобожденный гнев"
+    }
+   ]
+  }
+ ],
+ "builds": [
+  {
+   "id": "ret_leveling",
+   "name_en": "Retribution Leveling (Unsealed Wrath, 12/8/31)",
+   "name_ru": "Воздаяние для прокачки (Освобожденный гнев, 12/8/31)",
+   "role": "LEVELING",
+   "summary_en": "Wowhead's Retribution leveling build. It picks up mana savers and Seal of Command first, reaches Unsealed Wrath at level 40, and finishes in Holy and Protection for Strength, seal damage and Intellect. At 60 it is also Wowhead's recommended raid Retribution build.",
+   "summary_ru": "Сборка Wowhead для прокачки в ветке «Воздаяние». Сначала берутся таланты на экономию маны и Печать повиновения, на 40-м уровне — Освобожденный гнев, а остаток идет в «Свет» и «Защиту» ради силы, урона печатей и интеллекта. На 60-м уровне это же рекомендуемая рейдовая сборка «Воздаяния».",
+   "order": [
+    [
+     "Benediction",
+     5
+    ],
+    [
+     "Improved Judgement",
+     2
+    ],
+    [
+     "Sanctified Judgement",
+     3
+    ],
+    [
+     "Seal of Command",
+     1
+    ],
+    [
+     "Pursuit of Justice",
+     2
+    ],
+    [
+     "Conviction",
+     2
+    ],
+    [
+     "Sacred Arbiter",
+     1
+    ],
+    [
+     "Two-Handed Weapon Specialization",
+     3
+    ],
+    [
+     "Conviction",
+     1
+    ],
+    [
+     "Vengeance",
+     3
+    ],
+    [
+     "Repentance",
+     1
+    ],
+    [
+     "Unyielding Faith",
+     1
+    ],
+    [
+     "Champion of the Light",
+     5
+    ],
+    [
+     "Unsealed Wrath",
+     1
+    ],
+    [
+     "Divine Strength",
+     5
+    ],
+    [
+     "Improved Seals",
+     5
+    ],
+    [
+     "Holy Conduit",
+     2
+    ],
+    [
+     "Divine Intellect",
+     5
+    ],
+    [
+     "Precision",
+     3
+    ]
+   ],
+   "rotation_en": [
+    "Before the pull on long-lived targets, judge Seal of the Crusader, then switch to Seal of Command.",
+    "Keep Seal of Command active and cast Judgement on cooldown (it no longer consumes the seal).",
+    "Cast Hammer of Wrath on targets below 20% health.",
+    "Cast Holy Strike on cooldown; with Sacred Arbiter it also refreshes your Judgements.",
+    "With Unsealed Wrath, at 2-3 stored echoes switch to Seal of Righteousness for one swing to spend them, then go back to Seal of Command.",
+    "Cast Exorcism on Undead and Demons.",
+    "Use Consecration only on big pulls and when mana allows."
+   ],
+   "rotation_ru": [
+    "Перед боем с долгоживущей целью наложите Печать воина Cвета и примените Правосудие, затем переключитесь на Печать повиновения.",
+    "Держите активной Печать повиновения и применяйте Правосудие по готовности (оно больше не снимает печать).",
+    "Используйте Молот гнева на целях с запасом здоровья ниже 20%.",
+    "Применяйте Священный удар по готовности; со Священным вершителем он еще и обновляет ваши эффекты Правосудия.",
+    "С Освобожденным гневом при 2–3 накопленных зарядах переключитесь на Печать праведности на один удар, чтобы их потратить, затем вернитесь к Печати повиновения.",
+    "Применяйте Экзорцизм против нежити и демонов.",
+    "Освящение — только на больших группах и если хватает маны."
+   ],
+   "stats_en": "Weapon DPS and a slow two-hander first, then Hit (9%) and Expertise (6.5%), then Spell Damage and Intellect (Champion of the Light converts Intellect to spell damage), then Strength/Attack Power, then Agility/Crit.",
+   "stats_ru": "Сначала урон в секунду оружия и медленное двуручное оружие, затем меткость (9%) и мастерство (6,5%), затем сила заклинаний и интеллект (Воитель Света превращает интеллект в силу заклинаний), затем сила/сила атаки, затем ловкость/критический удар.",
+   "gear_en": [
+    "Upgrade your two-handed weapon whenever possible; it outweighs almost any other slot.",
+    "Prefer slow two-handers (about 2.8+ speed) for Seal of Command and Unsealed Wrath.",
+    "Mail/plate pieces carrying both Strength and Intellect or spell damage are the best all-round upgrades.",
+    "At 60 aim for the Justice Battlegear tier set; Blacksmiths can craft one BoE tier piece (Justice Leggings plans come first).",
+    "Fill Hit and Expertise from gear until you reach the caps."
+   ],
+   "gear_ru": [
+    "Обновляйте двуручное оружие при любой возможности — оно важнее почти любого другого слота.",
+    "Выбирайте медленное двуручное оружие (скорость примерно 2,8 и выше) для Печати повиновения и Освобожденного гнева.",
+    "Лучшие универсальные улучшения — кольчужные и латные вещи с силой и интеллектом или силой заклинаний.",
+    "На 60-м уровне цель — комплект Justice Battlegear; кузнецы могут создать одну БоЕ-часть комплекта (первыми доступны чертежи Justice Leggings).",
+    "Добирайте меткость и мастерство с экипировки до их порогов."
+   ],
+   "tips_en": [
+    "Judgement does not consume your seal in Forever, so you recast seals far less often.",
+    "Benediction and Sanctified Judgement are taken first because mana is what limits Retribution.",
+    "Holy Strike and Judgement reset during downtime, so open every pull with them for front-loaded burst.",
+    "If mana runs low, drop Consecration first; it adds little single-target damage.",
+    "Lay on Hands and Divine Shield are your panic buttons; you have no ranged pull, so walk into every fight."
+   ],
+   "tips_ru": [
+    "В Forever Правосудие не снимает печать, поэтому обновлять печати нужно гораздо реже.",
+    "Благодарение и Священное правосудие берутся первыми: «Воздаяние» прежде всего ограничено маной.",
+    "Священный удар и Правосудие восстанавливаются между боями — открывайте ими каждый бой ради мгновенного урона.",
+    "Когда мана заканчивается, первым откажитесь от Освящения: в бою с одной целью оно дает мало урона.",
+    "Возложение рук и Божественный щит — экстренные кнопки; дальнего пула у вас нет, так что к каждой цели придется подходить."
+   ]
+  },
+  {
+   "id": "holy_raid",
+   "name_en": "Holy Raid Healer (31/7/13)",
+   "name_ru": "Рейдовый лекарь «Свет» (31/7/13)",
+   "role": "HEAL",
+   "summary_en": "Wowhead's raid Holy build: all healing talents down to Light's Vigil, Divine Intellect in Protection and Conviction in Retribution. Leftover points go to Pursuit of Justice and Sacred Duty.",
+   "summary_ru": "Рейдовая сборка «Света» по Wowhead: все лечащие таланты вплоть до Дозора Света, Божественный интеллект в «Защите» и Приговор в «Воздаянии». Оставшиеся очки идут в Погоню за справедливостью и Священный долг.",
+   "order": [
+    [
+     "Spiritual Focus",
+     5
+    ],
+    [
+     "Reverence",
+     2
+    ],
+    [
+     "Healing Light",
+     3
+    ],
+    [
+     "Illumination",
+     5
+    ],
+    [
+     "Divine Favor",
+     1
+    ],
+    [
+     "Infusion of Light",
+     2
+    ],
+    [
+     "Oath of Light",
+     1
+    ],
+    [
+     "Divine Precision",
+     1
+    ],
+    [
+     "Holy Shock",
+     1
+    ],
+    [
+     "Boundless Light",
+     2
+    ],
+    [
+     "Divine Precision",
+     1
+    ],
+    [
+     "Purifying Power",
+     1
+    ],
+    [
+     "Holy Power",
+     5
+    ],
+    [
+     "Light's Vigil",
+     1
+    ],
+    [
+     "Divine Intellect",
+     5
+    ],
+    [
+     "Benediction",
+     5
+    ],
+    [
+     "Conviction",
+     3
+    ],
+    [
+     "Sanctified Judgement",
+     2
+    ],
+    [
+     "Pursuit of Justice",
+     2
+    ],
+    [
+     "Sanctified Judgement",
+     1
+    ],
+    [
+     "Sacred Duty",
+     2
+    ]
+   ],
+   "rotation_en": [
+    "Keep your assigned Judgement seal (Seal of Wisdom or Seal of the Crusader) applied with Judgement on the main target.",
+    "Pre-place Light's Vigil on a player whose group will take damage soon.",
+    "Holy Shock that player to trigger Light's Vigil for group-wide healing; it also refunds Holy Shock's cooldown.",
+    "Spend Infusion of Light procs on fast Holy Light casts.",
+    "Use Holy Shock as an instant emergency heal when there is no time to cast.",
+    "Fill with Flash of Light for cheap healing, or Holy Light for big damage; save Lay on Hands for real emergencies."
+   ],
+   "rotation_ru": [
+    "Поддерживайте на основной цели назначенную печать (Печать мудрости или Печать воина Cвета) через Правосудие.",
+    "Заранее накладывайте Дозор Света на игрока, чья группа скоро получит урон.",
+    "Примените к нему Шок небес, чтобы активировать Дозор Света и исцелить всю группу; это еще и сбрасывает перезарядку Шока небес.",
+    "Тратьте эффекты Прилива Света на быстрый Свет небес.",
+    "Используйте Шок небес как мгновенное экстренное исцеление, когда нет времени на произнесение.",
+    "В остальное время — Вспышка Света для дешевого лечения или Свет небес для крупного урона; Возложение рук берегите на крайний случай."
+   ],
+   "stats_en": "Healing Power > Intellect > Critical Strike > Spirit. You don't need hit for heals; Divine Precision covers hit for offensive spells.",
+   "stats_ru": "Сила исцеления > интеллект > критический удар > дух. Меткость для лечения не нужна, а для атакующих заклинаний ее дает Божественная точность.",
+   "gear_en": [
+    "Pieces with +healing are the top priority, then Intellect.",
+    "Spell critical strike items feed Illumination, Infusion of Light and Holy Power.",
+    "At 60 aim for the Justice Armor tier set from Barrow Deeps and Hyjal Summit.",
+    "A Spirit or mp5 piece helps because Reverence keeps 30% of Spirit regeneration while casting."
+   ],
+   "gear_ru": [
+    "Главный приоритет — вещи с бонусом к исцелению, затем интеллект.",
+    "Критический удар заклинаниями усиливает Свечение, Прилив Света и Священную силу.",
+    "На 60-м уровне цель — комплект Justice Armor из Barrow Deeps и Hyjal Summit.",
+    "Вещи с духом или восполнением маны полезны: Благоговение сохраняет 30% восполнения от духа во время произнесения."
+   ],
+   "tips_en": [
+    "Light's Vigil plus Holy Shock is your only real group heal; plan it before damage arrives.",
+    "Divine Favor guarantees a crit on the next Flash of Light, Holy Light or Holy Shock; use it for emergencies or to trigger Illumination.",
+    "Use Voice of Truth to ignore silences and interrupts for 6 seconds on fights that have them.",
+    "Your Blessings, Auras and Cleanse are a big part of your raid value; keep them up."
+   ],
+   "tips_ru": [
+    "Дозор Света в связке с Шоком небес — ваше единственное настоящее групповое лечение; готовьте его до прихода урона.",
+    "Божественное одобрение гарантирует критический эффект следующей Вспышки Света, Света небес или Шока небес — используйте его в экстренных случаях или для срабатывания Свечения.",
+    "Глас истины на 6 секунд защищает от безмолвия и прерываний — применяйте его там, где они есть.",
+    "Благословения, ауры и Очищение — большая часть вашей ценности для рейда; не забывайте о них."
+   ]
+  },
+  {
+   "id": "prot_standard",
+   "name_en": "Protection Standard Tank (0/35/16)",
+   "name_ru": "Стандартный танк «Защита» (0/35/16)",
+   "role": "TANK",
+   "summary_en": "Wowhead's go-to tank build. It takes every strong defensive Protection talent down to Shieldsworn, plus Deflection, Conviction, Sanctified Judgement, Pursuit of Justice and Sacred Arbiter from Retribution.",
+   "summary_ru": "Основная танковая сборка по Wowhead. Она берет все сильные защитные таланты «Защиты» вплоть до Клятвы щита, а из «Воздаяния» — Отражение, Приговор, Священное правосудие, Погоню за справедливостью и Священного вершителя.",
+   "order": [
+    [
+     "Redoubt",
+     5
+    ],
+    [
+     "Precision",
+     3
+    ],
+    [
+     "Sacred Duty",
+     2
+    ],
+    [
+     "Templar's Bulwark",
+     1
+    ],
+    [
+     "Shield Specialization",
+     2
+    ],
+    [
+     "Toughness",
+     2
+    ],
+    [
+     "Swift Judgement",
+     1
+    ],
+    [
+     "Improved Righteous Fury",
+     3
+    ],
+    [
+     "Anticipation",
+     1
+    ],
+    [
+     "Holy Shield",
+     1
+    ],
+    [
+     "Reckoning",
+     5
+    ],
+    [
+     "Iron Creed",
+     3
+    ],
+    [
+     "Anticipation",
+     1
+    ],
+    [
+     "Shieldsworn",
+     1
+    ],
+    [
+     "Deflection",
+     5
+    ],
+    [
+     "Improved Judgement",
+     2
+    ],
+    [
+     "Conviction",
+     3
+    ],
+    [
+     "Sanctified Judgement",
+     3
+    ],
+    [
+     "Pursuit of Justice",
+     2
+    ],
+    [
+     "Sacred Arbiter",
+     1
+    ],
+    [
+     "Anticipation",
+     3
+    ],
+    [
+     "Toughness",
+     1
+    ]
+   ],
+   "rotation_en": [
+    "Before the pull, turn on Righteous Fury and Retribution Aura and judge your assigned debuff seal (Seal of Wisdom or Seal of the Crusader).",
+    "Keep Seal of Fury active while tanking.",
+    "Cast Judgement on cooldown (it is off the GCD).",
+    "Cast Consecration when mana allows.",
+    "Cast Holy Shield on cooldown, then Holy Strike; try to fit two Holy Strikes into each Holy Shield window.",
+    "Cast Exorcism and Holy Wrath on Undead or Demons, and Hammer of Wrath on low-health targets.",
+    "Save Templar's Bulwark for heavy damage spikes."
+   ],
+   "rotation_ru": [
+    "Перед пулом включите Праведное неистовство и Ауру воздаяния и через Правосудие наложите назначенную печать (Печать мудрости или Печать воина Cвета).",
+    "Во время танкования держите активной Печать ярости.",
+    "Применяйте Правосудие по готовности (оно не занимает глобальную перезарядку).",
+    "Применяйте Освящение, если хватает маны.",
+    "Применяйте Щит небес по готовности, затем Священный удар; старайтесь уложить два Священных удара в одно действие Щита небес.",
+    "Против нежити и демонов используйте Экзорцизм и Гнев небес, по целям с малым запасом здоровья — Молот гнева.",
+    "Щит храмовника берегите для пиков сильного урона."
+   ],
+   "stats_en": "Balanced: Stamina > Spell Power > Hit to 8% > Defense to 440 > Armor > Expertise to 6.5% > Agility > Block. Lean defensive (Stamina, Defense, Armor) for progression, offensive (Spell Power, Hit, Expertise) on farm.",
+   "stats_ru": "Сбалансированно: выносливость > сила заклинаний > меткость до 8% > защита до 440 > броня > мастерство до 6,5% > ловкость > блок. Для освоения сложного контента уклон в защиту (выносливость, защита, броня), для фарма — в атаку (сила заклинаний, меткость, мастерство).",
+   "gear_en": [
+    "Reach 440 Defense so bosses can't crit you, then stack Stamina and Armor.",
+    "Spell Power on tank pieces is your main threat stat.",
+    "A good shield with high block value powers Holy Shield, Shield Specialization and Reckoning.",
+    "At 60 aim for the Justice Battleplate tier set."
+   ],
+   "gear_ru": [
+    "Наберите 440 защиты, чтобы боссы не наносили вам критических ударов, затем выносливость и броню.",
+    "Сила заклинаний на танковых вещах — ваша главная характеристика для угрозы.",
+    "Хороший щит с высоким показателем блока усиливает Щит небес, Специализацию на щитах и Расплату.",
+    "На 60-м уровне цель — комплект Justice Battleplate."
+   ],
+   "tips_en": [
+    "Mana is the core of Protection play; don't spam Consecration if your pool is draining.",
+    "Shieldsworn brings Holy Strike to a 6-sec cooldown, so Iron Creed's damage reduction can stay up all the time.",
+    "Sacred Duty lowers Templar's Bulwark to a 4-minute cooldown; treat it as your Shield Wall.",
+    "Cleanse is a strong raid tool; set up a mouseover macro.",
+    "Reapply blessings after using Blessing of Protection or Blessing of Freedom."
+   ],
+   "tips_ru": [
+    "Мана — основа игры за «Защиту»; не злоупотребляйте Освящением, если запас тает.",
+    "Клятва щита сокращает перезарядку Священного удара до 6 секунд, поэтому снижение урона от Железной веры может действовать постоянно.",
+    "Священный долг сокращает перезарядку Щита храмовника до 4 минут — это ваш аналог Глухой обороны.",
+    "Очищение — сильный инструмент для рейда; заведите макрос на цель под курсором.",
+    "После Благословения защиты или Благословения свободы не забудьте снова наложить обычное благословение."
+   ]
+  }
+ ],
+ "forever_changes_ru": "Паладин сильно переработан. «Священный удар» — новая базовая атака ближнего боя с восстановлением 10 сек., «Правосудие» больше не расходует активную печать, а «Печать ярости» стала танковой печатью. «Благословение королей» и «Голос истины» стали базовыми, благословения длятся 1 час. Талант Воздаяния за 31 очко — «Гнев без печати»: он копит «отголоски» печатей, которые тратятся при смене печати. «Защитник Света» превращает 60% интеллекта в урон от заклинаний, поэтому Воздаянию теперь нужны интеллект и сила заклинаний. Свет получает «Шок небес» за 21 очко (восстановление 10 сек.) и «Бдение Света» — групповое исцеление, которое запускает «Шок небес». Защита получает «Оплот храмовника» (поглощение), «Быстрое правосудие», «Железное кредо» и «Клятву щита». Появилась характеристика «Мастерство» (мягкий предел 6,5%). «Золотые» таланты по 1 очку открываются при 11/16/21/31 очке в ветке."
+}

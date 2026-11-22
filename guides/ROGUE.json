@@ -1,0 +1,903 @@
+{
+ "class": "ROGUE",
+ "patch": "WoW: Forever 1.60.1 (build 71037); talent data from Wowhead Forever talent calculator data file dated 2026-11-20 (post Nov 10-11 hotfixes)",
+ "sources": [
+  "https://www.wowhead.com/forever/talent-calc/rogue",
+  "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1795213635",
+  "https://nether.wowhead.com/forever/ru/data/talents-classic?dv=34&db=1795213635",
+  "https://www.wowhead.com/forever/guide/classes/rogue/combat/dps-leveling-tips",
+  "https://www.wowhead.com/forever/guide/classes/rogue/combat/talent-builds-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/rogue/combat/rotation-cooldowns-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/rogue/combat/stat-priority-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/rogue/assassination/talent-builds-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/rogue/assassination/rotation-cooldowns-pve-dps",
+  "https://www.wowhead.com/forever/talent-calc/rogue/vkndmh00530320201-3200132202012321551_t0",
+  "https://www.wowhead.com/forever/talent-calc/rogue/vkndmh00530311231251031-32030302020103-001_t0"
+ ],
+ "confidence_notes": "Talent names, maxRank, row/col and Russian names come straight from Wowhead's Forever talent data (enUS and ruRU, data build 2026-11-20), so they are high confidence. tier = Wowhead row+1, col = Wowhead col+1. spellId is the rank-1 spell ID. The Combat leveling order is copied from Wowhead's embedded calculator (guide updated 2026-11-18). The Combat Sinister Strike raid build (16/35/0) and the Assassination Mutilate raid build (31/19/1) are exact Wowhead point distributions (guides updated 2026-11-17), but Wowhead publishes them without a point order, so their 'order' was built by me to respect tier gating and prerequisites; treat that order as a sensible suggestion, not a guide-sourced one. Wowhead's stat priority is still marked speculative for level 60. The ruRU names for poisons and Thistle Tea are not in the data I had; standard ruRU Classic names are used (Быстродействующий яд, Смертельный яд, Чертополоховый чай).",
+ "forever_changes_en": "Rogue gained Shank (new off-hand strike that generates Energy, buffed by Flash of Steel and Venom) and Poised (Energy cost reduction at full Energy out of combat). Poisons no longer compete with Windfury Totem or sharpening stones, so both weapons always carry poisons (Instant on main hand, Deadly on off hand). Mutilate is the Assassination 31-point talent and is unlocked by Venom. Subtlety ends in Death Mark, Combat in Adrenaline Rush, and Hack and Slash merges the old weapon specializations (mace armor penetration, dagger/fist crit, sword/axe extra attacks). Blizzard stated Rogues should be the top pure single-target DPS. Expertise exists as a stat (6.5% cap), and Hit matters past 8% because poisons need spell hit (17%).",
+ "trees": [
+  {
+   "name": "Assassination",
+   "talents": [
+    {
+     "name": "Improved Gouge",
+     "tier": 1,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 13741,
+     "name_ru": "Улучшенный парализующий удар"
+    },
+    {
+     "name": "Remorseless Attacks",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 14144,
+     "name_ru": "Беспощадные атаки"
+    },
+    {
+     "name": "Malice",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 14138,
+     "name_ru": "Злоба"
+    },
+    {
+     "name": "Ruthlessness",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 14156,
+     "name_ru": "Жестокость"
+    },
+    {
+     "name": "Improved Expose Armor",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 14168,
+     "name_ru": "Улучшенное ослабление доспеха"
+    },
+    {
+     "name": "Improved Slice and Dice",
+     "tier": 2,
+     "col": 4,
+     "maxRank": 3,
+     "spellId": 14165,
+     "name_ru": "Улучшенная мясорубка"
+    },
+    {
+     "name": "Vigor",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 14983,
+     "name_ru": "Неутомимость"
+    },
+    {
+     "name": "Blood Splatter",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 1329256,
+     "name_ru": "Брызги крови"
+    },
+    {
+     "name": "Lethality",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 14128,
+     "name_ru": "Смертоносность"
+    },
+    {
+     "name": "Vile Poisons",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 5,
+     "spellId": 16513,
+     "name_ru": "Тлетворные яды"
+    },
+    {
+     "name": "Cold Blood",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 14177,
+     "name_ru": "Хладнокровие"
+    },
+    {
+     "name": "Improved Poisons",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 14113,
+     "name_ru": "Улучшенные яды"
+    },
+    {
+     "name": "Relentless Strikes",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 5,
+     "spellId": 14179,
+     "name_ru": "Неослабевающие удары"
+    },
+    {
+     "name": "Venom",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 1329328,
+     "name_ru": "Яд"
+    },
+    {
+     "name": "Improved Kidney Shot",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 14174,
+     "name_ru": "Улучшенный удар по почкам"
+    },
+    {
+     "name": "Seal Fate",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 14186,
+     "name_ru": "Печать судьбы"
+    },
+    {
+     "name": "Mutilate",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 399956,
+     "name_ru": "Расправа"
+    }
+   ]
+  },
+  {
+   "name": "Combat",
+   "talents": [
+    {
+     "name": "Coup de Grace",
+     "tier": 1,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 14162,
+     "name_ru": "Удар милосердия"
+    },
+    {
+     "name": "Efficient Strikes",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 13732,
+     "name_ru": "Эффективные удары"
+    },
+    {
+     "name": "Lightning Reflexes",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 13712,
+     "name_ru": "Молниеносные рефлексы"
+    },
+    {
+     "name": "Puncturing Wounds",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 1224716,
+     "name_ru": "Колотые раны"
+    },
+    {
+     "name": "Deflection",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 13713,
+     "name_ru": "Отражение"
+    },
+    {
+     "name": "Precision",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 13705,
+     "name_ru": "Точность"
+    },
+    {
+     "name": "Improved Sprint",
+     "tier": 2,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 13743,
+     "name_ru": "Улучшенный спринт"
+    },
+    {
+     "name": "Endurance",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 13742,
+     "name_ru": "Закалка"
+    },
+    {
+     "name": "Riposte",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 14251,
+     "name_ru": "Ответный удар"
+    },
+    {
+     "name": "Composure",
+     "tier": 3,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 1329265,
+     "name_ru": "Самообладание"
+    },
+    {
+     "name": "Improved Kick",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 13754,
+     "name_ru": "Улучшенный пинок"
+    },
+    {
+     "name": "Flawless Execution",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 1310711,
+     "name_ru": "Безупречная расправа"
+    },
+    {
+     "name": "Weapon Expertise",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 30919,
+     "name_ru": "Оружейное мастерство"
+    },
+    {
+     "name": "Aggression",
+     "tier": 4,
+     "col": 4,
+     "maxRank": 3,
+     "spellId": 18427,
+     "name_ru": "Агрессивность"
+    },
+    {
+     "name": "Dual Wield Specialization",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 13715,
+     "name_ru": "Специализация на бое двумя оружиями"
+    },
+    {
+     "name": "Blade Flurry",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 13877,
+     "name_ru": "Шквал клинков"
+    },
+    {
+     "name": "Hack and Slash",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 13960,
+     "name_ru": "Руби, кромсай!"
+    },
+    {
+     "name": "Flash of Steel",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 1329284,
+     "name_ru": "Блеск стали"
+    },
+    {
+     "name": "Adrenaline Rush",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 13750,
+     "name_ru": "Выброс адреналина"
+    }
+   ]
+  },
+  {
+   "name": "Subtlety",
+   "talents": [
+    {
+     "name": "Setup",
+     "tier": 1,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 13983,
+     "name_ru": "Выучка"
+    },
+    {
+     "name": "Master of Deception",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 13958,
+     "name_ru": "Мастер маскировки"
+    },
+    {
+     "name": "Opportunity",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 14057,
+     "name_ru": "Правильный момент"
+    },
+    {
+     "name": "Dirty Deeds",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 14082,
+     "name_ru": "Грязные делишки"
+    },
+    {
+     "name": "Camouflage",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 13975,
+     "name_ru": "Камуфляж"
+    },
+    {
+     "name": "Improved Ambush",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 14079,
+     "name_ru": "Улучшенный внезапный удар"
+    },
+    {
+     "name": "Dirty Tricks",
+     "tier": 2,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 1224782,
+     "name_ru": "Грязные приемы"
+    },
+    {
+     "name": "Initiative",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 13976,
+     "name_ru": "Инициатива"
+    },
+    {
+     "name": "Premeditation",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 14183,
+     "name_ru": "Умысел"
+    },
+    {
+     "name": "Serrated Blades",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 14171,
+     "name_ru": "Зазубренные клинки"
+    },
+    {
+     "name": "Elusiveness",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 13981,
+     "name_ru": "Неуловимость"
+    },
+    {
+     "name": "Ghostly Strike",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 14278,
+     "name_ru": "Призрачный удар"
+    },
+    {
+     "name": "Quick Getaway",
+     "tier": 4,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 1310728,
+     "name_ru": "Быстрый побег"
+    },
+    {
+     "name": "Heightened Senses",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 30894,
+     "name_ru": "Обостренные чувства"
+    },
+    {
+     "name": "Preparation",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 14185,
+     "name_ru": "Подготовка"
+    },
+    {
+     "name": "Hemorrhage",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 16511,
+     "name_ru": "Кровоизлияние"
+    },
+    {
+     "name": "Boot Knife",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 1329286,
+     "name_ru": "Нож в сапоге"
+    },
+    {
+     "name": "Death Mark",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 1316709,
+     "name_ru": "Метка смерти"
+    }
+   ]
+  }
+ ],
+ "builds": [
+  {
+   "id": "combat_leveling",
+   "name_en": "Combat Leveling (Riposte, 16/35/0)",
+   "name_ru": "Бой для прокачки (Ответный удар, 16/35/0)",
+   "role": "LEVELING",
+   "summary_en": "Wowhead's Combat leveling build: Efficient Strikes and Remorseless Attacks first, then Riposte for a cheap off-GCD hit, and on down to Adrenaline Rush. It finishes in Assassination with Malice, Improved Slice and Dice, Lethality and Cold Blood.",
+   "summary_ru": "Сборка Wowhead для прокачки в ветке «Бой»: сначала Эффективные удары и Беспощадные атаки, затем Ответный удар — дешевый удар вне глобальной перезарядки, и дальше до Выброса адреналина. Остаток уходит в «Ликвидацию»: Злоба, Улучшенная мясорубка, Смертоносность и Хладнокровие.",
+   "order": [
+    [
+     "Efficient Strikes",
+     2
+    ],
+    [
+     "Remorseless Attacks",
+     2
+    ],
+    [
+     "Coup de Grace",
+     3
+    ],
+    [
+     "Precision",
+     2
+    ],
+    [
+     "Deflection",
+     3
+    ],
+    [
+     "Riposte",
+     1
+    ],
+    [
+     "Composure",
+     2
+    ],
+    [
+     "Precision",
+     1
+    ],
+    [
+     "Endurance",
+     1
+    ],
+    [
+     "Weapon Expertise",
+     2
+    ],
+    [
+     "Aggression",
+     3
+    ],
+    [
+     "Blade Flurry",
+     1
+    ],
+    [
+     "Dual Wield Specialization",
+     2
+    ],
+    [
+     "Flawless Execution",
+     1
+    ],
+    [
+     "Hack and Slash",
+     1
+    ],
+    [
+     "Flash of Steel",
+     5
+    ],
+    [
+     "Adrenaline Rush",
+     1
+    ],
+    [
+     "Hack and Slash",
+     4
+    ],
+    [
+     "Malice",
+     3
+    ],
+    [
+     "Improved Slice and Dice",
+     3
+    ],
+    [
+     "Malice",
+     2
+    ],
+    [
+     "Vigor",
+     2
+    ],
+    [
+     "Lethality",
+     2
+    ],
+    [
+     "Ruthlessness",
+     1
+    ],
+    [
+     "Cold Blood",
+     1
+    ]
+   ],
+   "rotation_en": [
+    "Open from Stealth (Cheap Shot, Garrote or Ambush depending on weapon).",
+    "Keep Slice and Dice up at all times.",
+    "Build combo points with Sinister Strike.",
+    "Use Riposte whenever it lights up after a parry.",
+    "Spend extra combo points on Eviscerate.",
+    "Use Shank on cooldown for free Energy; Blade Flurry and Adrenaline Rush on packs or dangerous pulls."
+   ],
+   "rotation_ru": [
+    "Начинайте бой из Незаметности (Подлый трюк, Гаррота или Внезапный удар в зависимости от оружия).",
+    "Постоянно поддерживайте Мясорубку.",
+    "Набирайте приемы серии Коварным ударом.",
+    "Применяйте Ответный удар каждый раз, когда он становится доступен после парирования.",
+    "Лишние приемы серии тратьте на Потрошение.",
+    "Используйте Подлый удар по готовности ради бесплатной энергии; Шквал клинков и Выброс адреналина — против групп и в опасных боях."
+   ],
+   "stats_en": "Main-hand weapon DPS first, then Hit to 8%, Expertise to 6.5%, weapon skill, Hit up to 17% for poisons, then Agility > Crit = Haste > Strength > Attack Power.",
+   "stats_ru": "Сначала урон в секунду оружия в правой руке, затем меткость до 8%, мастерство до 6,5%, навык владения оружием, меткость до 17% ради ядов, затем ловкость > критический удар = скорость > сила > сила атаки.",
+   "gear_en": [
+    "Upgrade your main-hand weapon first; a slow sword, axe or mace suits Sinister Strike.",
+    "Hack and Slash: a mace in either hand gives armor penetration to both weapons; sword/axe procs need the weapon in the main hand.",
+    "Leather with Agility and Hit.",
+    "Keep poisons on both weapons."
+   ],
+   "gear_ru": [
+    "В первую очередь обновляйте оружие в правой руке; для Коварного удара подходит медленный меч, топор или булава.",
+    "Руби, кромсай!: булава в любой руке дает пробивание брони обоим оружиям, а дополнительные атаки от меча или топора требуют, чтобы он был в правой руке.",
+    "Кожаная броня с ловкостью и меткостью.",
+    "Держите яды на обоих оружиях."
+   ],
+   "tips_en": [
+    "Take Efficient Strikes and Remorseless Attacks at levels 10-13; Remorseless Attacks gives +40% crit to your next builder after a kill.",
+    "Riposte is off the global cooldown and disarms for 6 sec; it is your bread and butter while leveling.",
+    "Use Sprint, Evasion and Vanish to escape bad pulls.",
+    "Use Slice and Dice at low combo points when Ruthlessness procs give you a free point."
+   ],
+   "tips_ru": [
+    "На 10–13 уровнях возьмите Эффективные удары и Беспощадные атаки: после убийства противника Беспощадные атаки дают +40% к шансу крит. удара следующего приема.",
+    "Ответный удар не вызывает глобальную перезарядку и обезоруживает на 6 сек. — это основа прокачки.",
+    "Спринт, Ускользание и Исчезновение помогут уйти из неудачного боя.",
+    "Применяйте Мясорубку с малым числом приемов серии, когда Жестокость дает бесплатный прием."
+   ]
+  },
+  {
+   "id": "combat_ss_raid",
+   "name_en": "Combat Sinister Strike Raid (16/35/0)",
+   "name_ru": "Бой с Коварным ударом для рейда (16/35/0)",
+   "role": "DPS",
+   "summary_en": "Wowhead's standard deep-Combat raid build with a slow main-hand weapon and Sinister Strike as the builder. Compared with the leveling build, it drops Riposte and Remorseless Attacks for Improved Sprint, a second point in Endurance and full Ruthlessness.",
+   "summary_ru": "Стандартная рейдовая сборка «Боя» по Wowhead: медленное оружие в правой руке и Коварный удар как основной прием. По сравнению с прокачкой Ответный удар и Беспощадные атаки заменены Улучшенным спринтом, вторым очком в Закалке и полной Жестокостью.",
+   "order": [
+    [
+     "Efficient Strikes",
+     2
+    ],
+    [
+     "Coup de Grace",
+     3
+    ],
+    [
+     "Precision",
+     3
+    ],
+    [
+     "Improved Sprint",
+     2
+    ],
+    [
+     "Endurance",
+     2
+    ],
+    [
+     "Composure",
+     2
+    ],
+    [
+     "Deflection",
+     1
+    ],
+    [
+     "Weapon Expertise",
+     2
+    ],
+    [
+     "Aggression",
+     3
+    ],
+    [
+     "Blade Flurry",
+     1
+    ],
+    [
+     "Dual Wield Specialization",
+     2
+    ],
+    [
+     "Flawless Execution",
+     1
+    ],
+    [
+     "Hack and Slash",
+     1
+    ],
+    [
+     "Flash of Steel",
+     5
+    ],
+    [
+     "Adrenaline Rush",
+     1
+    ],
+    [
+     "Hack and Slash",
+     4
+    ],
+    [
+     "Malice",
+     5
+    ],
+    [
+     "Improved Slice and Dice",
+     3
+    ],
+    [
+     "Ruthlessness",
+     3
+    ],
+    [
+     "Vigor",
+     2
+    ],
+    [
+     "Lethality",
+     2
+    ],
+    [
+     "Cold Blood",
+     1
+    ]
+   ],
+   "rotation_en": [
+    "Opener: Blade Flurry, Sinister Strike, Vanish + Garrote, Shank, Slice and Dice, Adrenaline Rush, Sinister Strike to 5 combo points, Cold Blood + Eviscerate.",
+    "Keep Slice and Dice up at all times, ideally refreshed with few combo points.",
+    "Build combo points with Sinister Strike.",
+    "Spend extra combo points on Eviscerate without letting Slice and Dice drop.",
+    "Use Shank on cooldown for the free Energy.",
+    "Use Thistle Tea when Energy runs dry after Adrenaline Rush."
+   ],
+   "rotation_ru": [
+    "Начало боя: Шквал клинков, Коварный удар, Исчезновение + Гаррота, Подлый удар, Мясорубка, Выброс адреналина, Коварный удар до 5 приемов серии, Хладнокровие + Потрошение.",
+    "Постоянно поддерживайте Мясорубку, по возможности обновляя ее с малым числом приемов серии.",
+    "Набирайте приемы серии Коварным ударом.",
+    "Лишние приемы серии тратьте на Потрошение, не давая Мясорубке спасть.",
+    "Используйте Подлый удар по готовности ради бесплатной энергии.",
+    "Применяйте Чертополоховый чай, когда энергия заканчивается после Выброса адреналина."
+   ],
+   "stats_en": "Main-hand weapon DPS, then Hit to 8% > Expertise to 6.5% > weapon skill to 308 > Hit to 17% (poison cap) > Agility > Crit = Haste > Strength > Attack Power.",
+   "stats_ru": "Урон в секунду оружия в правой руке, затем меткость до 8% > мастерство до 6,5% > навык владения оружием до 308 > меткость до 17% (порог для ядов) > ловкость > критический удар = скорость > сила > сила атаки.",
+   "gear_en": [
+    "A slow, high-DPS main-hand sword, axe or mace is the single biggest upgrade.",
+    "Use Instant Poison on the main hand and Deadly Poison on the off hand.",
+    "Leather with Hit and Expertise until capped.",
+    "Thistle Tea is a Rogue-only Energy cooldown; carry some."
+   ],
+   "gear_ru": [
+    "Медленный меч, топор или булава с высоким уроном в секунду в правой руке — главное улучшение.",
+    "Быстродействующий яд на правую руку, Смертельный яд на левую.",
+    "Кожаная броня с меткостью и мастерством до порогов.",
+    "Чертополоховый чай восстанавливает энергию — держите его в сумках."
+   ],
+   "tips_en": [
+    "Blade Flurry also gives 20% attack speed, so it is worth using on single targets too.",
+    "Save Cold Blood for a 5-point Eviscerate.",
+    "Interrupt with Kick, Kidney Shot or Gouge; it is a big part of your raid value.",
+    "Swap poisons between hands if Deadly Poison stacks keep falling off."
+   ],
+   "tips_ru": [
+    "Шквал клинков также повышает скорость атаки на 20%, поэтому он полезен и против одной цели.",
+    "Хладнокровие берегите для Потрошения на 5 приемов серии.",
+    "Прерывайте заклинания Пинком, Ударом по почкам или Парализующим ударом — это важная часть вашей пользы в рейде.",
+    "Если заряды Смертельного яда спадают, поменяйте яды местами."
+   ]
+  },
+  {
+   "id": "assassination_mutilate_raid",
+   "name_en": "Assassination Mutilate Raid (31/19/1)",
+   "name_ru": "Ликвидация с Расправой для рейда (31/19/1)",
+   "role": "DPS",
+   "summary_en": "Wowhead's single uniform Assassination build: Mutilate with daggers, Venom-buffed Shank, Seal Fate and Relentless Strikes, plus Combat's Puncturing Wounds and Precision. Use it for pure single-target fights; switch to Combat when you need cleave.",
+   "summary_ru": "Единственная рекомендуемая Wowhead сборка «Ликвидации»: Расправа с кинжалами, Подлый удар, усиленный Ядом, Печать судьбы и Неослабевающие удары, а из «Боя» — Колотые раны и Точность. Подходит для боев против одной цели; когда нужен урон по нескольким целям, переходите на «Бой».",
+   "order": [
+    [
+     "Malice",
+     5
+    ],
+    [
+     "Ruthlessness",
+     3
+    ],
+    [
+     "Improved Slice and Dice",
+     3
+    ],
+    [
+     "Blood Splatter",
+     1
+    ],
+    [
+     "Lethality",
+     2
+    ],
+    [
+     "Vigor",
+     1
+    ],
+    [
+     "Cold Blood",
+     1
+    ],
+    [
+     "Vile Poisons",
+     3
+    ],
+    [
+     "Improved Poisons",
+     2
+    ],
+    [
+     "Relentless Strikes",
+     5
+    ],
+    [
+     "Venom",
+     1
+    ],
+    [
+     "Seal Fate",
+     3
+    ],
+    [
+     "Mutilate",
+     1
+    ],
+    [
+     "Efficient Strikes",
+     2
+    ],
+    [
+     "Coup de Grace",
+     3
+    ],
+    [
+     "Precision",
+     3
+    ],
+    [
+     "Puncturing Wounds",
+     3
+    ],
+    [
+     "Endurance",
+     2
+    ],
+    [
+     "Composure",
+     2
+    ],
+    [
+     "Flawless Execution",
+     1
+    ],
+    [
+     "Aggression",
+     3
+    ],
+    [
+     "Opportunity",
+     1
+    ]
+   ],
+   "rotation_en": [
+    "Opener: Mutilate, Vanish + Garrote, Shank, Slice and Dice, Mutilate to 4-5 combo points, Cold Blood + Eviscerate.",
+    "Keep Slice and Dice up, refreshed with 1 combo point when possible.",
+    "Build combo points with Mutilate.",
+    "Spend on Eviscerate at 4+ combo points to get full value from Relentless Strikes.",
+    "Use Shank on cooldown: Energy plus Venom's 30% poison damage window.",
+    "Use Thistle Tea for extra Eviscerates."
+   ],
+   "rotation_ru": [
+    "Начало боя: Расправа, Исчезновение + Гаррота, Подлый удар, Мясорубка, Расправа до 4–5 приемов серии, Хладнокровие + Потрошение.",
+    "Поддерживайте Мясорубку, по возможности обновляя ее с 1 приемом серии.",
+    "Набирайте приемы серии Расправой.",
+    "Тратьте их на Потрошение при 4+ приемах серии, чтобы полностью использовать Неослабевающие удары.",
+    "Применяйте Подлый удар по готовности: энергия и окно +30% к урону ядов от таланта Яд.",
+    "Используйте Чертополоховый чай ради дополнительных Потрошений."
+   ],
+   "stats_en": "Dagger DPS in both hands, then Hit to 8% > Expertise to 6.5% > Hit to 17% (poisons matter more here) > Agility > Crit = Haste > Attack Power.",
+   "stats_ru": "Урон в секунду кинжалов в обеих руках, затем меткость до 8% > мастерство до 6,5% > меткость до 17% (здесь яды важнее) > ловкость > критический удар = скорость > сила атаки.",
+   "gear_en": [
+    "Two good daggers: Mutilate strikes with both weapons.",
+    "Instant Poison main hand, Deadly Poison off hand; Mutilate deals 20% more to poisoned targets.",
+    "Leather with Hit, Expertise and Agility.",
+    "Spell hit up to 17% keeps poisons from missing."
+   ],
+   "gear_ru": [
+    "Два хороших кинжала: Расправа бьет обоими оружиями.",
+    "Быстродействующий яд в правой руке, Смертельный в левой; Расправа наносит на 20% больше урона отравленным целям.",
+    "Кожаная броня с меткостью, мастерством и ловкостью.",
+    "Меткость заклинаний до 17% не дает ядам промахиваться."
+   ],
+   "tips_en": [
+    "Mutilate awards 2 combo points, and Seal Fate adds more on crits, so watch for overcapping.",
+    "If Cold Blood will only be used once in a fight, save it for the first 5-point Eviscerate.",
+    "Blood Splatter extends Garrote, so the Vanish + Garrote opener lasts longer.",
+    "No real AoE: bring a Combat spec for cleave-heavy fights."
+   ],
+   "tips_ru": [
+    "Расправа дает 2 приема серии, а Печать судьбы добавляет еще при критических ударах — не переполняйте серию.",
+    "Если Хладнокровие будет использовано за бой лишь раз, приберегите его для первого Потрошения на 5 приемов.",
+    "Брызги крови продлевают Гарроту, так что открытие Исчезновение + Гаррота держится дольше.",
+    "Нормального урона по площади нет: для боев с несколькими целями держите вторую сборку «Боя»."
+   ]
+  }
+ ],
+ "forever_changes_ru": "Разбойник получил «Пырок» (новый удар левой рукой, восстанавливающий энергию, его усиливают «Вспышка стали» и «Яд») и «Собранность» (снижение стоимости энергии при полной энергии вне боя). Яды больше не конкурируют с «Тотемом неистовства ветра» и точильными камнями, поэтому на обоих оружиях всегда яды (быстродействующий на правой руке, смертельный на левой). «Расправа» — талант Ликвидации за 31 очко, открывается через «Яд». Скрытность заканчивается «Меткой смерти», Бой — «Выбросом адреналина», а «Руби и режь» объединяет старые специализации по оружию (пробивание брони для дробящего, крит для кинжалов и кистевого, дополнительные атаки для мечей и топоров). Blizzard заявила, что разбойник должен быть лучшим чистым DPS по одной цели. Появилось «Мастерство» (предел 6,5%), а меткость важна и выше 8%, потому что ядам нужна меткость заклинаний (17%)."
+}

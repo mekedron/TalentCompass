@@ -1,0 +1,814 @@
+{
+ "class": "HUNTER",
+ "patch": "WoW: Forever 1.60.1 (build 71037); talent data from Wowhead Forever talent calculator data file dated 2026-11-20 (post Nov 10-11 hotfixes)",
+ "sources": [
+  "https://www.wowhead.com/forever/talent-calc/hunter",
+  "https://nether.wowhead.com/forever/data/talents-classic?dv=34&db=1795213635",
+  "https://nether.wowhead.com/forever/ru/data/talents-classic?dv=34&db=1795213635",
+  "https://www.wowhead.com/forever/guide/classes/hunter/beast-mastery/dps-leveling-tips",
+  "https://www.wowhead.com/forever/guide/classes/hunter/beast-mastery/overview-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/hunter/beast-mastery/talent-builds-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/hunter/beast-mastery/rotation-cooldowns-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/hunter/marksmanship/talent-builds-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/hunter/marksmanship/rotation-cooldowns-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/hunter/survival/talent-builds-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/hunter/survival/rotation-cooldowns-pve-dps",
+  "https://www.wowhead.com/forever/guide/classes/hunter/survival/stat-priority-pve-dps"
+ ],
+ "confidence_notes": "Talent names, maxRank, row/col and Russian names come straight from Wowhead's Forever talent data (enUS and ruRU, data build 2026-11-20), so they are high confidence. tier = Wowhead row+1, col = Wowhead col+1. spellId is the rank-1 spell ID from that data. ruRU uses Blizzard's own strings, which are sometimes inconsistent with ability names (the talent 'Improved Concussive Shot' is 'Улучшенный контузящий выстрел' while the ability is 'Шокирующий выстрел'). Point orders are copied from Wowhead's embedded talent calculators: BM leveling (updated 2026-11-20), Survival melee (2026-11-17), Marksmanship (2026-11-04). The MM build still validates against the current tree. Wowhead's BM overview says BM trails MM and Survival at 60, so the two endgame builds are MM and melee Survival. The BM raid build (31/20/0) equals the leveling build with Improved Tracking 4/5 swapped for Mortal Shots 4/5. The stat priority is Wowhead's per-1%/per-point ranking and is provisional until raids open (Dec 9). Gear advice is generic because tier set data is still placeholder.",
+ "forever_changes_en": "Hunter changes are moderate. Aimed Shot is baseline and shares its cooldown with Multi-Shot. Auto Shot keeps firing while you cast other abilities. Pets scale with some of the hunter's stats, and several pet families gained new abilities (Dust Cloud, Dismember, etc.). New talents include Summon Hawk (BM, shares Arcane Shot's cooldown), Focused Fire, Lone Wolf (MM, play without a pet), Sniper Shot (MM 31-point talent), Trueshot Aura, Strider Kick, Predator's Edge, Expose Prey and Lacerating Strikes (Survival 31-point talent). Survival is a real melee or 'weaving' spec. There is no glancing on ranged attacks, and mana is tight without Judgement of Wisdom.",
+ "trees": [
+  {
+   "name": "Beast Mastery",
+   "talents": [
+    {
+     "name": "Deadly Aspects",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 19552,
+     "name_ru": "Смертоносные духи"
+    },
+    {
+     "name": "Endurance Training",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 19583,
+     "name_ru": "Тренировка стойкости"
+    },
+    {
+     "name": "Focused Fire",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 1223755,
+     "name_ru": "Направленный огонь"
+    },
+    {
+     "name": "Improved Aspect of the Monkey",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 19549,
+     "name_ru": "Улучшенный дух обезьяны"
+    },
+    {
+     "name": "Improved Revive Pet",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 24443,
+     "name_ru": "Улучшенное воскрешение питомца"
+    },
+    {
+     "name": "Pathfinding",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 19559,
+     "name_ru": "Знание троп"
+    },
+    {
+     "name": "Bestial Swiftness",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 19596,
+     "name_ru": "Звериная стремительность"
+    },
+    {
+     "name": "Unleashed Fury",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 19616,
+     "name_ru": "Неудержимое неистовство"
+    },
+    {
+     "name": "Improved Mend Pet",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 19572,
+     "name_ru": "Улучшенное лечение питомца"
+    },
+    {
+     "name": "Ferocity",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 19598,
+     "name_ru": "Свирепость"
+    },
+    {
+     "name": "Summon Hawk",
+     "tier": 4,
+     "col": 4,
+     "maxRank": 1,
+     "spellId": 1293241,
+     "name_ru": "Призыв ястреба"
+    },
+    {
+     "name": "Spirit Bond",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 19578,
+     "name_ru": "Узы духа"
+    },
+    {
+     "name": "Intimidation",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 19577,
+     "name_ru": "Устрашение"
+    },
+    {
+     "name": "Bestial Discipline",
+     "tier": 5,
+     "col": 4,
+     "maxRank": 2,
+     "spellId": 19590,
+     "name_ru": "Беспрекословное послушание"
+    },
+    {
+     "name": "Frenzy",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 19621,
+     "name_ru": "Бешенство"
+    },
+    {
+     "name": "Bestial Wrath",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 19574,
+     "name_ru": "Звериный гнев"
+    }
+   ]
+  },
+  {
+   "name": "Marksmanship",
+   "talents": [
+    {
+     "name": "Hawk Eye",
+     "tier": 1,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 19498,
+     "name_ru": "Глаз ястреба"
+    },
+    {
+     "name": "Improved Concussive Shot",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 19407,
+     "name_ru": "Улучшенный контузящий выстрел"
+    },
+    {
+     "name": "Lethal Attacks",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 19426,
+     "name_ru": "Смертоносные атаки"
+    },
+    {
+     "name": "Improved Stings",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 3,
+     "spellId": 1310661,
+     "name_ru": "Смертельные укусы"
+    },
+    {
+     "name": "Efficiency",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 19416,
+     "name_ru": "Эффективность"
+    },
+    {
+     "name": "Careful Aim",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 1223984,
+     "name_ru": "Верная цель"
+    },
+    {
+     "name": "Rapid Killing",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 415405,
+     "name_ru": "Быстрые убийства"
+    },
+    {
+     "name": "Improved Arcane Shot",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 19454,
+     "name_ru": "Улучшенный чародейский выстрел"
+    },
+    {
+     "name": "Lone Wolf",
+     "tier": 3,
+     "col": 4,
+     "maxRank": 1,
+     "spellId": 415370,
+     "name_ru": "Одинокий волк"
+    },
+    {
+     "name": "Trueshot Aura",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 1299346,
+     "name_ru": "Аура меткого выстрела"
+    },
+    {
+     "name": "Mortal Shots",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 19485,
+     "name_ru": "Смертоносные выстрелы"
+    },
+    {
+     "name": "Rapid Recuperation",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 1223987,
+     "name_ru": "Быстрая концентрация"
+    },
+    {
+     "name": "Barrage",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 3,
+     "spellId": 19461,
+     "name_ru": "Заградительный огонь"
+    },
+    {
+     "name": "Scatter Shot",
+     "tier": 5,
+     "col": 4,
+     "maxRank": 1,
+     "spellId": 19503,
+     "name_ru": "Дезориентирующий выстрел"
+    },
+    {
+     "name": "Ranged Weapon Specialization",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 19507,
+     "name_ru": "Специализация на оружии дальнего боя"
+    },
+    {
+     "name": "Sniper Shot",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 1310687,
+     "name_ru": "Снайперский выстрел"
+    }
+   ]
+  },
+  {
+   "name": "Survival",
+   "talents": [
+    {
+     "name": "Improved Tracking",
+     "tier": 1,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 24293,
+     "name_ru": "Мастерское выслеживание"
+    },
+    {
+     "name": "Deflection",
+     "tier": 1,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 19295,
+     "name_ru": "Отражение"
+    },
+    {
+     "name": "Entrapment",
+     "tier": 2,
+     "col": 1,
+     "maxRank": 5,
+     "spellId": 19184,
+     "name_ru": "Удержание"
+    },
+    {
+     "name": "Savage Strikes",
+     "tier": 2,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 19159,
+     "name_ru": "Беспощадные удары"
+    },
+    {
+     "name": "Survivalist",
+     "tier": 2,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 19255,
+     "name_ru": "Остаться в живых"
+    },
+    {
+     "name": "Improved Wing Clip",
+     "tier": 2,
+     "col": 4,
+     "maxRank": 3,
+     "spellId": 19228,
+     "name_ru": "Улучшенная подрезка крыльев"
+    },
+    {
+     "name": "Clever Traps",
+     "tier": 3,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 19239,
+     "name_ru": "Хитрые ловушки"
+    },
+    {
+     "name": "Surefooted",
+     "tier": 3,
+     "col": 2,
+     "maxRank": 3,
+     "spellId": 19290,
+     "name_ru": "Верный шаг"
+    },
+    {
+     "name": "Deterrence",
+     "tier": 3,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 19263,
+     "name_ru": "Сдерживание"
+    },
+    {
+     "name": "Survival Tactics",
+     "tier": 4,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 19376,
+     "name_ru": "Тактика выживания"
+    },
+    {
+     "name": "Predator's Edge",
+     "tier": 4,
+     "col": 2,
+     "maxRank": 5,
+     "spellId": 1310627,
+     "name_ru": "Лезвие хищника"
+    },
+    {
+     "name": "Counterattack",
+     "tier": 4,
+     "col": 3,
+     "maxRank": 1,
+     "spellId": 19306,
+     "name_ru": "Контратака"
+    },
+    {
+     "name": "Resourcefulness",
+     "tier": 5,
+     "col": 1,
+     "maxRank": 2,
+     "spellId": 440529,
+     "name_ru": "Находчивость"
+    },
+    {
+     "name": "Expose Prey",
+     "tier": 5,
+     "col": 2,
+     "maxRank": 2,
+     "spellId": 1310532,
+     "name_ru": "Обнаружение добычи"
+    },
+    {
+     "name": "Survivalist's Discipline",
+     "tier": 5,
+     "col": 3,
+     "maxRank": 2,
+     "spellId": 1310496,
+     "name_ru": "Дисциплина выживающего"
+    },
+    {
+     "name": "Strider Kick",
+     "tier": 5,
+     "col": 4,
+     "maxRank": 1,
+     "spellId": 1317257,
+     "name_ru": "Удар долгонога"
+    },
+    {
+     "name": "Lightning Reflexes",
+     "tier": 6,
+     "col": 3,
+     "maxRank": 5,
+     "spellId": 19168,
+     "name_ru": "Молниеносные рефлексы"
+    },
+    {
+     "name": "Lacerating Strikes",
+     "tier": 7,
+     "col": 2,
+     "maxRank": 1,
+     "spellId": 1310533,
+     "name_ru": "Раздирающие удары"
+    }
+   ]
+  }
+ ],
+ "builds": [
+  {
+   "id": "bm_leveling",
+   "name_en": "Beast Mastery Leveling (31/16/4)",
+   "name_ru": "Повелитель зверей для прокачки (31/16/4)",
+   "role": "LEVELING",
+   "summary_en": "Wowhead's leveling build: go down the Beast Mastery tree to Bestial Wrath so your pet carries the damage and holds aggro, then pick up Marksmanship damage talents and Improved Tracking. At 60, swap Improved Tracking for 4 points in Mortal Shots to get Wowhead's BM raid build (31/20/0).",
+   "summary_ru": "Сборка Wowhead для прокачки: идите по ветке «Повелитель зверей» до Звериного гнева, чтобы питомец наносил основной урон и удерживал угрозу, затем возьмите атакующие таланты «Стрельбы» и Мастерское выслеживание. На 60-м уровне замените Мастерское выслеживание на 4 очка в Смертоносные выстрелы — получится рейдовая сборка Wowhead (31/20/0).",
+   "order": [
+    [
+     "Deadly Aspects",
+     5
+    ],
+    [
+     "Focused Fire",
+     2
+    ],
+    [
+     "Endurance Training",
+     3
+    ],
+    [
+     "Bestial Swiftness",
+     1
+    ],
+    [
+     "Unleashed Fury",
+     4
+    ],
+    [
+     "Summon Hawk",
+     1
+    ],
+    [
+     "Unleashed Fury",
+     1
+    ],
+    [
+     "Ferocity",
+     3
+    ],
+    [
+     "Intimidation",
+     1
+    ],
+    [
+     "Bestial Discipline",
+     2
+    ],
+    [
+     "Ferocity",
+     2
+    ],
+    [
+     "Frenzy",
+     5
+    ],
+    [
+     "Bestial Wrath",
+     1
+    ],
+    [
+     "Lethal Attacks",
+     5
+    ],
+    [
+     "Careful Aim",
+     5
+    ],
+    [
+     "Improved Stings",
+     3
+    ],
+    [
+     "Rapid Killing",
+     2
+    ],
+    [
+     "Trueshot Aura",
+     1
+    ],
+    [
+     "Improved Tracking",
+     4
+    ]
+   ],
+   "rotation_en": [
+    "Send the pet in and keep Hunter's Mark on the target.",
+    "Keep Serpent Sting up on targets that live long enough.",
+    "Use Summon Hawk on cooldown (it shares its cooldown with Arcane Shot); use Arcane Shot instead every third time.",
+    "Use Aimed Shot when available (shares its cooldown with Multi-Shot); Auto Shot keeps firing.",
+    "Use Bestial Wrath and Rapid Fire on cooldown, Intimidation on stunnable targets.",
+    "Kite with Concussive Shot, Wing Clip and Frost Trap; use Feign Death to reset a bad pull."
+   ],
+   "rotation_ru": [
+    "Отправьте питомца в атаку и держите на цели Метку охотника.",
+    "Поддерживайте Укус змеи на целях, которые живут достаточно долго.",
+    "Применяйте Призыв ястреба по готовности (у него общая перезарядка с Чародейским выстрелом); каждый третий раз вместо него используйте Чародейский выстрел.",
+    "Применяйте Прицельный выстрел по готовности (общая перезарядка с Залпом); Автоматическая стрельба при этом не прерывается.",
+    "Используйте Звериный гнев и Быструю стрельбу по готовности, Устрашение — на целях, подверженных оглушению.",
+    "Удерживайте врагов на расстоянии Шокирующим выстрелом, Подрезать крылья и Ледяной ловушкой; Притвориться мертвым поможет сбросить неудачный бой."
+   ],
+   "stats_en": "Hit chance > Critical Strike > Haste > Agility > Attack Power > Intellect > Stamina; pets scale off part of your stats, so Agility and Attack Power also help the pet.",
+   "stats_ru": "Меткость > критический удар > скорость > ловкость > сила атаки > интеллект > выносливость; питомец получает часть ваших характеристик, поэтому ловкость и сила атаки усиливают и его.",
+   "gear_en": [
+    "Upgrade your ranged weapon first; it drives Auto Shot, Aimed Shot and Arcane Shot.",
+    "Leather/mail pieces with Agility and hit or crit.",
+    "Carry enough arrows or bullets and pet food; a full quiver adds attack speed.",
+    "Some Intellect helps mana sustain while leveling."
+   ],
+   "gear_ru": [
+    "В первую очередь обновляйте оружие дальнего боя: от него зависят Автоматическая стрельба, Прицельный и Чародейский выстрелы.",
+    "Кожаные и кольчужные вещи с ловкостью и меткостью или критическим ударом.",
+    "Держите запас стрел или пуль и корма для питомца; полный колчан повышает скорость стрельбы.",
+    "Немного интеллекта помогает с маной во время прокачки."
+   ],
+   "tips_en": [
+    "Cats and Raptors have a 1.1x damage modifier and Claw; Carrion Birds bring Demoralizing Screech.",
+    "About every 10 levels, tame a pet with higher Claw/Bite ranks to learn them, then teach them to your main pet.",
+    "Keep the pet fed: if it dies, its happiness and damage drop.",
+    "Points in Pathfinding, Improved Revive Pet or Endurance Training are interchangeable as top-row fillers.",
+    "Ranged attacks don't glance, so you can handle mobs above your level."
+   ],
+   "tips_ru": [
+    "Кошки и ящеры имеют модификатор урона 1,1 и умение Когти; падальщики дают Деморализующий крик.",
+    "Примерно раз в 10 уровней приручайте питомца с более высокими рангами Когтей или Укуса, чтобы выучить их, а затем обучите им основного питомца.",
+    "Кормите питомца: если он погибает, его настроение и урон падают.",
+    "Знание троп, Улучшенное воскрешение питомца и Тренировка стойкости взаимозаменяемы для заполнения верхних рядов.",
+    "Атаки дальнего боя не бывают скользящими, поэтому вы справитесь с противниками выше вас по уровню."
+   ]
+  },
+  {
+   "id": "mm_raid",
+   "name_en": "Marksmanship Raid (Lone Wolf, 5/41/5)",
+   "name_ru": "Стрельба для рейда (Одинокий волк, 5/41/5)",
+   "role": "DPS",
+   "summary_en": "Wowhead's raid and dungeon Marksmanship build: deep Marksmanship to Sniper Shot with Lone Wolf, so no pet is needed. Deadly Aspects and Improved Tracking are the only picks outside the tree, plus Efficiency because Sniper Shot is mana-hungry.",
+   "summary_ru": "Рейдовая сборка «Стрельбы» по Wowhead: глубоко в ветку до Снайперского выстрела с Одиноким волком, питомец не нужен. Вне ветки берутся только Смертоносные духи и Мастерское выслеживание, а Эффективность нужна потому, что Снайперский выстрел расходует много маны.",
+   "order": [
+    [
+     "Lethal Attacks",
+     5
+    ],
+    [
+     "Careful Aim",
+     5
+    ],
+    [
+     "Lone Wolf",
+     1
+    ],
+    [
+     "Rapid Killing",
+     2
+    ],
+    [
+     "Improved Arcane Shot",
+     2
+    ],
+    [
+     "Trueshot Aura",
+     1
+    ],
+    [
+     "Mortal Shots",
+     5
+    ],
+    [
+     "Rapid Recuperation",
+     2
+    ],
+    [
+     "Improved Arcane Shot",
+     2
+    ],
+    [
+     "Ranged Weapon Specialization",
+     5
+    ],
+    [
+     "Sniper Shot",
+     1
+    ],
+    [
+     "Improved Arcane Shot",
+     1
+    ],
+    [
+     "Deadly Aspects",
+     5
+    ],
+    [
+     "Efficiency",
+     5
+    ],
+    [
+     "Improved Tracking",
+     5
+    ],
+    [
+     "Improved Stings",
+     3
+    ],
+    [
+     "Barrage",
+     1
+    ]
+   ],
+   "rotation_en": [
+    "Keep Hunter's Mark and Trueshot Aura up.",
+    "Maintain Serpent Sting.",
+    "Cast Arcane Shot on cooldown.",
+    "Cast Aimed Shot on cooldown.",
+    "Use Sniper Shot when available.",
+    "Use Rapid Fire on cooldown together with trinkets and racials."
+   ],
+   "rotation_ru": [
+    "Поддерживайте Метку охотника и Ауру меткого выстрела.",
+    "Поддерживайте Укус змеи.",
+    "Применяйте Чародейский выстрел по готовности.",
+    "Применяйте Прицельный выстрел по готовности.",
+    "Используйте Снайперский выстрел, когда он доступен.",
+    "Быструю стрельбу применяйте по готовности вместе с аксессуарами и расовыми способностями."
+   ],
+   "stats_en": "Hit chance (top priority until capped) > Critical Strike > Haste > Agility > Attack Power > Intellect (Careful Aim and mana pool) > Stamina.",
+   "stats_ru": "Меткость (главный приоритет до порога) > критический удар > скорость > ловкость > сила атаки > интеллект (Верная цель и запас маны) > выносливость.",
+   "gear_en": [
+    "The best ranged weapon you can get is your top upgrade.",
+    "Pieces with hit until capped, then crit.",
+    "Intellect and mp5 help: Sniper Shot is very mana-intensive.",
+    "Mana potions and runes matter on long fights; Viper Sting can drain mana from caster bosses when needed."
+   ],
+   "gear_ru": [
+    "Лучшее оружие дальнего боя — главное улучшение.",
+    "Вещи с меткостью до порога, затем с критическим ударом.",
+    "Интеллект и восполнение маны полезны: Снайперский выстрел расходует очень много маны.",
+    "На долгих боях важны зелья и руны маны; при необходимости Жало гадюки вытягивает ману у боссов-заклинателей."
+   ],
+   "tips_en": [
+    "Lone Wolf means you play without a pet, so the Beast Mastery tree is mostly dead weight.",
+    "Stand at least 8 yards from targets: inside that dead zone you can't use ranged attacks.",
+    "Use Tranquilizing Shot when assigned to remove enrages.",
+    "Freezing Trap and Frost Trap are your add control tools."
+   ],
+   "tips_ru": [
+    "С Одиноким волком вы играете без питомца, поэтому ветка «Повелитель зверей» почти бесполезна.",
+    "Держитесь не ближе 8 метров от цели: в этой «мертвой зоне» выстрелы недоступны.",
+    "Используйте Усмиряющий выстрел, если вам поручено снимать исступление.",
+    "Замораживающая и Ледяная ловушки — ваши инструменты контроля дополнительных противников."
+   ]
+  },
+  {
+   "id": "sv_melee_raid",
+   "name_en": "Survival Melee Raid (16/10/25)",
+   "name_ru": "Выживание ближнего боя для рейда (16/10/25)",
+   "role": "DPS",
+   "summary_en": "Wowhead's melee Survival build for dungeons and raids: Survival to Predator's Edge, Strider Kick and Expose Prey, Beast Mastery for Focused Fire and Summon Hawk, and Marksmanship for Lethal Attacks and Careful Aim. It skips Lightning Reflexes and Lacerating Strikes, which Wowhead rates weak for full melee.",
+   "summary_ru": "Сборка Wowhead для «Выживания» в ближнем бою в подземельях и рейдах: «Выживание» до Лезвия хищника, Удара долгонога и Обнаружения добычи, «Повелитель зверей» ради Направленного огня и Призыва ястреба, «Стрельба» ради Смертоносных атак и Верной цели. Молниеносные рефлексы и Раздирающие удары пропускаются — для чистого ближнего боя Wowhead считает их слабыми.",
+   "order": [
+    [
+     "Improved Tracking",
+     5
+    ],
+    [
+     "Savage Strikes",
+     2
+    ],
+    [
+     "Survivalist",
+     3
+    ],
+    [
+     "Surefooted",
+     3
+    ],
+    [
+     "Clever Traps",
+     2
+    ],
+    [
+     "Predator's Edge",
+     5
+    ],
+    [
+     "Strider Kick",
+     1
+    ],
+    [
+     "Expose Prey",
+     2
+    ],
+    [
+     "Deadly Aspects",
+     5
+    ],
+    [
+     "Focused Fire",
+     2
+    ],
+    [
+     "Improved Revive Pet",
+     2
+    ],
+    [
+     "Endurance Training",
+     1
+    ],
+    [
+     "Unleashed Fury",
+     5
+    ],
+    [
+     "Summon Hawk",
+     1
+    ],
+    [
+     "Lethal Attacks",
+     4
+    ],
+    [
+     "Resourcefulness",
+     2
+    ],
+    [
+     "Lethal Attacks",
+     1
+    ],
+    [
+     "Careful Aim",
+     5
+    ]
+   ],
+   "rotation_en": [
+    "Keep Hunter's Mark on the target.",
+    "Always keep Raptor Strike queued.",
+    "When Serpent Sting is missing and Strider Kick's buff is up, step out, cast Serpent Sting plus an Auto Shot, and step back in.",
+    "Use Mongoose Bite whenever available.",
+    "Use Immolation Trap on cooldown.",
+    "Use Strider Kick and Summon Hawk on cooldown; Rapid Fire with trinkets."
+   ],
+   "rotation_ru": [
+    "Держите на цели Метку охотника.",
+    "Всегда держите в очереди Удар ящера.",
+    "Если Укуса змеи нет, а действует эффект Удара долгонога, отойдите, примените Укус змеи и Автоматическую стрельбу и вернитесь в ближний бой.",
+    "Применяйте Укус мангуста при каждой возможности.",
+    "Используйте Обжигающую ловушку по готовности.",
+    "Применяйте Удар долгонога и Призыв ястреба по готовности, Быструю стрельбу — вместе с аксессуарами."
+   ],
+   "stats_en": "Hit chance > Critical Strike > Haste > Agility > Strength > Attack Power > Intellect > Stamina; weapon quality matters for both melee and ranged slots.",
+   "stats_ru": "Меткость > критический удар > скорость > ловкость > сила > сила атаки > интеллект > выносливость; важны и оружие ближнего боя, и оружие дальнего боя.",
+   "gear_en": [
+    "Strong melee weapons are the core of this build: Raptor Strike and Mongoose Bite scale with them, and Predator's Edge adds 50% off-hand damage, so dual-wielding pays off.",
+    "Agility leather/mail with hit and crit.",
+    "A decent ranged weapon is still needed for Serpent Sting and Auto Shot weaving.",
+    "Wowhead's weaving variant (0/20/31, Lacerating Strikes) wants a two-handed weapon instead."
+   ],
+   "gear_ru": [
+    "Сильное оружие ближнего боя — основа сборки: от него зависят Удар ящера и Укус мангуста, а Лезвие хищника увеличивает урон оружием в левой руке на 50%, поэтому бой двумя оружиями выгоден.",
+    "Кожа или кольчуга с ловкостью, меткостью и критическим ударом.",
+    "Приличное оружие дальнего боя все равно нужно для Укуса змеи и Автоматической стрельбы.",
+    "Вариант Wowhead с чередованием (0/20/31, Раздирающие удары) требует двуручное оружие."
+   ],
+   "tips_en": [
+    "Summon Hawk is an extra button that also works in melee range.",
+    "Your pet is still out (Focused Fire, Unleashed Fury), so keep it alive and fed.",
+    "Strider Kick helps you stick to targets and enables quick ranged weaves.",
+    "Mana is tight without a paladin's Judgement of Wisdom; Resourcefulness lowers trap and melee ability costs."
+   ],
+   "tips_ru": [
+    "Призыв ястреба — дополнительная кнопка, которая работает и в ближнем бою.",
+    "Питомец по-прежнему с вами (Направленный огонь, Неудержимое неистовство) — следите, чтобы он был жив и сыт.",
+    "Удар долгонога помогает не отпускать цель и быстро вставлять выстрелы.",
+    "Без Правосудия мудрости от паладина маны мало; Находчивость снижает стоимость ловушек и умений ближнего боя."
+   ]
+  }
+ ],
+ "forever_changes_ru": "Изменения охотника умеренные. «Прицельный выстрел» стал базовой способностью и делит время восстановления с «Залпом». «Автоматическая стрельба» не прерывается при использовании других способностей. Питомцы получают часть характеристик охотника, у нескольких семейств появились новые способности («Облако пыли», «Расчленение» и др.). Новые таланты: «Призыв ястреба» (Повелитель зверей, общее восстановление с «Чародейским выстрелом»), «Сосредоточенный огонь», «Одинокий волк» (Стрельба, игра без питомца), «Выстрел снайпера» (талант Стрельбы за 31 очко), «Аура меткого выстрела», «Удар странника», «Грань хищника», «Обнажение добычи» и «Рваные удары» (талант Выживания за 31 очко). Выживание — полноценная ближнебойная или «смешанная» специализация. Скользящих ударов у дальних атак нет, а без «Правосудия мудрости» маны мало."
+}
