@@ -35,7 +35,7 @@ function ns.Print(fmt, ...)
 end
 
 -- Blizzard font objects are font families that pick the Latin or Cyrillic font by the
--- start of a string, so mixed text such as "Protection · 16 ур." shows boxes. Our own
+-- start of a string, so mixed text such as "Protection, 16 ур." shows boxes. Our own
 -- copies use the Cyrillic Friz Quadrata, which contains both alphabets.
 local CYRILLIC_FONT = "Fonts\\FRIZQT___CYR.TTF"
 local fontCache = {}

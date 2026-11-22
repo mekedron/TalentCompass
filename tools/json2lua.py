@@ -16,7 +16,7 @@ OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "Data")
 
 
 def lua_str(value):
-    s = str(value).replace("\u2192", "->").replace("\u2190", "<-")
+    s = str(value).replace("\u2192", "->").replace("\u2190", "<-").replace("\u00b7", ",").replace("\u00d7", "x").replace("\u2022", "-")
     s = s.replace("\\", "\\\\").replace('"', '\\"').replace("\n", "\\n")
     return '"' + s + '"'
 

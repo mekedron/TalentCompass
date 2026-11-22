@@ -100,7 +100,7 @@ end
 
 function Content:Bullets(items, numbered)
 	for i, item in ipairs(items or {}) do
-		local prefix = numbered and ("|cffffd100" .. i .. ".|r ") or "|cffffd100•|r "
+		local prefix = numbered and ("|cffffd100" .. i .. ".|r ") or "|cffffd100–|r "
 		self:Text(prefix .. item, "GameFontHighlight", WHITE, 6)
 		self:Space(2)
 	end
@@ -187,9 +187,9 @@ end
 
 local function LevelRange(first, last)
 	if first == last then
-		return L.LEVEL_SHORT:format(first)
+		return L.LEVEL_SHORT:format(tostring(first))
 	end
-	return L.LEVEL_SHORT:format(first) .. "–" .. last
+	return L.LEVEL_SHORT:format(first .. "–" .. last)
 end
 
 local function UpdateNextCard(plan, scan)
@@ -199,8 +199,8 @@ local function UpdateNextCard(plan, scan)
 		card.Icon:SetTexture(step.talent and step.talent.icon or 134400)
 		card.Icon:SetDesaturated(step.talent == nil)
 		card.Name:SetText(ns.TalentDisplayName(step.key, step.talent))
-		local tree = step.talent and step.talent.treeName and (step.talent.treeName .. " · ") or ""
-		card.Sub:SetText(tree .. L.LEVEL_SHORT:format(step.level) .. " · " .. step.rankAfter .. "/" .. step.maxRanks)
+		local tree = step.talent and step.talent.treeName and (step.talent.treeName .. ", ") or ""
+		card.Sub:SetText(tree .. L.LEVEL_SHORT:format(tostring(step.level)) .. ", " .. step.rankAfter .. "/" .. step.maxRanks)
 		card.spellID = step.talent and step.talent.spellID
 	else
 		card.Icon:SetTexture("Interface\\Icons\\Achievement_Level_60")
@@ -271,7 +271,7 @@ local function RenderTalents(c, build, plan, scan)
 			LevelRange(level + first, level + last),
 			talent and talent.icon,
 			ns.TalentDisplayName(key, talent),
-			(from + 1 == to and to or ((from + 1) .. ">" .. to)) .. "/" .. maxRanks,
+			(from + 1 == to and to or ((from + 1) .. "–" .. to)) .. "/" .. maxRanks,
 			state,
 			talent and talent.spellID
 		)
@@ -620,7 +620,7 @@ local function UpdatePanel(plan, build, scan)
 			card.Role:SetAtlas(ROLE_ATLAS[b.role] or ROLE_ATLAS.DPS)
 			local roleText = L["ROLE_" .. (b.role or "DPS")]
 			if scan and scan.spent > 0 then
-				roleText = roleText .. " · |cff80ff80" .. L.MATCH:format(ns.MatchBuild(b, scan).percent) .. "|r"
+				roleText = roleText .. ", |cff80ff80" .. L.MATCH:format(ns.MatchBuild(b, scan).percent) .. "|r"
 			end
 			card.RoleText:SetText(roleText .. " — " .. (T(b.summary) or ""))
 			local selected = build and b.id == build.id
