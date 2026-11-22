@@ -27,7 +27,7 @@ local function CreateOverlay()
 	alpha:SetDuration(0.7)
 	alpha:SetSmoothing("IN_OUT")
 
-	f.Label = f:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+	f.Label = ns.CreateText(f, "OVERLAY", "GameFontNormalSmall")
 	f.Label:SetPoint("BOTTOM", f, "TOP", 0, 4)
 	f.Label:SetTextColor(1, 0.82, 0)
 	f.Label:SetShadowOffset(1, -1)
@@ -46,7 +46,7 @@ local function CreateOverlay()
 		edgeFile = "Interface\\Buttons\\WHITE8X8",
 		edgeSize = 1,
 	})
-	f.Badge.Text = f.Badge:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+	f.Badge.Text = ns.CreateText(f.Badge, "OVERLAY", "GameFontHighlightSmall")
 	f.Badge.Text:SetPoint("CENTER", 0, 0)
 
 	f.Check = f:CreateTexture(nil, "OVERLAY")

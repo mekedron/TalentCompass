@@ -34,6 +34,31 @@ function ns.Print(fmt, ...)
 	DEFAULT_CHAT_FRAME:AddMessage("|cffffd100Talent Compass:|r " .. msg)
 end
 
+-- Blizzard font objects are font families that pick the Latin or Cyrillic font by the
+-- start of a string, so mixed text such as "Protection · 16 ур." shows boxes. Our own
+-- copies use the Cyrillic Friz Quadrata, which contains both alphabets.
+local CYRILLIC_FONT = "Fonts\\FRIZQT___CYR.TTF"
+local fontCache = {}
+
+function ns.Font(base)
+	if fontCache[base] then
+		return fontCache[base]
+	end
+	local source = _G[base] or GameFontNormal
+	local font = CreateFont("TalentCompass_" .. base)
+	font:CopyFontObject(source)
+	local _, size, flags = source:GetFont()
+	font:SetFont(CYRILLIC_FONT, size or 12, flags or "")
+	fontCache[base] = font
+	return font
+end
+
+function ns.CreateText(parent, layer, base)
+	local fs = parent:CreateFontString(nil, layer or "OVERLAY")
+	fs:SetFontObject(ns.Font(base or "GameFontHighlight"))
+	return fs
+end
+
 function ns.OnUpdate(callback)
 	table.insert(ns.callbacks, callback)
 end
